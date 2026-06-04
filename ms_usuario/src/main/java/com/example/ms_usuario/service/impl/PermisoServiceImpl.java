@@ -11,11 +11,14 @@ import com.example.ms_usuario.repository.PermisoRepository;
 import com.example.ms_usuario.repository.RolRepository;
 import com.example.ms_usuario.service.PermisoService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@Slf4j
 @RequiredArgsConstructor
 public class PermisoServiceImpl implements PermisoService {
 

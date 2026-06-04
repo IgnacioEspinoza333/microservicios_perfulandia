@@ -18,12 +18,15 @@ import com.example.ms_usuario.repository.UsuarioRepository;
 import com.example.ms_usuario.repository.UsuarioRolRepository;
 import com.example.ms_usuario.service.UsuarioService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@Slf4j
 @RequiredArgsConstructor
 public class UsuarioServiceImpl implements UsuarioService {
 
