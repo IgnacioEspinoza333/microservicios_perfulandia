@@ -1,0 +1,35 @@
+package com.example.ms_usuario.model;
+
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.util.HashSet;
+import java.util.Set;
+
+@Entity
+@Table(
+        name = "rol",
+        uniqueConstraints = {
+                @UniqueConstraint(columnNames = "nombre")
+        }
+)
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Rol {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(nullable = false, unique = true, length = 60)
+    private String nombre;
+
+    @ManyToMany
+    @JoinTable(
+            name = "rol_permiso",
+            joinColumns = @JoinColumn(name = "rol_id"),
+            inverseJoinColumns = @JoinColumn(name = "permiso_id")
+    )
+    private Set<Permiso> permisos = new HashSet<>();
+}
