@@ -11,11 +11,15 @@ import com.example.ms_usuario.repository.EmpleadoRepository;
 import com.example.ms_usuario.repository.UsuarioRepository;
 import com.example.ms_usuario.service.EmpleadoService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
 @Service
+@Slf4j
 @RequiredArgsConstructor
 public class EmpleadoServiceImpl implements EmpleadoService {
 
