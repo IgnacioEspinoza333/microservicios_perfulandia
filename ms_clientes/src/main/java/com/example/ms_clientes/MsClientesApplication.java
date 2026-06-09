@@ -2,7 +2,7 @@ package com.example.ms_clientes;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
+//hola
 @SpringBootApplication
 public class MsClientesApplication {
 
