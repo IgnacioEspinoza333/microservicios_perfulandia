@@ -1,0 +1,38 @@
+2026-06-11 12:31:26 [main] INFO  c.e.ms_pedidos.MsPedidosApplication - Starting MsPedidosApplication using Java 21.0.10 with PID 20560 (C:\Users\PAAPCAXXTRXXX\Documents\GitHub\microservicios_perfulandia\ms_pedidos\target\classes started by PAAPCA02TR628 in C:\Users\PAAPCAXXTRXXX\Documents\GitHub\microservicios_perfulandia)
+2026-06-11 12:31:26 [main] INFO  c.e.ms_pedidos.MsPedidosApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-11 12:31:27 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-11 12:31:27 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36 ms. Found 2 JPA repository interfaces.
+2026-06-11 12:31:27 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=000cc6a6-cbdf-3fbe-90e2-bb371601d66c
+2026-06-11 12:31:27 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-06-11 12:31:27 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-11 12:31:27 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-11 12:31:27 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1279 ms
+2026-06-11 12:31:27 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-11 12:31:27 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-06-11 12:31:28 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-11 12:31:28 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-11 12:31:28 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18dbc1b
+2026-06-11 12:31:28 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-11 12:31:28 [main] WARN  org.hibernate.orm.core - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-11 12:31:28 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-11 12:31:28 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/ms_pedidos?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: ms_pedidos/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-11 12:31:29 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-11 12:31:29 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-11 12:31:29 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-11 12:31:29 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-11 12:31:29 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-06-11 12:31:31 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-06-11 12:31:31 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path '/'
+2026-06-11 12:31:32 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-06-11 12:31:32 [main] INFO  c.e.ms_pedidos.MsPedidosApplication - Started MsPedidosApplication in 7.359 seconds (process running for 7.796)

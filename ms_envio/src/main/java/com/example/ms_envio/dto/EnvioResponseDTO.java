@@ -1,7 +1,8 @@
-package com.example.ms_pedidos.dtos;
+package com.example.ms_envio.dto;
 
 import java.time.LocalDateTime;
-import java.util.List;
+
+import com.example.ms_envio.model.EstadoEnvio;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,11 +13,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class PedidoResponseDTO {
+public class EnvioResponseDTO {
     private Long id;
+    private String direccionDestino;
     private String cliente;
-    private LocalDateTime fecha;
-    private String estado;
-    private List<DetallePedidoResponseDTO> detalles;
-
+    private LocalDateTime fechaEnvio;
+    private EstadoEnvio estado;
 }

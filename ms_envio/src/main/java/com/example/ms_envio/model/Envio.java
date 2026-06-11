@@ -1,4 +1,4 @@
-package com.example.ms_envio.modelo;
+package com.example.ms_envio.model;
 
 import java.time.LocalDateTime;
 
