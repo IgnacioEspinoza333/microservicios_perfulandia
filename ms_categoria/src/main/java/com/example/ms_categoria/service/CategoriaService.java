@@ -2,8 +2,8 @@ package com.example.ms_categoria.service;
 
 import java.util.List;
 
-import com.example.ms_categoria.dtos.CategoriaRequestDTO;
-import com.example.ms_categoria.dtos.CategoriaResponseDTO;
+import com.example.ms_categoria.dto.CategoriaRequestDTO;
+import com.example.ms_categoria.dto.CategoriaResponseDTO;
 
 public interface CategoriaService {
    CategoriaResponseDTO crearCategoria(CategoriaRequestDTO request);

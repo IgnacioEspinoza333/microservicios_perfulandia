@@ -2,8 +2,8 @@ package com.example.ms_envio.service;
 
 import java.util.List;
 
-import com.example.ms_envio.dtos.EnvioRequestDTO;
-import com.example.ms_envio.dtos.EnvioResponseDTO;
+import com.example.ms_envio.dto.EnvioRequestDTO;
+import com.example.ms_envio.dto.EnvioResponseDTO;
 
 public interface EnvioService {
      EnvioResponseDTO crearEnvio(EnvioRequestDTO request);

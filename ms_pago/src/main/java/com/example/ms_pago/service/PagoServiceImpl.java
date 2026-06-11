@@ -3,7 +3,7 @@ package com.example.ms_pago.service;
 import com.example.ms_pago.dto.PagoRequestDTO;
 import com.example.ms_pago.dto.PagoResponseDTO;
 import com.example.ms_pago.exception.PagoNotFoundException;
-import com.example.ms_pago.modelo.Pago;
+import com.example.ms_pago.model.Pago;
 import com.example.ms_pago.repository.PagoRepository;
 
 import lombok.RequiredArgsConstructor;

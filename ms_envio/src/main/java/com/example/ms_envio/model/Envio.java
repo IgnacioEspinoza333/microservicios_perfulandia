@@ -1,8 +1,10 @@
-package com.example.ms_boleta.modelo;
+package com.example.ms_envio.model;
 
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -14,21 +16,22 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "boletas")
+@Table(name = "envios")
 @Getter @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Boleta {
-    @Id
+public class Envio {
+   @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String numero;
+    private String direccionDestino;
 
     private String cliente;
 
-    private Double monto;
+    private LocalDateTime fechaEnvio;
 
-    private LocalDateTime fechaEmision;
+    @Enumerated(EnumType.STRING)
+    private EstadoEnvio estado;
 }

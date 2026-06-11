@@ -1,8 +1,8 @@
-package com.example.ms_envio.dtos;
+package com.example.ms_envio.dto;
 
 import java.time.LocalDateTime;
 
-import com.example.ms_envio.modelo.EstadoEnvio;
+import com.example.ms_envio.model.EstadoEnvio;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
