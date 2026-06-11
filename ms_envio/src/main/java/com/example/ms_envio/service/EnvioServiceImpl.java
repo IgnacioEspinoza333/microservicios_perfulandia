@@ -3,11 +3,11 @@ package com.example.ms_envio.service;
 
 import org.springframework.stereotype.Service;
 
-import com.example.ms_envio.dtos.EnvioRequestDTO;
-import com.example.ms_envio.dtos.EnvioResponseDTO;
+import com.example.ms_envio.dto.EnvioRequestDTO;
+import com.example.ms_envio.dto.EnvioResponseDTO;
 import com.example.ms_envio.exception.EnvioNotFoundException;
-import com.example.ms_envio.modelo.Envio;
-import com.example.ms_envio.modelo.EstadoEnvio;
+import com.example.ms_envio.model.Envio;
+import com.example.ms_envio.model.EstadoEnvio;
 import com.example.ms_envio.repository.EnvioRepository;
 import lombok.RequiredArgsConstructor;
 import java.time.LocalDateTime;

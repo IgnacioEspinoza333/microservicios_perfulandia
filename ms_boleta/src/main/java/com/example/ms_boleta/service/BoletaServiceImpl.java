@@ -6,11 +6,11 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
-import com.example.ms_boleta.dtos.BoletaRequestDTO;
-import com.example.ms_boleta.dtos.BoletaResponseDTO;
+import com.example.ms_boleta.dto.BoletaRequestDTO;
+import com.example.ms_boleta.dto.BoletaResponseDTO;
 import com.example.ms_boleta.exceptions.DuplicateResourceException;
 import com.example.ms_boleta.exceptions.ResourceNotFoundException;
-import com.example.ms_boleta.modelo.Boleta;
+import com.example.ms_boleta.model.Boleta;
 import com.example.ms_boleta.repository.BoletaRepository;
 
 import lombok.RequiredArgsConstructor;

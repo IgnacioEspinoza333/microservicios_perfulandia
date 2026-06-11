@@ -6,8 +6,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.example.ms_categoria.dtos.CategoriaRequestDTO;
-import com.example.ms_categoria.dtos.CategoriaResponseDTO;
+import com.example.ms_categoria.dto.CategoriaRequestDTO;
+import com.example.ms_categoria.dto.CategoriaResponseDTO;
 import com.example.ms_categoria.service.CategoriaService;
 
 import java.util.List;

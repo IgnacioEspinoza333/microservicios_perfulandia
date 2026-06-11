@@ -5,11 +5,12 @@ package com.example.ms_categoria.service;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
-import com.example.ms_categoria.dtos.CategoriaRequestDTO;
-import com.example.ms_categoria.dtos.CategoriaResponseDTO;
+
+import com.example.ms_categoria.dto.CategoriaRequestDTO;
+import com.example.ms_categoria.dto.CategoriaResponseDTO;
 import com.example.ms_categoria.exception.DuplicateResourceException;
 import com.example.ms_categoria.exception.ResourceNotFoundException;
-import com.example.ms_categoria.modelo.Categoria;
+import com.example.ms_categoria.model.Categoria;
 import com.example.ms_categoria.repository.CategoriaRepository;
 import lombok.RequiredArgsConstructor;
 

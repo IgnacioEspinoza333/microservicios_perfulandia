@@ -1,4 +1,4 @@
-package com.example.ms_boleta.dtos;
+package com.example.ms_boleta.dto;
 
 import java.time.LocalDateTime;
 

@@ -1,4 +1,4 @@
-package com.example.ms_pago.dto;
+package com.example.ms_boleta.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -13,14 +13,21 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+public class BoletaRequestDTO {
 
-public class PagoRequestDTO {
+
+    @NotBlank(message = "El número de la boleta es obligatorio")
+    @Size(min = 5, max = 20, message = "El número debe tener entre 5 y 20 caracteres")
+    private String numero;
+
+
+    @NotBlank(message = "El nombre del cliente es obligatorio")
+    @Size(min = 3, max = 50, message = "El nombre del cliente debe tener entre 3 y 50 caracteres")
+    private String cliente;
+
+
+
     @NotNull(message = "El monto es obligatorio")
     @Positive(message = "El monto debe ser mayor a 0")
     private Double monto;
-
-    @NotBlank(message = "El método de pago es obligatorio")
-    @Size(min = 3, max = 20, message = "El método debe tener entre 3 y 20 caracteres")
-    private String metodo;
-
 }

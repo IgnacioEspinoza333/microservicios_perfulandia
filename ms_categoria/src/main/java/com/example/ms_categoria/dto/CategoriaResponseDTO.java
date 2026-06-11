@@ -1,4 +1,4 @@
-package com.example.ms_categoria.dtos;
+package com.example.ms_categoria.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,8 +9,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-
-public class CategoriaRequestDTO {
+public class CategoriaResponseDTO {
+  private Long id;
     private String nombre;
     private String descripcion;
-}
+} 

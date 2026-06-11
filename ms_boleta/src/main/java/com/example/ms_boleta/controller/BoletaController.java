@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.ms_boleta.dtos.BoletaRequestDTO;
-import com.example.ms_boleta.dtos.BoletaResponseDTO;
+import com.example.ms_boleta.dto.BoletaRequestDTO;
+import com.example.ms_boleta.dto.BoletaResponseDTO;
 import com.example.ms_boleta.service.BoletaService;
 
 import lombok.RequiredArgsConstructor;
