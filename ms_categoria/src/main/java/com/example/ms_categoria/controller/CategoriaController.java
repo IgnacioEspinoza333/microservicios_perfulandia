@@ -34,7 +34,7 @@ public class CategoriaController {
     public ResponseEntity<List<CategoriaResponseDTO>> listar() {
         return ResponseEntity.ok(categoriaService.listarCategorias());
     }
-
+//integrado la actual
     @PutMapping("/{id}")
     public ResponseEntity<CategoriaResponseDTO> actualizarCategoria(
             @PathVariable Long id,
