@@ -66,6 +66,11 @@ public class EmpleadoServiceImpl implements EmpleadoService {
             throw new BusinessException("Ese usuario ya está asociado a otro empleado");
         }
 
+
+        usuario.setNombre(dto.getNombreUsuario());
+        usuario.setEmail(dto.getEmailUsuario());
+
+
         empleado.setUsuario(usuario);
         empleado.setActivo(dto.getActivo());
 
