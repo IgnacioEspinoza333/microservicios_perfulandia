@@ -11,3 +11,9 @@ public class PublicController {
         return "ms_producto operativo";
     }
 }
+/*
+verificar que el microservicio está vivo
+probar acceso público
+servir como endpoint de test rápido
+comprobar que SecurityConfig permite rutas públicas
+*/

@@ -16,13 +16,22 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/public/**").permitAll()
-                .requestMatchers("/api/envios/**").hasRole("USER")
+
+                // V1
+                .requestMatchers("/api/envios/**")
+                    .hasAnyRole("USER", "ADMIN")
+
+                // V2
+                .requestMatchers("/api/v2/envios/**")
+                    .hasAnyRole("USER", "ADMIN")
+
                 .anyRequest().authenticated()
             )
             .httpBasic(Customizer.withDefaults());
@@ -41,7 +50,7 @@ public class SecurityConfig {
         UserDetails admin = User
             .withUsername("admin")
             .password(encoder.encode("1234"))
-            .roles("ADMIN")
+            .roles("ADMIN", "USER")
             .build();
 
         return new InMemoryUserDetailsManager(user, admin);
@@ -51,5 +60,4 @@ public class SecurityConfig {
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
-
 }
