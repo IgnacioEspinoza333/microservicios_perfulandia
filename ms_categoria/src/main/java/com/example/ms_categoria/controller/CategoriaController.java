@@ -10,6 +10,8 @@ import com.example.ms_categoria.dto.CategoriaRequestDTO;
 import com.example.ms_categoria.dto.CategoriaResponseDTO;
 import com.example.ms_categoria.service.CategoriaService;
 
+import jakarta.validation.Valid;
+
 import java.util.List;
 
 @RestController
@@ -31,6 +33,13 @@ public class CategoriaController {
     @GetMapping
     public ResponseEntity<List<CategoriaResponseDTO>> listar() {
         return ResponseEntity.ok(categoriaService.listarCategorias());
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<CategoriaResponseDTO> actualizarCategoria(
+            @PathVariable Long id,
+            @Valid @RequestBody CategoriaRequestDTO request) {
+        return ResponseEntity.ok(categoriaService.actualizarCategoria(id, request));
     }
 
     @DeleteMapping("/{id}")
