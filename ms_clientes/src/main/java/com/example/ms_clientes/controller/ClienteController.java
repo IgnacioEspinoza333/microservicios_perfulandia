@@ -39,7 +39,7 @@ public class ClienteController {
         log.debug("Solicitud para obtener cliente con id: {}", id);
         return clienteService.obtenerPorId(id);
     }
-
+   //listo 
     @PutMapping("/{id}")
     public ClienteResponseDto actualizar(@PathVariable Long id,
                                          @Valid @RequestBody ClienteUpdateDto dto) {
