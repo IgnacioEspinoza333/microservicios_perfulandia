@@ -22,7 +22,16 @@ public class SecurityConfig {
         http
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/inventarios/**").hasAnyRole("USER", "ADMIN")
+                .requestMatchers("/api/public/**").permitAll()
+
+                // V1
+                .requestMatchers("/api/inventarios/**")
+                    .hasAnyRole("USER", "ADMIN")
+
+                // V2
+                .requestMatchers("/api/v2/inventarios/**")
+                    .hasAnyRole("USER", "ADMIN")
+
                 .anyRequest().authenticated()
             )
             .httpBasic(Customizer.withDefaults());

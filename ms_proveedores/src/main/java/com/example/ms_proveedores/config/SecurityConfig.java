@@ -22,8 +22,16 @@ public class SecurityConfig {
         http
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/proveedores/**").hasAnyRole("USER", "ADMIN")
-                .requestMatchers("/api/abastecimientos/**").hasAnyRole("USER", "ADMIN")
+                .requestMatchers("/api/public/**").permitAll()
+
+                // V1
+                .requestMatchers("/api/proveedores/**", "/api/abastecimientos/**")
+                    .hasAnyRole("USER", "ADMIN")
+
+                // V2
+                .requestMatchers("/api/v2/proveedores/**", "/api/v2/abastecimientos/**")
+                    .hasAnyRole("USER", "ADMIN")
+
                 .anyRequest().authenticated()
             )
             .httpBasic(Customizer.withDefaults());
