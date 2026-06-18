@@ -59,4 +59,16 @@ public class CategoriaServiceImpl  implements CategoriaService{
                 .descripcion(categoria.getDescripcion())
                 .build();
     }
+    // 🚀 Nuevo método para actualizar
+    public CategoriaResponseDTO actualizarCategoria(Long id, CategoriaRequestDTO request) {
+        Categoria categoria = categoriaRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Categoría no encontrada"));
+
+        categoria.setNombre(request.getNombre());
+        categoria.setDescripcion(request.getDescripcion());
+
+        Categoria actualizada = categoriaRepository.save(categoria);
+
+        return new CategoriaResponseDTO(actualizada.getId(), actualizada.getNombre(), actualizada.getDescripcion());
+    }
 }

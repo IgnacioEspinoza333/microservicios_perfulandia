@@ -4,6 +4,8 @@ import com.example.ms_categoria.assembler.CategoriaModelAssembler;
 import com.example.ms_categoria.dto.CategoriaRequestDTO;
 import com.example.ms_categoria.dto.CategoriaResponseDTO;
 import com.example.ms_categoria.service.CategoriaService;
+
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
@@ -55,5 +57,15 @@ public class CategoriaControllerV2 {
     public ResponseEntity<Void> eliminar(@PathVariable Long id) {
         categoriaService.eliminarCategoria(id);
         return ResponseEntity.noContent().build();
+    }
+
+
+    @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    public ResponseEntity<EntityModel<CategoriaResponseDTO>> actualizarCategoria(
+            @PathVariable Long id,
+            @Valid @RequestBody CategoriaRequestDTO request) {
+
+        CategoriaResponseDTO actualizada = categoriaService.actualizarCategoria(id, request);
+        return ResponseEntity.ok(assembler.toModel(actualizada));
     }
 }
