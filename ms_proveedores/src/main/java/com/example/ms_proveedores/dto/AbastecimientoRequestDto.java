@@ -2,6 +2,7 @@ package com.example.ms_proveedores.dto;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 
 @Data
@@ -17,5 +18,8 @@ public class AbastecimientoRequestDto {
     @Min(value = 1, message = "La cantidad debe ser mayor o igual a 1")
     private Integer cantidad;
 
+    
+    @Pattern(regexp = "PENDIENTE|APROBADO|CANCELADO", 
+         message = "El estado debe ser PENDIENTE, APROBADO o CANCELADO")
     private String estado;
 }

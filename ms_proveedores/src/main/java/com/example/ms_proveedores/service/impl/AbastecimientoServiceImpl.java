@@ -104,9 +104,16 @@ public class AbastecimientoServiceImpl implements AbastecimientoService {
 
         Abastecimiento abastecimiento = getAbastecimientoOrThrow(id);
         Proveedor proveedor = getProveedorOrThrow(dto.getProveedorId());
+        
 
         String estado = dto.getEstado().trim().toUpperCase();
         validarEstado(estado);
+
+        // actualizar proveedor si viene en el DTO
+        if (dto.getNombreProveedor() != null && !dto.getNombreProveedor().isBlank()) {
+        proveedor.setNombre(dto.getNombreProveedor());
+        proveedorRepository.save(proveedor);
+    }
 
         abastecimiento.setProveedorId(dto.getProveedorId());
         abastecimiento.setProductoId(dto.getProductoId());
