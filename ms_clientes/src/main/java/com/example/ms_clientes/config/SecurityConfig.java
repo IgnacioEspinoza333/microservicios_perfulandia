@@ -23,8 +23,15 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/public/**").permitAll()
-                .requestMatchers("/api/clientes/**").hasRole("USER")
-                .requestMatchers("/api/direcciones/**").hasRole("USER")
+
+                // V1
+                .requestMatchers("/api/clientes/**", "/api/direcciones/**")
+                    .hasAnyRole("USER", "ADMIN")
+
+                // V2
+                .requestMatchers("/api/v2/clientes/**", "/api/v2/direcciones/**")
+                    .hasAnyRole("USER", "ADMIN")
+
                 .anyRequest().authenticated()
             )
             .httpBasic(Customizer.withDefaults());
@@ -43,12 +50,11 @@ public class SecurityConfig {
         UserDetails admin = User
             .withUsername("admin")
             .password(encoder.encode("1234"))
-            .roles("ADMIN")
+            .roles("ADMIN", "USER")
             .build();
 
         return new InMemoryUserDetailsManager(user, admin);
     }
-
 
     @Bean
     public PasswordEncoder passwordEncoder() {
