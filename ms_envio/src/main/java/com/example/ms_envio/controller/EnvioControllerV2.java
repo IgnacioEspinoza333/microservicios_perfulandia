@@ -4,6 +4,8 @@ import com.example.ms_envio.assembler.EnvioModelAssembler;
 import com.example.ms_envio.dto.EnvioRequestDTO;
 import com.example.ms_envio.dto.EnvioResponseDTO;
 import com.example.ms_envio.service.EnvioService;
+
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
@@ -55,5 +57,14 @@ public class EnvioControllerV2 {
     public ResponseEntity<Void> cancelar(@PathVariable Long id) {
         envioService.cancelarEnvio(id);
         return ResponseEntity.noContent().build();
+    }
+
+      @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    public ResponseEntity<EntityModel<EnvioResponseDTO>> actualizarEnvio(
+            @PathVariable Long id,
+            @Valid @RequestBody EnvioRequestDTO request) {
+
+        EnvioResponseDTO actualizado = envioService.actualizarEnvio(id, request);
+        return ResponseEntity.ok(assembler.toModel(actualizado));
     }
 }

@@ -15,6 +15,7 @@ import com.example.ms_envio.dto.EnvioResponseDTO;
 import com.example.ms_envio.service.EnvioService;
 
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 @RestController
@@ -42,6 +43,12 @@ public class EnvioController {
     public ResponseEntity<Void> cancelar(@PathVariable Long id) {
         envioService.cancelarEnvio(id);
         return ResponseEntity.noContent().build();
+    }
+    @PutMapping("/{id}")
+    public ResponseEntity<EnvioResponseDTO> actualizarEnvio(
+            @PathVariable Long id,
+            @Valid @RequestBody EnvioRequestDTO request) {
+        return ResponseEntity.ok(envioService.actualizarEnvio(id, request));
     }
 
 }

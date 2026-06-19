@@ -1,6 +1,11 @@
 package com.example.ms_envio.dto;
 
+import java.time.LocalDateTime;
+
+import com.example.ms_envio.model.EstadoEnvio;
+
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,5 +24,11 @@ public class EnvioRequestDTO {
     @NotBlank(message = "El nombre del cliente es obligatorio")
     @Size(min = 3, max = 50, message = "El nombre del cliente debe tener entre 3 y 50 caracteres")
     private String cliente;
+
+    @NotNull(message = "La fecha de envío es obligatoria")
+    private LocalDateTime fechaEnvio;
+
+    @NotNull(message = "El estado del envío es obligatorio")
+    private EstadoEnvio estado;
 }
 
