@@ -59,12 +59,12 @@ public class EnvioControllerV2 {
         return ResponseEntity.noContent().build();
     }
 
-      @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+     @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
     public ResponseEntity<EntityModel<EnvioResponseDTO>> actualizarEnvio(
             @PathVariable Long id,
             @Valid @RequestBody EnvioRequestDTO request) {
 
         EnvioResponseDTO actualizado = envioService.actualizarEnvio(id, request);
         return ResponseEntity.ok(assembler.toModel(actualizado));
-    }
+}
 }

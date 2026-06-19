@@ -58,19 +58,23 @@ public class EnvioServiceImpl implements EnvioService {
                 .estado(envio.getEstado())
                 .build();
     }
-    @Override
-    public EnvioResponseDTO actualizarEnvio(Long id, EnvioRequestDTO request) {
-        Envio envio = envioRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Envío no encontrado"));
-
-        envio.setDireccionDestino(request.getDireccionDestino());
-        envio.setCliente(request.getCliente());
-        envio.setFechaEnvio(request.getFechaEnvio());
-        envio.setEstado(request.getEstado());
-
-        Envio actualizado = envioRepository.save(envio);
-        return new EnvioResponseDTO(actualizado.getId(), actualizado.getDireccionDestino(),
-                actualizado.getCliente(), actualizado.getFechaEnvio(), actualizado.getEstado());
+   @Override
+public EnvioResponseDTO actualizarEnvio(Long id, EnvioRequestDTO request) {
+    if (!id.equals(request.getId())) {
+        throw new RuntimeException("El ID de la URL no coincide con el del cuerpo");
     }
+
+    Envio envio = envioRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Envío no encontrado"));
+
+    envio.setDireccionDestino(request.getDireccionDestino());
+    envio.setCliente(request.getCliente());
+    envio.setFechaEnvio(request.getFechaEnvio());
+    envio.setEstado(request.getEstado());
+
+    Envio actualizado = envioRepository.save(envio);
+    return new EnvioResponseDTO(actualizado.getId(), actualizado.getDireccionDestino(),
+            actualizado.getCliente(), actualizado.getFechaEnvio(), actualizado.getEstado());
+}
 
 }
