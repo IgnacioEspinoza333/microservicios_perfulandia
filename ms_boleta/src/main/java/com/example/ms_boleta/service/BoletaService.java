@@ -9,5 +9,6 @@ public interface BoletaService {
     BoletaResponseDTO crearBoleta(BoletaRequestDTO request);
     BoletaResponseDTO obtenerBoleta(Long id);
     List<BoletaResponseDTO> listarBoletas();
+     BoletaResponseDTO actualizarBoleta(Long id, BoletaRequestDTO request);
     void eliminarBoleta(Long id);
 }
