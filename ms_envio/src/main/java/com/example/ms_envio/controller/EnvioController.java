@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.ms_envio.dto.EnvioRequestDTO;
 import com.example.ms_envio.dto.EnvioResponseDTO;
 import com.example.ms_envio.service.EnvioService;
-
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
+import org.springframework.web.bind.annotation.RequestBody;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
@@ -49,6 +48,5 @@ public class EnvioController {
             @PathVariable Long id,
             @Valid @RequestBody EnvioRequestDTO request) {
         return ResponseEntity.ok(envioService.actualizarEnvio(id, request));
-    }
-
+}
 }

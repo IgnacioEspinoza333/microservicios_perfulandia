@@ -4,7 +4,6 @@ import com.example.ms_boleta.assembler.BoletaModelAssembler;
 import com.example.ms_boleta.dto.BoletaRequestDTO;
 import com.example.ms_boleta.dto.BoletaResponseDTO;
 import com.example.ms_boleta.service.BoletaService;
-
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.hateoas.CollectionModel;

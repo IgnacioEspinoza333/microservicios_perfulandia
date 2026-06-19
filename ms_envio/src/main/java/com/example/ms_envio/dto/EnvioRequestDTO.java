@@ -30,5 +30,8 @@ public class EnvioRequestDTO {
 
     @NotNull(message = "El estado del envío es obligatorio")
     private EstadoEnvio estado;
+
+    @NotNull(message = "El ID del envío es obligatorio en actualización")
+    private Long id;
 }
 
