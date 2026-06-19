@@ -4,6 +4,8 @@ import com.example.ms_boleta.assembler.BoletaModelAssembler;
 import com.example.ms_boleta.dto.BoletaRequestDTO;
 import com.example.ms_boleta.dto.BoletaResponseDTO;
 import com.example.ms_boleta.service.BoletaService;
+
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
@@ -55,5 +57,13 @@ public class BoletaControllerV2 {
     public ResponseEntity<Void> eliminar(@PathVariable Long id) {
         boletaService.eliminarBoleta(id);
         return ResponseEntity.noContent().build();
+    }
+     @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    public ResponseEntity<EntityModel<BoletaResponseDTO>> actualizarBoleta(
+            @PathVariable Long id,
+            @Valid @RequestBody BoletaRequestDTO request) {
+
+        BoletaResponseDTO actualizada = boletaService.actualizarBoleta(id, request);
+        return ResponseEntity.ok(assembler.toModel(actualizada));
     }
 }

@@ -63,4 +63,17 @@ public class BoletaServiceImpl implements BoletaService {
                 .fechaEmision(boleta.getFechaEmision())
                 .build();
     }
+
+     @Override
+    public BoletaResponseDTO actualizarBoleta(Long id, BoletaRequestDTO request) {
+        Boleta boleta = boletaRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Boleta no encontrada"));
+
+        boleta.setNumero(request.getNumero());
+        boleta.setCliente(request.getCliente());
+        boleta.setMonto(request.getMonto());
+
+        Boleta actualizada = boletaRepository.save(boleta);
+        return new BoletaResponseDTO(actualizada.getId(), actualizada.getNumero(), actualizada.getCliente(), actualizada.getMonto(), actualizada.getFechaEmision());
+    }
 }
