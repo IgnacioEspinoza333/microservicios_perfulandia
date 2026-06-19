@@ -12,7 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 //Tiene las 4 funcioens
 import java.util.List;
-//Listo 
+//Listo aaaaaa
 @RestController
 @RequestMapping("/api/inventarios")
 @RequiredArgsConstructor
