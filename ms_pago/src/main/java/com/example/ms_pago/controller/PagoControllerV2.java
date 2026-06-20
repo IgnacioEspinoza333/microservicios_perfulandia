@@ -14,6 +14,7 @@ import com.example.ms_pago.dto.PagoRequestDTO;
 import com.example.ms_pago.dto.PagoResponseDTO;
 import com.example.ms_pago.service.PagoService;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
@@ -57,5 +58,15 @@ public class PagoControllerV2 {
     public ResponseEntity<Void> eliminar(@PathVariable Long id) {
         pagoService.eliminarPago(id);
         return ResponseEntity.noContent().build();
+    }
+
+
+    @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    public ResponseEntity<EntityModel<PagoResponseDTO>> actualizarPago(
+            @PathVariable Long id,
+            @Valid @RequestBody PagoRequestDTO request) {
+
+        PagoResponseDTO actualizado = pagoService.actualizarPago(id, request);
+        return ResponseEntity.ok(assembler.toModel(actualizado));
     }
 }
