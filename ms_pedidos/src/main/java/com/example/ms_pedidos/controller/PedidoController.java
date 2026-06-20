@@ -2,6 +2,7 @@ package com.example.ms_pedidos.controller;
 
 import java.util.List;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -43,6 +44,17 @@ public class PedidoController {
     public ResponseEntity<Void> cancelar(@PathVariable Long id) {
         pedidoService.cancelarPedido(id);
         return ResponseEntity.noContent().build();
+    }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> eliminarPedido(@PathVariable Long id) {
+    pedidoService.eliminarPedido(id);
+    return ResponseEntity.noContent().build();
+}
+   @PutMapping("/{id}")
+    public ResponseEntity<PedidoResponseDTO> actualizarPedido(
+            @PathVariable Long id,
+            @Valid @RequestBody PedidoRequestDTO request) {
+        return ResponseEntity.ok(pedidoService.actualizarPedido(id, request));
     }
 
 }
