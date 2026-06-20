@@ -11,5 +11,7 @@ public interface PedidoService {
     PedidoResponseDTO obtenerPedido(Long id);
     List<PedidoResponseDTO> listarPedidos();
     void cancelarPedido(Long id);
-
+    PedidoResponseDTO actualizarPedido(Long id, PedidoRequestDTO request);
+    void eliminarPedido(Long id); // <-- faltaba este
 }
+
