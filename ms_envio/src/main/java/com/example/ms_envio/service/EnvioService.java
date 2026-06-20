@@ -11,4 +11,5 @@ public interface EnvioService {
     List<EnvioResponseDTO> listarEnvios();
     void cancelarEnvio(Long id);
     EnvioResponseDTO actualizarEnvio(Long id, EnvioRequestDTO request);
+    void eliminarEnvio(Long id); // <-- faltaba este
 }
