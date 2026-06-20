@@ -77,5 +77,41 @@ public class PedidoServiceImpl implements PedidoService {
                         .collect(Collectors.toList()))
                 .build();
     }
+     @Override
+    public PedidoResponseDTO actualizarPedido(Long id, PedidoRequestDTO request) {
+        if (!id.equals(request.getId())) {
+            throw new RuntimeException("El ID de la URL no coincide con el del cuerpo");
+        }
 
+        Pedido pedido = pedidoRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Pedido no encontrado"));
+
+        pedido.setCliente(request.getCliente());
+        pedido.setFecha(request.getFecha());
+        pedido.setEstado(request.getEstado());
+
+        Pedido actualizado = pedidoRepository.save(pedido);
+      return PedidoResponseDTO.builder()
+    .id(actualizado.getId())
+    .cliente(actualizado.getCliente())
+    .fecha(actualizado.getFecha())
+    .estado(actualizado.getEstado())
+    .detalles(actualizado.getDetalles().stream()
+        .map(d -> new DetallePedidoResponseDTO(
+            d.getId(),
+            d.getProducto(),
+            d.getCantidad(),
+            d.getPrecioUnitario()
+        ))
+        .collect(Collectors.toList()))
+    .build();
+    }
+
+    @Override
+    public void eliminarPedido(Long id) {
+        if (!pedidoRepository.existsById(id)) {
+            throw new RuntimeException("Pedido no encontrado");
+        }
+        pedidoRepository.deleteById(id);
+    }
 }

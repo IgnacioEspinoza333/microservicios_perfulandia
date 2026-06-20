@@ -4,6 +4,8 @@ import com.example.ms_pedidos.assembler.PedidoModelAssembler;
 import com.example.ms_pedidos.dto.PedidoRequestDTO;
 import com.example.ms_pedidos.dto.PedidoResponseDTO;
 import com.example.ms_pedidos.service.PedidoService;
+
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
@@ -56,4 +58,19 @@ public class PedidoControllerV2 {
         pedidoService.cancelarPedido(id);
         return ResponseEntity.noContent().build();
     }
+
+     @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+       public ResponseEntity<EntityModel<PedidoResponseDTO>> actualizarPedido(
+            @PathVariable Long id,
+            @Valid @RequestBody PedidoRequestDTO request) {
+
+        PedidoResponseDTO actualizado = pedidoService.actualizarPedido(id, request);
+        return ResponseEntity.ok(assembler.toModel(actualizado));
+    }
+
+    @DeleteMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    public ResponseEntity<Void> eliminarPedido(@PathVariable Long id) {
+    pedidoService.eliminarPedido(id);
+    return ResponseEntity.noContent().build();
+}
 }
