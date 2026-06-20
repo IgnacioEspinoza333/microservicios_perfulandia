@@ -60,4 +60,18 @@ public class PagoServiceImpl implements PagoService  {
                 .estado(pago.getEstado())
                 .build();
     }
+     @Override
+    public PagoResponseDTO actualizarPago(Long id, PagoRequestDTO request) {
+        Pago pago = pagoRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Pago no encontrado"));
+
+        pago.setMonto(request.getMonto());
+        pago.setMetodo(request.getMetodo());
+        pago.setFecha(request.getFecha());
+        pago.setEstado(request.getEstado());
+
+        Pago actualizado = pagoRepository.save(pago);
+        return new PagoResponseDTO(actualizado.getId(), actualizado.getMonto(),
+                actualizado.getMetodo(), actualizado.getFecha(), actualizado.getEstado());
+    }
 }
