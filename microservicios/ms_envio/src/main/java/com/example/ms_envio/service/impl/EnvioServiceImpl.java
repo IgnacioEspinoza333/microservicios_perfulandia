@@ -78,5 +78,12 @@ public EnvioResponseDTO actualizarEnvio(Long id, EnvioRequestDTO request) {
     return new EnvioResponseDTO(actualizado.getId(), actualizado.getDireccionDestino(),
             actualizado.getCliente(), actualizado.getFechaEnvio(), actualizado.getEstado());
 }
+@Override
+    public void eliminarEnvio(Long id) {
+        if (!envioRepository.existsById(id)) {
+            throw new RuntimeException("Envio no encontrado");
+        }
+        envioRepository.deleteById(id);
+    }
 
 }

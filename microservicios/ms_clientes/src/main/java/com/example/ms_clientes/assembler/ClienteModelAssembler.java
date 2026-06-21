@@ -18,7 +18,9 @@ public class ClienteModelAssembler implements RepresentationModelAssembler<Clien
                 cliente,
                 linkTo(methodOn(ClienteControllerV2.class).obtenerPorId(cliente.getId())).withSelfRel(),
                 linkTo(methodOn(ClienteControllerV2.class).listar()).withRel("clientes"),
-                linkTo(methodOn(DireccionControllerV2.class).listarPorCliente(cliente.getId())).withRel("direcciones")
-        );
+                linkTo(methodOn(DireccionControllerV2.class).listarPorCliente(cliente.getId())).withRel("direcciones"),
+                linkTo(methodOn(ClienteControllerV2.class).actualizar(cliente.getId(), null)).withRel("actualizar"),
+                linkTo(methodOn(ClienteControllerV2.class).eliminar(cliente.getId())).withRel("eliminar")
+            );
     }
 }

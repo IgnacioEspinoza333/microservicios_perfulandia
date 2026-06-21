@@ -18,7 +18,9 @@ public class ProveedorModelAssembler implements RepresentationModelAssembler<Pro
                 proveedor,
                 linkTo(methodOn(ProveedorControllerV2.class).obtenerPorId(proveedor.getId())).withSelfRel(),
                 linkTo(methodOn(ProveedorControllerV2.class).listar()).withRel("proveedores"),
-                linkTo(methodOn(AbastecimientoControllerV2.class).listarPorProveedor(proveedor.getId())).withRel("abastecimientos")
+                linkTo(methodOn(AbastecimientoControllerV2.class).listarPorProveedor(proveedor.getId())).withRel("abastecimientos"),
+                linkTo(methodOn(ProveedorControllerV2.class).actualizar(proveedor.getId(), null)).withRel("actualizar"),
+                linkTo(methodOn(ProveedorControllerV2.class).eliminar(proveedor.getId())).withRel("eliminar")
         );
     }
 }

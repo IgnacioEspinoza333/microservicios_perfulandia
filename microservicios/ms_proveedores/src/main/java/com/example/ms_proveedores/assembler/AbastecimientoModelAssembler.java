@@ -16,7 +16,9 @@ public class AbastecimientoModelAssembler implements RepresentationModelAssemble
         return EntityModel.of(
                 abastecimiento,
                 linkTo(methodOn(AbastecimientoControllerV2.class).obtenerPorId(abastecimiento.getId())).withSelfRel(),
-                linkTo(methodOn(AbastecimientoControllerV2.class).listar()).withRel("abastecimientos")
+                linkTo(methodOn(AbastecimientoControllerV2.class).listar()).withRel("abastecimientos"),
+                linkTo(methodOn(AbastecimientoControllerV2.class).actualizar(abastecimiento.getId(), null)).withRel("actualizar"),
+                linkTo(methodOn(AbastecimientoControllerV2.class).eliminar(abastecimiento.getId())).withRel("eliminar")
         );
     }
 }

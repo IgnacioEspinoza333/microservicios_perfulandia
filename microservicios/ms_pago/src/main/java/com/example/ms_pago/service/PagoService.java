@@ -9,4 +9,5 @@ public interface PagoService {
     PagoResponseDTO obtenerPago(Long id);
     List<PagoResponseDTO> listarPagos();
     void eliminarPago(Long id);
+    PagoResponseDTO actualizarPago(Long id, PagoRequestDTO request);
 }

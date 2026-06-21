@@ -67,4 +67,9 @@ public class EnvioControllerV2 {
         EnvioResponseDTO actualizado = envioService.actualizarEnvio(id, request);
         return ResponseEntity.ok(assembler.toModel(actualizado));
 }
+    @DeleteMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    public ResponseEntity<Void> eliminarEnvio(@PathVariable Long id) {
+        envioService.eliminarEnvio(id);
+        return ResponseEntity.noContent().build();
+    }
 }
