@@ -19,6 +19,12 @@
 
     <dependencies>
 
+        <!-- ✅ EUREKA CLIENT -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
         <!-- ✅ PERSISTENCIA -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -91,7 +97,7 @@
             <version>0.2.6</version>
         </dependency>
 
-        <!-- ✅ DATAFAKER (solo este microservicio lo usa) -->
+        <!-- ✅ DATAFAKER -->
         <dependency>
             <groupId>net.datafaker</groupId>
             <artifactId>datafaker</artifactId>

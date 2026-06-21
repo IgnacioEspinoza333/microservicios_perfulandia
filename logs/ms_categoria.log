@@ -1,39 +1,39 @@
-2026-06-21 15:02:55 [restartedMain] INFO  c.e.ms_envio.MsEnvioApplication - Starting MsEnvioApplication using Java 21.0.9 with PID 28012 (C:\Users\Nacho\Documents\GitHub\microservicios_perfulandia\microservicios\ms_envio\target\classes started by Nacho in C:\Users\Nacho\Documents\GitHub\microservicios_perfulandia)
-2026-06-21 15:02:55 [restartedMain] DEBUG c.e.ms_envio.MsEnvioApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
-2026-06-21 15:02:55 [restartedMain] INFO  c.e.ms_envio.MsEnvioApplication - The following 1 profile is active: "dev"
-2026-06-21 15:02:55 [restartedMain] DEBUG o.s.boot.SpringApplication - Loading source class com.example.ms_envio.MsEnvioApplication
-2026-06-21 15:02:55 [restartedMain] DEBUG o.s.b.d.restart.ChangeableUrls - Matching URLs for reloading : [file:/C:/Users/Nacho/Documents/GitHub/microservicios_perfulandia/microservicios/ms_envio/target/classes/]
-2026-06-21 15:02:55 [restartedMain] DEBUG o.s.b.d.settings.DevToolsSettings - Included patterns for restart : []
-2026-06-21 15:02:55 [restartedMain] DEBUG o.s.b.d.settings.DevToolsSettings - Excluded patterns for restart : [/spring-boot-starter-[\w-]+/, /spring-boot/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot-actuator/(bin|build|out)/, /spring-boot-autoconfigure/(bin|build|out)/]
-2026-06-21 15:02:55 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-06-21 15:02:55 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-06-21 15:02:55 [restartedMain] DEBUG o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@b0e48a6
-2026-06-21 15:02:56 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-21 15:02:56 [restartedMain] DEBUG o.s.b.a.AutoConfigurationPackages - @EnableAutoConfiguration was declared on a class in the package 'com.example.ms_envio'. Automatic @Repository and @Entity scanning is enabled.
-2026-06-21 15:02:56 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 108 ms. Found 1 JPA repository interface.
-2026-06-21 15:02:57 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=401fc6f6-4383-3b73-8fe9-ba4b48440479
-2026-06-21 15:02:57 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - Code archive: C:\Users\Nacho\.m2\repository\org\springframework\boot\spring-boot-web-server\4.0.7\spring-boot-web-server-4.0.7.jar
-2026-06-21 15:02:57 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - Code archive: C:\Users\Nacho\.m2\repository\org\springframework\boot\spring-boot-web-server\4.0.7\spring-boot-web-server-4.0.7.jar
-2026-06-21 15:02:57 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
-2026-06-21 15:02:57 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8084 (http)
-2026-06-21 15:02:57 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-06-21 15:02:57 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
-2026-06-21 15:02:57 [restartedMain] DEBUG o.s.b.w.c.s.WebApplicationContextInitializer - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
-2026-06-21 15:02:57 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1690 ms
-2026-06-21 15:02:57 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
-2026-06-21 15:02:57 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
-2026-06-21 15:02:57 [restartedMain] DEBUG o.s.b.s.f.OrderedRequestContextFilter - Filter 'requestContextFilter' configured for use
-2026-06-21 15:02:57 [restartedMain] DEBUG o.s.b.s.f.OrderedCharacterEncodingFilter - Filter 'characterEncodingFilter' configured for use
-2026-06-21 15:02:57 [restartedMain] DEBUG o.s.b.w.s.DelegatingFilterProxyRegistrationBean$1 - Filter 'springSecurityFilterChain' configured for use
-2026-06-21 15:02:57 [restartedMain] DEBUG o.s.b.s.f.OrderedFormContentFilter - Filter 'formContentFilter' configured for use
-2026-06-21 15:02:57 [restartedMain] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-06-21 15:02:57 [restartedMain] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
-2026-06-21 15:02:58 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-21 15:02:58 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-06-21 15:02:59 [restartedMain] WARN  org.hibernate.orm.jdbc.error - HHH000247: ErrorCode: 1049, SQLState: 42000
-2026-06-21 15:02:59 [restartedMain] WARN  org.hibernate.orm.jdbc.error - Unknown database 'ms_envios'
-2026-06-21 15:02:59 [restartedMain] WARN  org.hibernate.orm.jdbc - HHH100046: Could not obtain connection to query JDBC database metadata
-org.hibernate.exception.SQLGrammarException: Unable to obtain isolated JDBC connection [Unknown database 'ms_envios'] [n/a]
+2026-06-21 15:04:28 [restartedMain] INFO  c.e.m.MsCategoriaApplication - Starting MsCategoriaApplication using Java 21.0.9 with PID 5256 (C:\Users\Nacho\Documents\GitHub\microservicios_perfulandia\microservicios\ms_categoria\target\classes started by Nacho in C:\Users\Nacho\Documents\GitHub\microservicios_perfulandia)
+2026-06-21 15:04:28 [restartedMain] DEBUG c.e.m.MsCategoriaApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
+2026-06-21 15:04:28 [restartedMain] INFO  c.e.m.MsCategoriaApplication - The following 1 profile is active: "dev"
+2026-06-21 15:04:28 [restartedMain] DEBUG o.s.boot.SpringApplication - Loading source class com.example.ms_categoria.MsCategoriaApplication
+2026-06-21 15:04:28 [restartedMain] DEBUG o.s.b.d.restart.ChangeableUrls - Matching URLs for reloading : [file:/C:/Users/Nacho/Documents/GitHub/microservicios_perfulandia/microservicios/ms_categoria/target/classes/]
+2026-06-21 15:04:28 [restartedMain] DEBUG o.s.b.d.settings.DevToolsSettings - Included patterns for restart : []
+2026-06-21 15:04:28 [restartedMain] DEBUG o.s.b.d.settings.DevToolsSettings - Excluded patterns for restart : [/spring-boot-starter-[\w-]+/, /spring-boot/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot-actuator/(bin|build|out)/, /spring-boot-autoconfigure/(bin|build|out)/]
+2026-06-21 15:04:28 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-21 15:04:28 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-21 15:04:28 [restartedMain] DEBUG o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@66caaefe
+2026-06-21 15:04:29 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-21 15:04:29 [restartedMain] DEBUG o.s.b.a.AutoConfigurationPackages - @EnableAutoConfiguration was declared on a class in the package 'com.example.ms_categoria'. Automatic @Repository and @Entity scanning is enabled.
+2026-06-21 15:04:29 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 115 ms. Found 1 JPA repository interface.
+2026-06-21 15:04:30 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=72d1a59d-fe8c-33fa-a014-739bf70af11c
+2026-06-21 15:04:30 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - Code archive: C:\Users\Nacho\.m2\repository\org\springframework\boot\spring-boot-web-server\4.0.7\spring-boot-web-server-4.0.7.jar
+2026-06-21 15:04:30 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - Code archive: C:\Users\Nacho\.m2\repository\org\springframework\boot\spring-boot-web-server\4.0.7\spring-boot-web-server-4.0.7.jar
+2026-06-21 15:04:30 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2026-06-21 15:04:30 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8089 (http)
+2026-06-21 15:04:30 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-21 15:04:30 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-21 15:04:30 [restartedMain] DEBUG o.s.b.w.c.s.WebApplicationContextInitializer - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2026-06-21 15:04:30 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1672 ms
+2026-06-21 15:04:30 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2026-06-21 15:04:30 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+2026-06-21 15:04:30 [restartedMain] DEBUG o.s.b.s.f.OrderedRequestContextFilter - Filter 'requestContextFilter' configured for use
+2026-06-21 15:04:30 [restartedMain] DEBUG o.s.b.s.f.OrderedCharacterEncodingFilter - Filter 'characterEncodingFilter' configured for use
+2026-06-21 15:04:30 [restartedMain] DEBUG o.s.b.w.s.DelegatingFilterProxyRegistrationBean$1 - Filter 'springSecurityFilterChain' configured for use
+2026-06-21 15:04:30 [restartedMain] DEBUG o.s.b.s.f.OrderedFormContentFilter - Filter 'formContentFilter' configured for use
+2026-06-21 15:04:30 [restartedMain] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-21 15:04:30 [restartedMain] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-06-21 15:04:31 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-21 15:04:31 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-21 15:04:32 [restartedMain] WARN  org.hibernate.orm.jdbc.error - HHH000247: ErrorCode: 1049, SQLState: 42000
+2026-06-21 15:04:32 [restartedMain] WARN  org.hibernate.orm.jdbc.error - Unknown database 'ms_categorias'
+2026-06-21 15:04:32 [restartedMain] WARN  org.hibernate.orm.jdbc - HHH100046: Could not obtain connection to query JDBC database metadata
+org.hibernate.exception.SQLGrammarException: Unable to obtain isolated JDBC connection [Unknown database 'ms_categorias'] [n/a]
 	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:63)
 	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
@@ -75,11 +75,11 @@ org.hibernate.exception.SQLGrammarException: Unable to obtain isolated JDBC conn
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at com.example.ms_envio.MsEnvioApplication.main(MsEnvioApplication.java:10)
+	at com.example.ms_categoria.MsCategoriaApplication.main(MsCategoriaApplication.java:10)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
-Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'ms_envios'
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'ms_categorias'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
@@ -97,8 +97,8 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'ms_envios'
 	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508)
 	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:48)
 	... 40 common frames omitted
-2026-06-21 15:02:59 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-06-21 15:02:59 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2026-06-21 15:04:33 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-21 15:04:33 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [undefined/unknown]
 	Database driver: undefined/unknown
 	Database dialect: MySQLDialect
@@ -110,17 +110,17 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'ms_envios'
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-06-21 15:03:00 [restartedMain] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-21 15:03:00 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-06-21 15:03:01 [restartedMain] WARN  org.hibernate.orm.jdbc.error - HHH000247: ErrorCode: 1049, SQLState: 42000
-2026-06-21 15:03:01 [restartedMain] WARN  org.hibernate.orm.jdbc.error - Unknown database 'ms_envios'
-2026-06-21 15:03:01 [restartedMain] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'ms_envios'] [n/a]
-2026-06-21 15:03:01 [restartedMain] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'ms_envios'] [n/a]
-2026-06-21 15:03:01 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2026-06-21 15:03:01 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Creating new Restarter for thread Thread[#1,main,5,main]
-2026-06-21 15:03:01 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Immediately restarting application
-2026-06-21 15:03:01 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Starting application com.example.ms_envio.MsEnvioApplication with URLs [file:/C:/Users/Nacho/Documents/GitHub/microservicios_perfulandia/microservicios/ms_envio/target/classes/]
-2026-06-21 15:03:01 [restartedMain] DEBUG o.s.b.a.l.ConditionEvaluationReportLogger - 
+2026-06-21 15:04:33 [restartedMain] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-21 15:04:33 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-21 15:04:34 [restartedMain] WARN  org.hibernate.orm.jdbc.error - HHH000247: ErrorCode: 1049, SQLState: 42000
+2026-06-21 15:04:34 [restartedMain] WARN  org.hibernate.orm.jdbc.error - Unknown database 'ms_categorias'
+2026-06-21 15:04:34 [restartedMain] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'ms_categorias'] [n/a]
+2026-06-21 15:04:34 [restartedMain] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'ms_categorias'] [n/a]
+2026-06-21 15:04:34 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-06-21 15:04:34 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Creating new Restarter for thread Thread[#1,main,5,main]
+2026-06-21 15:04:34 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Immediately restarting application
+2026-06-21 15:04:34 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Starting application com.example.ms_categoria.MsCategoriaApplication with URLs [file:/C:/Users/Nacho/Documents/GitHub/microservicios_perfulandia/microservicios/ms_categoria/target/classes/]
+2026-06-21 15:04:34 [restartedMain] DEBUG o.s.b.a.l.ConditionEvaluationReportLogger - 
 
 
 ============================
@@ -1736,8 +1736,8 @@ Unconditional classes:
 
 
 
-2026-06-21 15:03:01 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'ms_envios'] [n/a]
+2026-06-21 15:04:34 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'ms_categorias'] [n/a]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1815)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
@@ -1753,18 +1753,18 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at com.example.ms_envio.MsEnvioApplication.main(MsEnvioApplication.java:10)
+	at com.example.ms_categoria.MsCategoriaApplication.main(MsCategoriaApplication.java:10)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
-Caused by: jakarta.persistence.PersistenceException: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'ms_envios'] [n/a]
+Caused by: jakarta.persistence.PersistenceException: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'ms_categorias'] [n/a]
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:448)
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411)
 	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811)
 	... 18 common frames omitted
-Caused by: org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'ms_envios'] [n/a]
+Caused by: org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'ms_categorias'] [n/a]
 	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:64)
 	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
@@ -1794,7 +1794,7 @@ Caused by: org.hibernate.exception.SQLGrammarException: Unable to open JDBC Conn
 	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443)
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436)
 	... 22 common frames omitted
-Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'ms_envios'
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'ms_categorias'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
@@ -1812,97 +1812,95 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'ms_envios'
 	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508)
 	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44)
 	... 45 common frames omitted
-2026-06-21 15:03:29 [restartedMain] INFO  c.e.ms_envio.MsEnvioApplication - Starting MsEnvioApplication using Java 21.0.9 with PID 20320 (C:\Users\Nacho\Documents\GitHub\microservicios_perfulandia\microservicios\ms_envio\target\classes started by Nacho in C:\Users\Nacho\Documents\GitHub\microservicios_perfulandia)
-2026-06-21 15:03:29 [restartedMain] DEBUG c.e.ms_envio.MsEnvioApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
-2026-06-21 15:03:29 [restartedMain] INFO  c.e.ms_envio.MsEnvioApplication - The following 1 profile is active: "dev"
-2026-06-21 15:03:29 [restartedMain] DEBUG o.s.boot.SpringApplication - Loading source class com.example.ms_envio.MsEnvioApplication
-2026-06-21 15:03:29 [restartedMain] DEBUG o.s.b.d.restart.ChangeableUrls - Matching URLs for reloading : [file:/C:/Users/Nacho/Documents/GitHub/microservicios_perfulandia/microservicios/ms_envio/target/classes/]
-2026-06-21 15:03:29 [restartedMain] DEBUG o.s.b.d.settings.DevToolsSettings - Included patterns for restart : []
-2026-06-21 15:03:29 [restartedMain] DEBUG o.s.b.d.settings.DevToolsSettings - Excluded patterns for restart : [/spring-boot-starter-[\w-]+/, /spring-boot/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot-actuator/(bin|build|out)/, /spring-boot-autoconfigure/(bin|build|out)/]
-2026-06-21 15:03:29 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-06-21 15:03:29 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-06-21 15:03:29 [restartedMain] DEBUG o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@b0e48a6
-2026-06-21 15:03:30 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-21 15:03:30 [restartedMain] DEBUG o.s.b.a.AutoConfigurationPackages - @EnableAutoConfiguration was declared on a class in the package 'com.example.ms_envio'. Automatic @Repository and @Entity scanning is enabled.
-2026-06-21 15:03:30 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 106 ms. Found 1 JPA repository interface.
-2026-06-21 15:03:30 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=401fc6f6-4383-3b73-8fe9-ba4b48440479
-2026-06-21 15:03:31 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - Code archive: C:\Users\Nacho\.m2\repository\org\springframework\boot\spring-boot-web-server\4.0.7\spring-boot-web-server-4.0.7.jar
-2026-06-21 15:03:31 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - Code archive: C:\Users\Nacho\.m2\repository\org\springframework\boot\spring-boot-web-server\4.0.7\spring-boot-web-server-4.0.7.jar
-2026-06-21 15:03:31 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
-2026-06-21 15:03:31 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8084 (http)
-2026-06-21 15:03:31 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-06-21 15:03:31 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
-2026-06-21 15:03:31 [restartedMain] DEBUG o.s.b.w.c.s.WebApplicationContextInitializer - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
-2026-06-21 15:03:31 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1653 ms
-2026-06-21 15:03:31 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
-2026-06-21 15:03:31 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
-2026-06-21 15:03:31 [restartedMain] DEBUG o.s.b.s.f.OrderedRequestContextFilter - Filter 'requestContextFilter' configured for use
-2026-06-21 15:03:31 [restartedMain] DEBUG o.s.b.s.f.OrderedCharacterEncodingFilter - Filter 'characterEncodingFilter' configured for use
-2026-06-21 15:03:31 [restartedMain] DEBUG o.s.b.w.s.DelegatingFilterProxyRegistrationBean$1 - Filter 'springSecurityFilterChain' configured for use
-2026-06-21 15:03:31 [restartedMain] DEBUG o.s.b.s.f.OrderedFormContentFilter - Filter 'formContentFilter' configured for use
-2026-06-21 15:03:31 [restartedMain] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-06-21 15:03:31 [restartedMain] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
-2026-06-21 15:03:31 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-21 15:03:31 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-06-21 15:03:32 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c445e43
-2026-06-21 15:03:32 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-06-21 15:03:32 [restartedMain] WARN  org.hibernate.orm.core - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2026-06-21 15:03:32 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-06-21 15:03:32 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/ms_envios?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
+2026-06-21 15:04:55 [restartedMain] INFO  c.e.m.MsCategoriaApplication - Starting MsCategoriaApplication using Java 21.0.9 with PID 25776 (C:\Users\Nacho\Documents\GitHub\microservicios_perfulandia\microservicios\ms_categoria\target\classes started by Nacho in C:\Users\Nacho\Documents\GitHub\microservicios_perfulandia)
+2026-06-21 15:04:55 [restartedMain] DEBUG c.e.m.MsCategoriaApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
+2026-06-21 15:04:55 [restartedMain] INFO  c.e.m.MsCategoriaApplication - The following 1 profile is active: "dev"
+2026-06-21 15:04:55 [restartedMain] DEBUG o.s.boot.SpringApplication - Loading source class com.example.ms_categoria.MsCategoriaApplication
+2026-06-21 15:04:55 [restartedMain] DEBUG o.s.b.d.restart.ChangeableUrls - Matching URLs for reloading : [file:/C:/Users/Nacho/Documents/GitHub/microservicios_perfulandia/microservicios/ms_categoria/target/classes/]
+2026-06-21 15:04:55 [restartedMain] DEBUG o.s.b.d.settings.DevToolsSettings - Included patterns for restart : []
+2026-06-21 15:04:55 [restartedMain] DEBUG o.s.b.d.settings.DevToolsSettings - Excluded patterns for restart : [/spring-boot-starter-[\w-]+/, /spring-boot/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot-actuator/(bin|build|out)/, /spring-boot-autoconfigure/(bin|build|out)/]
+2026-06-21 15:04:55 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-21 15:04:55 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-21 15:04:55 [restartedMain] DEBUG o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@b0e48a6
+2026-06-21 15:04:56 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-21 15:04:56 [restartedMain] DEBUG o.s.b.a.AutoConfigurationPackages - @EnableAutoConfiguration was declared on a class in the package 'com.example.ms_categoria'. Automatic @Repository and @Entity scanning is enabled.
+2026-06-21 15:04:56 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 100 ms. Found 1 JPA repository interface.
+2026-06-21 15:04:56 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=72d1a59d-fe8c-33fa-a014-739bf70af11c
+2026-06-21 15:04:57 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - Code archive: C:\Users\Nacho\.m2\repository\org\springframework\boot\spring-boot-web-server\4.0.7\spring-boot-web-server-4.0.7.jar
+2026-06-21 15:04:57 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - Code archive: C:\Users\Nacho\.m2\repository\org\springframework\boot\spring-boot-web-server\4.0.7\spring-boot-web-server-4.0.7.jar
+2026-06-21 15:04:57 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2026-06-21 15:04:57 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8089 (http)
+2026-06-21 15:04:57 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-21 15:04:57 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-21 15:04:57 [restartedMain] DEBUG o.s.b.w.c.s.WebApplicationContextInitializer - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2026-06-21 15:04:57 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1621 ms
+2026-06-21 15:04:57 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2026-06-21 15:04:57 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+2026-06-21 15:04:57 [restartedMain] DEBUG o.s.b.s.f.OrderedRequestContextFilter - Filter 'requestContextFilter' configured for use
+2026-06-21 15:04:57 [restartedMain] DEBUG o.s.b.s.f.OrderedCharacterEncodingFilter - Filter 'characterEncodingFilter' configured for use
+2026-06-21 15:04:57 [restartedMain] DEBUG o.s.b.w.s.DelegatingFilterProxyRegistrationBean$1 - Filter 'springSecurityFilterChain' configured for use
+2026-06-21 15:04:57 [restartedMain] DEBUG o.s.b.s.f.OrderedFormContentFilter - Filter 'formContentFilter' configured for use
+2026-06-21 15:04:57 [restartedMain] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-21 15:04:57 [restartedMain] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-06-21 15:04:57 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-21 15:04:57 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-21 15:04:58 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@48b983b
+2026-06-21 15:04:58 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-21 15:04:58 [restartedMain] WARN  org.hibernate.orm.core - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-21 15:04:58 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-21 15:04:58 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/ms_categorias?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
 	Database version: 5.5.5
-	Default catalog/schema: ms_envios/undefined
+	Default catalog/schema: ms_categorias/undefined
 	Autocommit mode: undefined/unknown
 	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
 	JDBC fetch size: none
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-06-21 15:03:32 [restartedMain] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-21 15:03:32 [restartedMain] DEBUG org.hibernate.SQL - 
-    create table envios (
+2026-06-21 15:04:58 [restartedMain] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-21 15:04:58 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table categorias (
         id bigint not null auto_increment,
-        cliente varchar(50) not null,
-        direccion_destino varchar(100) not null,
-        estado enum ('CANCELADO','ENTREGADO','EN_CAMINO','PENDIENTE') not null,
-        fecha_envio datetime(6) not null,
+        descripcion varchar(200) not null,
+        nombre varchar(50) not null,
         primary key (id)
     ) engine=InnoDB
-2026-06-21 15:03:32 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-21 15:03:32 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-06-21 15:03:33 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-21 15:03:33 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
-2026-06-21 15:03:33 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 16 mappings in 'requestMappingHandlerMapping'
-2026-06-21 15:03:33 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /doc/swagger-ui/**, /doc/swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.2/*swagger-initializer.js] in 'resourceHandlerMapping'
-2026-06-21 15:03:33 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-06-21 15:03:33 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-06-21 15:03:34 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestClient.
-2026-06-21 15:03:34 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-06-21 15:03:34 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
-2026-06-21 15:03:34 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
-2026-06-21 15:03:34 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
-2026-06-21 15:03:34 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
-2026-06-21 15:03:34 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
-2026-06-21 15:03:34 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
-2026-06-21 15:03:34 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
-2026-06-21 15:03:34 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
-2026-06-21 15:03:34 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
-2026-06-21 15:03:34 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
-2026-06-21 15:03:34 [restartedMain] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
-2026-06-21 15:03:34 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
-2026-06-21 15:03:34 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
-2026-06-21 15:03:34 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-06-21 15:03:34 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1782068614435 with initial instances count: 4
-2026-06-21 15:03:34 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application MS_ENVIO with eureka with status UP
-2026-06-21 15:03:34 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1782068614438, current=UP, previous=STARTING]
-2026-06-21 15:03:34 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS_ENVIO/DESKTOP-VFAPE9K:ms_envio:8084: registering service...
-2026-06-21 15:03:34 [DiscoveryClient-InstanceInfoReplicator-%d] DEBUG o.s.web.client.DefaultRestClient - Writing [InstanceInfo [instanceId = DESKTOP-VFAPE9K:ms_envio:8084, appName = MS_ENVIO, hostName = 192.168.1.88, status = UP, ipAddr = 192.168.1.88, port = 8084, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@5fd4bc3e] as "application/json" with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
-2026-06-21 15:03:34 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8084 (http) with context path '/'
-2026-06-21 15:03:34 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8084
-2026-06-21 15:03:34 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS_ENVIO/DESKTOP-VFAPE9K:ms_envio:8084 - registration status: 204
-2026-06-21 15:03:34 [restartedMain] DEBUG o.s.b.a.l.ConditionEvaluationReportLogger - 
+2026-06-21 15:04:58 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-21 15:04:58 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-21 15:04:58 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-21 15:04:59 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-06-21 15:04:59 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 16 mappings in 'requestMappingHandlerMapping'
+2026-06-21 15:04:59 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /doc/swagger-ui/**, /doc/swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.2/*swagger-initializer.js] in 'resourceHandlerMapping'
+2026-06-21 15:04:59 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-06-21 15:04:59 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-06-21 15:04:59 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestClient.
+2026-06-21 15:04:59 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-21 15:04:59 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2026-06-21 15:04:59 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2026-06-21 15:04:59 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-06-21 15:04:59 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-06-21 15:04:59 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-06-21 15:04:59 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-06-21 15:04:59 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2026-06-21 15:04:59 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-06-21 15:04:59 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2026-06-21 15:04:59 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-06-21 15:05:00 [restartedMain] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-21 15:05:00 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2026-06-21 15:05:00 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2026-06-21 15:05:00 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-21 15:05:00 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1782068700254 with initial instances count: 5
+2026-06-21 15:05:00 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application MS_CATEGORIA with eureka with status UP
+2026-06-21 15:05:00 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1782068700257, current=UP, previous=STARTING]
+2026-06-21 15:05:00 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS_CATEGORIA/DESKTOP-VFAPE9K:ms_categoria:8089: registering service...
+2026-06-21 15:05:00 [DiscoveryClient-InstanceInfoReplicator-%d] DEBUG o.s.web.client.DefaultRestClient - Writing [InstanceInfo [instanceId = DESKTOP-VFAPE9K:ms_categoria:8089, appName = MS_CATEGORIA, hostName = 192.168.1.88, status = UP, ipAddr = 192.168.1.88, port = 8089, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@cfb6985] as "application/json" with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
+2026-06-21 15:05:00 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8089 (http) with context path '/'
+2026-06-21 15:05:00 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8089
+2026-06-21 15:05:00 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS_CATEGORIA/DESKTOP-VFAPE9K:ms_categoria:8089 - registration status: 204
+2026-06-21 15:05:00 [restartedMain] DEBUG o.s.b.a.l.ConditionEvaluationReportLogger - 
 
 
 ============================
@@ -3518,15 +3516,12 @@ Unconditional classes:
 
 
 
-2026-06-21 15:03:34 [restartedMain] INFO  c.e.ms_envio.MsEnvioApplication - Started MsEnvioApplication in 5.411 seconds (process running for 6.052)
-2026-06-21 15:03:34 [restartedMain] DEBUG o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
-2026-06-21 15:03:34 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Creating new Restarter for thread Thread[#1,main,5,main]
-2026-06-21 15:03:34 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Immediately restarting application
-2026-06-21 15:03:34 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Starting application com.example.ms_envio.MsEnvioApplication with URLs [file:/C:/Users/Nacho/Documents/GitHub/microservicios_perfulandia/microservicios/ms_envio/target/classes/]
-2026-06-21 15:03:34 [restartedMain] DEBUG o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
-2026-06-21 15:04:04 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
-2026-06-21 15:04:34 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
-2026-06-21 15:05:04 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
-2026-06-21 15:05:34 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
-2026-06-21 15:06:04 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
-2026-06-21 15:06:34 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-21 15:05:00 [restartedMain] INFO  c.e.m.MsCategoriaApplication - Started MsCategoriaApplication in 5.245 seconds (process running for 5.886)
+2026-06-21 15:05:00 [restartedMain] DEBUG o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+2026-06-21 15:05:00 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Creating new Restarter for thread Thread[#1,main,5,main]
+2026-06-21 15:05:00 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Immediately restarting application
+2026-06-21 15:05:00 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Starting application com.example.ms_categoria.MsCategoriaApplication with URLs [file:/C:/Users/Nacho/Documents/GitHub/microservicios_perfulandia/microservicios/ms_categoria/target/classes/]
+2026-06-21 15:05:00 [restartedMain] DEBUG o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2026-06-21 15:05:30 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-21 15:06:00 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-21 15:06:30 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]

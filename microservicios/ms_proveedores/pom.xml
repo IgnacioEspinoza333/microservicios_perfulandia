@@ -15,9 +15,15 @@
 
     <artifactId>ms_proveedores</artifactId>
     <name>ms_proveedores</name>
-    <description>Microservicio de proveedores y abastecimientos</description>
+    <description>Microservicio de proveedores</description>
 
     <dependencies>
+
+        <!-- ✅ EUREKA CLIENT -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
 
         <!-- ✅ PERSISTENCIA -->
         <dependency>
@@ -91,7 +97,14 @@
             <version>0.2.6</version>
         </dependency>
 
-        <!-- ✅ ====== TESTING (CORRECTO) ====== -->
+        <!-- ✅ DATAFAKER -->
+        <dependency>
+            <groupId>net.datafaker</groupId>
+            <artifactId>datafaker</artifactId>
+            <version>2.3.0</version>
+        </dependency>
+
+        <!-- ✅ ====== TESTING ====== -->
 
         <!-- Base -->
         <dependency>
@@ -100,7 +113,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Seguridad en tests -->
+        <!-- Seguridad -->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
@@ -121,14 +134,14 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Extra tests -->
+        <!-- Extra -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-test</artifactId>
             <scope>test</scope>
         </dependency>
 
-        <!-- Base en memoria -->
+        <!-- BD en memoria -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
@@ -154,7 +167,7 @@
                 </configuration>
             </plugin>
 
-            <!-- ✅ LOMBOK COMPILER -->
+            <!-- ✅ COMPILADOR (Lombok) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
