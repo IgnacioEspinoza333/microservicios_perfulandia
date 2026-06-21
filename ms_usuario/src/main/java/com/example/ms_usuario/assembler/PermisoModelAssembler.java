@@ -16,7 +16,9 @@ public class PermisoModelAssembler implements RepresentationModelAssembler<Permi
         return EntityModel.of(
                 permiso,
                 linkTo(methodOn(PermisoControllerV2.class).obtenerPorId(permiso.getId())).withSelfRel(),
-                linkTo(methodOn(PermisoControllerV2.class).listar()).withRel("permisos")
+                linkTo(methodOn(PermisoControllerV2.class).listar()).withRel("permisos"),
+                linkTo(methodOn(PermisoControllerV2.class).actualizar(permiso.getId(), null)).withRel("actualizar"),
+                linkTo(methodOn(PermisoControllerV2.class).eliminar(permiso.getId())).withRel("eliminar")
         );
     }
 }

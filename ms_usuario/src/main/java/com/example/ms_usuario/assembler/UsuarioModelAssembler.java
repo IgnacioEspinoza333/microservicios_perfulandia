@@ -17,7 +17,9 @@ public class UsuarioModelAssembler implements RepresentationModelAssembler<Usuar
                 usuario,
                 linkTo(methodOn(UsuarioControllerV2.class).obtenerPorId(usuario.getId())).withSelfRel(),
                 linkTo(methodOn(UsuarioControllerV2.class).listar()).withRel("usuarios"),
-                linkTo(methodOn(UsuarioControllerV2.class).listarRoles(usuario.getId())).withRel("roles")
+                linkTo(methodOn(UsuarioControllerV2.class).listarRoles(usuario.getId())).withRel("roles"),
+                 linkTo(methodOn(UsuarioControllerV2.class).actualizar(usuario.getId(), null)).withRel("actualizar"),
+                linkTo(methodOn(UsuarioControllerV2.class).eliminar(usuario.getId())).withRel("eliminar")
         );
     }
 }
