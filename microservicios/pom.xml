@@ -16,6 +16,7 @@
 
     <!-- ✅ MÓDULOS -->
     <modules>
+        <module>eureka-server</module>
         <module>ms_usuario</module>
         <module>ms_clientes</module>
         <module>ms_pedidos</module>
@@ -39,7 +40,7 @@
     <dependencyManagement>
         <dependencies>
 
-            <!-- Spring Boot (controla versiones de starters) -->
+            <!-- Spring Boot -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -60,7 +61,7 @@
         </dependencies>
     </dependencyManagement>
 
-    <!-- ✅ PLUGINS COMUNES (opcional pero recomendado) -->
+    <!-- ✅ PLUGINS COMUNES -->
     <build>
         <pluginManagement>
             <plugins>

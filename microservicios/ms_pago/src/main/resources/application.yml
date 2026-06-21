@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: ms-pago
+
+server:
+  port: 8083
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+      
+#Para evitar problemas de hostname
+  instance:
+    prefer-ip-address: true

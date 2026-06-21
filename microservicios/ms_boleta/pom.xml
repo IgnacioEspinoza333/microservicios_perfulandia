@@ -5,7 +5,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- 🔗 AHORA USA TU POM PADRE -->
+    <!-- 🔗 POM PADRE -->
     <parent>
         <groupId>com.example</groupId>
         <artifactId>microservicios</artifactId>
@@ -13,13 +13,17 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    
-
     <artifactId>ms_boleta</artifactId>
     <name>ms_boleta</name>
     <description>Microservicio de boletas</description>
 
     <dependencies>
+
+        <!-- ✅ EUREKA CLIENT (NUEVO) -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
 
         <!-- Persistencia -->
         <dependency>
@@ -131,6 +135,7 @@
     <build>
         <plugins>
 
+            <!-- SPRING BOOT -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

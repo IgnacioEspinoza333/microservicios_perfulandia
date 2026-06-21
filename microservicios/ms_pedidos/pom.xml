@@ -19,6 +19,12 @@
 
     <dependencies>
 
+        <!-- ✅ EUREKA CLIENT -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
         <!-- ✅ PERSISTENCIA -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -91,6 +97,13 @@
             <version>0.2.6</version>
         </dependency>
 
+        <!-- ✅ DATAFAKER -->
+        <dependency>
+            <groupId>net.datafaker</groupId>
+            <artifactId>datafaker</artifactId>
+            <version>2.3.0</version>
+        </dependency>
+
         <!-- ✅ ====== TESTING ====== -->
 
         <!-- Base -->
@@ -100,7 +113,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Seguridad en tests -->
+        <!-- Seguridad -->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
@@ -121,14 +134,14 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Extra tests (igual al primer POM) -->
+        <!-- Extra -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-test</artifactId>
             <scope>test</scope>
         </dependency>
 
-        <!-- H2 -->
+        <!-- BD en memoria -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
@@ -154,7 +167,7 @@
                 </configuration>
             </plugin>
 
-            <!-- ✅ LOMBOK COMPILER -->
+            <!-- ✅ COMPILADOR (Lombok) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
