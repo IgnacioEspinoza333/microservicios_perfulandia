@@ -12,4 +12,5 @@ public class InventarioResponseDto {
     private Long productoId;
     private Integer stock;
     private Long version;
+    private ProductoResumenExternoDto producto;
 }

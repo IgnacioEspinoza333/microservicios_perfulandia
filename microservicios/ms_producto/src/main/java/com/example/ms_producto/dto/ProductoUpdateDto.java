@@ -26,4 +26,10 @@ public class ProductoUpdateDto {
 
     @NotNull(message = "El estado activo es obligatorio")
     private Boolean activo;
+
+    @NotNull(message = "La categoriaId es obligatoria")
+    private Long categoriaId;
+
+    @NotNull(message = "La proveedorId es obligatoria")
+    private Long proveedorId;
 }
