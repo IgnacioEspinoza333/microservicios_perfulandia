@@ -16,7 +16,9 @@ public class RolModelAssembler implements RepresentationModelAssembler<RolRespon
         return EntityModel.of(
                 rol,
                 linkTo(methodOn(RolControllerV2.class).obtenerPorId(rol.getId())).withSelfRel(),
-                linkTo(methodOn(RolControllerV2.class).listar()).withRel("roles")
+                linkTo(methodOn(RolControllerV2.class).listar()).withRel("roles"),
+                linkTo(methodOn(RolControllerV2.class).actualizarRol(rol.getId(), null)).withRel("actualizar"),
+                linkTo(methodOn(RolControllerV2.class).eliminarRol(rol.getId())).withRel("eliminar")
         );
     }
 }

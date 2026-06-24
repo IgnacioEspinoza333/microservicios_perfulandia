@@ -16,7 +16,9 @@ public class BoletaModelAssembler implements RepresentationModelAssembler<Boleta
         return EntityModel.of(
                 boleta,
                 linkTo(methodOn(BoletaControllerV2.class).obtener(boleta.getId())).withSelfRel(),
-                linkTo(methodOn(BoletaControllerV2.class).listar()).withRel("boletas")
+                linkTo(methodOn(BoletaControllerV2.class).listar()).withRel("boletas"),
+                 linkTo(methodOn(BoletaControllerV2.class).actualizarBoleta(boleta.getId(), null)).withRel("actualizar"),
+                linkTo(methodOn(BoletaControllerV2.class).eliminarBoleta(boleta.getId())).withRel("eliminar")
         );
     }
 }

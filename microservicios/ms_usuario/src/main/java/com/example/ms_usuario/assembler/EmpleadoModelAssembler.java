@@ -17,7 +17,9 @@ public class EmpleadoModelAssembler implements RepresentationModelAssembler<Empl
         return EntityModel.of(
                 empleado,
                 linkTo(methodOn(EmpleadoControllerV2.class).obtenerPorId(empleado.getId())).withSelfRel(),
-                linkTo(methodOn(EmpleadoControllerV2.class).listar()).withRel("empleados")
+                linkTo(methodOn(EmpleadoControllerV2.class).listar()).withRel("empleados"),
+                linkTo(methodOn(EmpleadoControllerV2.class).actualizarEmpleado(empleado.getId(), null)).withRel("actualizar"),
+                linkTo(methodOn(EmpleadoControllerV2.class).eliminarEmpleado(empleado.getId())).withRel("eliminar")
         );
     }
 }
