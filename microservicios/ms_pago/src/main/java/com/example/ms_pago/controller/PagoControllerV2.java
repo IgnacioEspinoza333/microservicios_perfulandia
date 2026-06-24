@@ -58,4 +58,13 @@ public class PagoControllerV2 {
         pagoService.eliminarPago(id);
         return ResponseEntity.noContent().build();
     }
+    @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+public ResponseEntity<EntityModel<PagoResponseDTO>> actualizar(
+        @PathVariable Long id,
+        @RequestBody PagoRequestDTO request) {
+
+    PagoResponseDTO actualizado = pagoService.actualizarPago(id, request);
+    return ResponseEntity.ok(assembler.toModel(actualizado));
+}
+
 }

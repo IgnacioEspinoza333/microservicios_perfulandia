@@ -17,8 +17,8 @@ public class PermisoModelAssembler implements RepresentationModelAssembler<Permi
                 permiso,
                 linkTo(methodOn(PermisoControllerV2.class).obtenerPorId(permiso.getId())).withSelfRel(),
                 linkTo(methodOn(PermisoControllerV2.class).listar()).withRel("permisos"),
-                linkTo(methodOn(PermisoControllerV2.class).actualizarPermiso(permiso.getId(), null)).withRel("actualizar"),
-                linkTo(methodOn(PermisoControllerV2.class).eliminarPermiso(permiso.getId())).withRel("eliminar")
+                linkTo(methodOn(PermisoControllerV2.class).actualizar(permiso.getId(), null)).withRel("actualizar"),
+                linkTo(methodOn(PermisoControllerV2.class).eliminar(permiso.getId())).withRel("eliminar")
                 
         );
     }

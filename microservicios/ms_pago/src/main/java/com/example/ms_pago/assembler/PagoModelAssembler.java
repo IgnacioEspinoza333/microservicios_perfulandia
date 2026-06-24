@@ -17,8 +17,8 @@ public class PagoModelAssembler implements RepresentationModelAssembler<PagoResp
                 pago,
                 linkTo(methodOn(PagoControllerV2.class).obtener(pago.getId())).withSelfRel(),
                 linkTo(methodOn(PagoControllerV2.class).listar()).withRel("pagos"),
-                linkTo(methodOn(PagoControllerV2.class).actualizarPago(pago.getId(), null)).withRel("actualizar"),
-                linkTo(methodOn(PagoControllerV2.class).eliminarPago(pago.getId())).withRel("eliminar")
+                linkTo(methodOn(PagoControllerV2.class).actualizar(pago.getId(), null)).withRel("actualizar"),
+                linkTo(methodOn(PagoControllerV2.class).eliminar(pago.getId())).withRel("eliminar")
         );
     }
 }

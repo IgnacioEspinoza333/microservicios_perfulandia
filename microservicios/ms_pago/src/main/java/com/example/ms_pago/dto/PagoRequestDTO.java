@@ -1,5 +1,7 @@
 package com.example.ms_pago.dto;
 
+import java.time.LocalDateTime;
+
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
@@ -22,5 +24,8 @@ public class PagoRequestDTO {
     @NotBlank(message = "El método de pago es obligatorio")
     @Size(min = 3, max = 20, message = "El método debe tener entre 3 y 20 caracteres")
     private String metodo;
+
+    private LocalDateTime fecha;   // opcional, si quieres permitir actualizar la fecha
+    private String estado; 
 
 }

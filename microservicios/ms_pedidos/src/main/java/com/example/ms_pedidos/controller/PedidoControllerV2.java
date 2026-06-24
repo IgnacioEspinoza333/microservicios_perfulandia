@@ -56,4 +56,19 @@ public class PedidoControllerV2 {
         pedidoService.cancelarPedido(id);
         return ResponseEntity.noContent().build();
     }
+    @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+public ResponseEntity<EntityModel<PedidoResponseDTO>> actualizar(
+        @PathVariable Long id,
+        @RequestBody PedidoRequestDTO request) {
+
+    PedidoResponseDTO actualizado = pedidoService.actualizarPedido(id, request);
+    return ResponseEntity.ok(assembler.toModel(actualizado));
+}
+
+  @DeleteMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+public ResponseEntity<Void> eliminar(@PathVariable Long id) {
+    pedidoService.eliminarPedido(id);
+    return ResponseEntity.noContent().build();
+}
+
 }

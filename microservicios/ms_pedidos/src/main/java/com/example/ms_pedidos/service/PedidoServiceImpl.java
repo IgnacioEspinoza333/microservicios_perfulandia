@@ -77,5 +77,38 @@ public class PedidoServiceImpl implements PedidoService {
                         .collect(Collectors.toList()))
                 .build();
     }
+    @Override
+public PedidoResponseDTO actualizarPedido(Long id, PedidoRequestDTO request) {
+    Pedido pedido = pedidoRepository.findById(id)
+            .orElseThrow(() -> new ResourceNotFoundException("Pedido no encontrado con id: " + id));
 
+    // Actualizamos los campos principales
+    pedido.setCliente(request.getCliente());
+    pedido.setFecha(request.getFecha() != null ? request.getFecha() : pedido.getFecha());
+    pedido.setEstado(request.getEstado() != null ? request.getEstado() : pedido.getEstado());
+
+    // Actualizamos los detalles
+    pedido.getDetalles().clear();
+    pedido.getDetalles().addAll(
+            request.getDetalles().stream()
+                    .map(d -> DetallePedido.builder()
+                            .producto(d.getProducto())
+                            .cantidad(d.getCantidad())
+                            .precioUnitario(d.getPrecioUnitario())
+                            .pedido(pedido)
+                            .build())
+                    .collect(Collectors.toList())
+    );
+
+    Pedido actualizado = pedidoRepository.save(pedido);
+    return toResponse(actualizado);
+}
+
+@Override
+public void eliminarPedido(Long id) {
+    Pedido pedido = pedidoRepository.findById(id)
+     .orElseThrow(() -> new ResourceNotFoundException("Pedido no encontrado con id: " + id));
+    pedidoRepository.delete(pedido);
+
+}
 }
