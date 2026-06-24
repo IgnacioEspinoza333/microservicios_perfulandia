@@ -15,11 +15,10 @@ public class CategoriaModelAssembler implements RepresentationModelAssembler<Cat
     public EntityModel<CategoriaResponseDTO> toModel(CategoriaResponseDTO categoria) {
         return EntityModel.of(
                 categoria,
-                linkTo(methodOn(CategoriaControllerV2.class).obtener(categoria.getId())).withSelfRel(),
-                linkTo(methodOn(CategoriaControllerV2.class).listar()).withRel("categorias"),
+                linkTo(methodOn(CategoriaControllerV2.class).obtenerCategoria(categoria.getId())).withSelfRel(),
+                linkTo(methodOn(CategoriaControllerV2.class).listarCategorias()).withRel("categorias"),
                 linkTo(methodOn(CategoriaControllerV2.class).actualizarCategoria(categoria.getId(), null)).withRel("actualizar"),
                 linkTo(methodOn(CategoriaControllerV2.class).eliminarCategoria(categoria.getId())).withRel("eliminar")
-
         );
     }
 }

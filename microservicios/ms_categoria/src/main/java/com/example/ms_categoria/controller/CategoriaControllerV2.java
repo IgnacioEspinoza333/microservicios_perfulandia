@@ -27,38 +27,40 @@ public class CategoriaControllerV2 {
     private final CategoriaModelAssembler assembler;
 
     @PostMapping(produces = MediaTypes.HAL_JSON_VALUE)
-    public ResponseEntity<EntityModel<CategoriaResponseDTO>> crear(@RequestBody CategoriaRequestDTO request) {
+    public ResponseEntity<EntityModel<CategoriaResponseDTO>> crearCategoria(
+            @Valid @RequestBody CategoriaRequestDTO request) {
+
         CategoriaResponseDTO nuevaCategoria = categoriaService.crearCategoria(request);
 
         return ResponseEntity
-                .created(linkTo(methodOn(CategoriaControllerV2.class).obtener(nuevaCategoria.getId())).toUri())
+                .created(linkTo(methodOn(CategoriaControllerV2.class)
+                        .obtenerCategoria(nuevaCategoria.getId())).toUri())
                 .body(assembler.toModel(nuevaCategoria));
     }
 
     @GetMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
-    public EntityModel<CategoriaResponseDTO> obtener(@PathVariable Long id) {
+    public EntityModel<CategoriaResponseDTO> obtenerCategoria(@PathVariable Long id) {
         CategoriaResponseDTO categoria = categoriaService.obtenerCategoria(id);
         return assembler.toModel(categoria);
     }
 
     @GetMapping(produces = MediaTypes.HAL_JSON_VALUE)
-    public CollectionModel<EntityModel<CategoriaResponseDTO>> listar() {
+    public CollectionModel<EntityModel<CategoriaResponseDTO>> listarCategorias() {
         List<EntityModel<CategoriaResponseDTO>> categorias = categoriaService.listarCategorias().stream()
                 .map(assembler::toModel)
                 .collect(Collectors.toList());
 
         return CollectionModel.of(
                 categorias,
-                linkTo(methodOn(CategoriaControllerV2.class).listar()).withSelfRel()
+                linkTo(methodOn(CategoriaControllerV2.class).listarCategorias()).withSelfRel()
         );
     }
 
-    @DeleteMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
-    public ResponseEntity<Void> eliminar(@PathVariable Long id) {
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> eliminarCategoria(@PathVariable Long id) {
         categoriaService.eliminarCategoria(id);
         return ResponseEntity.noContent().build();
     }
-
 
     @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
     public ResponseEntity<EntityModel<CategoriaResponseDTO>> actualizarCategoria(

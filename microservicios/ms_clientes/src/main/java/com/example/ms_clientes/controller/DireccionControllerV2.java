@@ -29,7 +29,7 @@ public class DireccionControllerV2 {
     private final DireccionModelAssembler assembler;
 
     @PostMapping(value = "/clientes/{clienteId}/direcciones", produces = MediaTypes.HAL_JSON_VALUE)
-    public ResponseEntity<EntityModel<DireccionResponseDto>> crear(
+    public ResponseEntity<EntityModel<DireccionResponseDto>> crearDireccion(
             @PathVariable Long clienteId,
             @Valid @RequestBody DireccionRequestDto dto) {
 
@@ -38,12 +38,12 @@ public class DireccionControllerV2 {
         DireccionResponseDto nuevaDireccion = direccionService.crear(clienteId, dto);
 
         return ResponseEntity
-                .created(linkTo(methodOn(DireccionControllerV2.class).obtenerPorId(nuevaDireccion.getId())).toUri())
+                .created(linkTo(methodOn(DireccionControllerV2.class).obtenerDireccionPorId(nuevaDireccion.getId())).toUri())
                 .body(assembler.toModel(nuevaDireccion));
     }
 
     @GetMapping(value = "/direcciones", produces = MediaTypes.HAL_JSON_VALUE)
-    public CollectionModel<EntityModel<DireccionResponseDto>> listar() {
+    public CollectionModel<EntityModel<DireccionResponseDto>> listarDirecciones() {
         log.debug("Solicitud v2 para listar direcciones");
 
         List<EntityModel<DireccionResponseDto>> direcciones = direccionService.listar().stream()
@@ -52,12 +52,12 @@ public class DireccionControllerV2 {
 
         return CollectionModel.of(
                 direcciones,
-                linkTo(methodOn(DireccionControllerV2.class).listar()).withSelfRel()
+                linkTo(methodOn(DireccionControllerV2.class).listarDirecciones()).withSelfRel()
         );
     }
 
     @GetMapping(value = "/clientes/{clienteId}/direcciones", produces = MediaTypes.HAL_JSON_VALUE)
-    public CollectionModel<EntityModel<DireccionResponseDto>> listarPorCliente(@PathVariable Long clienteId) {
+    public CollectionModel<EntityModel<DireccionResponseDto>> listarDireccionesPorCliente(@PathVariable Long clienteId) {
         log.debug("Solicitud v2 para listar direcciones del cliente con id: {}", clienteId);
 
         List<EntityModel<DireccionResponseDto>> direcciones = direccionService.listarPorCliente(clienteId).stream()
@@ -66,14 +66,14 @@ public class DireccionControllerV2 {
 
         return CollectionModel.of(
                 direcciones,
-                linkTo(methodOn(DireccionControllerV2.class).listarPorCliente(clienteId)).withSelfRel(),
-                linkTo(methodOn(ClienteControllerV2.class).obtenerPorId(clienteId)).withRel("cliente"),
-                linkTo(methodOn(DireccionControllerV2.class).listar()).withRel("direcciones")
+                linkTo(methodOn(DireccionControllerV2.class).listarDireccionesPorCliente(clienteId)).withSelfRel(),
+                linkTo(methodOn(ClienteControllerV2.class).obtenerClientePorId(clienteId)).withRel("cliente"),
+                linkTo(methodOn(DireccionControllerV2.class).listarDirecciones()).withRel("direcciones")
         );
     }
 
     @GetMapping(value = "/direcciones/{id}", produces = MediaTypes.HAL_JSON_VALUE)
-    public EntityModel<DireccionResponseDto> obtenerPorId(@PathVariable Long id) {
+    public EntityModel<DireccionResponseDto> obtenerDireccionPorId(@PathVariable Long id) {
         log.debug("Solicitud v2 para obtener dirección con id: {}", id);
 
         DireccionResponseDto direccion = direccionService.obtenerPorId(id);
@@ -81,7 +81,7 @@ public class DireccionControllerV2 {
     }
 
     @PutMapping(value = "/direcciones/{id}", produces = MediaTypes.HAL_JSON_VALUE)
-    public ResponseEntity<EntityModel<DireccionResponseDto>> actualizar(
+    public ResponseEntity<EntityModel<DireccionResponseDto>> actualizarDireccion(
             @PathVariable Long id,
             @Valid @RequestBody DireccionUpdateDto dto) {
 
@@ -91,8 +91,8 @@ public class DireccionControllerV2 {
         return ResponseEntity.ok(assembler.toModel(actualizada));
     }
 
-    @DeleteMapping(value = "/direcciones/{id}", produces = MediaTypes.HAL_JSON_VALUE)
-    public ResponseEntity<Void> eliminar(@PathVariable Long id) {
+    @DeleteMapping("/direcciones/{id}")
+    public ResponseEntity<Void> eliminarDireccion(@PathVariable Long id) {
         log.warn("Solicitud v2 para eliminar dirección con id: {}", id);
 
         direccionService.eliminar(id);
