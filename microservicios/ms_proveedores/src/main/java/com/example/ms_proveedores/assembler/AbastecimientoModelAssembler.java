@@ -17,8 +17,8 @@ public class AbastecimientoModelAssembler implements RepresentationModelAssemble
                 abastecimiento,
                 linkTo(methodOn(AbastecimientoControllerV2.class).obtenerPorId(abastecimiento.getId())).withSelfRel(),
                 linkTo(methodOn(AbastecimientoControllerV2.class).listar()).withRel("abastecimientos"),
-                linkTo(methodOn(AbastecimientoControllerV2.class).actualizarAbastecimiento(abastecimiento.getId(), null)).withRel("actualizar"),
-                linkTo(methodOn(AbastecimientoControllerV2.class).eliminarAbastecimiento(abastecimiento.getId())).withRel("eliminar")
+                linkTo(methodOn(AbastecimientoControllerV2.class).actualizar(abastecimiento.getId(), null)).withRel("actualizar"),
+                linkTo(methodOn(AbastecimientoControllerV2.class).eliminar(abastecimiento.getId())).withRel("eliminar")
         );
     }
 }

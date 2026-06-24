@@ -17,8 +17,8 @@ public class ProductoModelAssembler implements RepresentationModelAssembler<Prod
                 producto,
                 linkTo(methodOn(ProductoControllerV2.class).obtenerPorId(producto.getId())).withSelfRel(),
                 linkTo(methodOn(ProductoControllerV2.class).listar()).withRel("productos"),
-                linkTo(methodOn(ProductoControllerV2.class).actualizarProducto(producto.getId(), null)).withRel("actualizar"),
-                linkTo(methodOn(ProductoControllerV2.class).eliminarProducto(producto.getId())).withRel("eliminar")
+                linkTo(methodOn(ProductoControllerV2.class).actualizar(producto.getId(), null)).withRel("actualizar"),
+                linkTo(methodOn(ProductoControllerV2.class).eliminar(producto.getId())).withRel("eliminar")
         );
     }
 }

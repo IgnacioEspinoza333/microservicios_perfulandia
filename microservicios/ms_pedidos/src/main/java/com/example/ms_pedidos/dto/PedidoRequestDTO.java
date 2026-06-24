@@ -1,5 +1,6 @@
 package com.example.ms_pedidos.dto;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import jakarta.validation.constraints.NotBlank;
@@ -15,9 +16,17 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class PedidoRequestDTO {
+
+    private Long id;
+
     @NotBlank(message = "El nombre del cliente es obligatorio")
     @Size(min = 3, max = 50, message = "El nombre del cliente debe tener entre 3 y 50 caracteres")
      private String cliente;
+
+
+
+    private LocalDateTime fecha; // opcional, si quieres permitir actualizar la fecha
+    private String estado;
 
 
     @NotEmpty(message = "Debe incluir al menos un detalle en el pedido")

@@ -18,8 +18,8 @@ public class EmpleadoModelAssembler implements RepresentationModelAssembler<Empl
                 empleado,
                 linkTo(methodOn(EmpleadoControllerV2.class).obtenerPorId(empleado.getId())).withSelfRel(),
                 linkTo(methodOn(EmpleadoControllerV2.class).listar()).withRel("empleados"),
-                linkTo(methodOn(EmpleadoControllerV2.class).actualizarEmpleado(empleado.getId(), null)).withRel("actualizar"),
-                linkTo(methodOn(EmpleadoControllerV2.class).eliminarEmpleado(empleado.getId())).withRel("eliminar")
+                linkTo(methodOn(EmpleadoControllerV2.class).actualizar(empleado.getId(), null)).withRel("actualizar"),
+                linkTo(methodOn(EmpleadoControllerV2.class).eliminar(empleado.getId())).withRel("eliminar")
         );
     }
 }

@@ -3,6 +3,7 @@ package com.example.ms_envio.controller;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -48,5 +49,12 @@ public class EnvioController {
             @PathVariable Long id,
             @Valid @RequestBody EnvioRequestDTO request) {
         return ResponseEntity.ok(envioService.actualizarEnvio(id, request));
+} 
+
+  @DeleteMapping("/{id}")
+public ResponseEntity<Void> eliminar(@PathVariable Long id) {
+    envioService.eliminarEnvio(id);
+    return ResponseEntity.noContent().build();
 }
+
 }
