@@ -1,0 +1,246 @@
+services:
+
+  # ===================== BASE DE DATOS COMPARTIDA =====================
+  mysql:
+    image: mysql:8.0
+    container_name: ms-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+    ports:
+      - "3307:3306"
+    volumes:
+      - ms-mysql-data:/var/lib/mysql
+      - ./mysql-init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-proot123"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 60s
+    mem_limit: 768m
+    restart: unless-stopped
+    networks:
+      - ms-network
+
+  # ===================== EUREKA SERVER =====================
+  eureka-server:
+    build:
+      context: .
+      dockerfile: eureka-server/Dockerfile
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    environment:
+      JAVA_TOOL_OPTIONS: "-Xmx256m -Xms128m"
+    mem_limit: 384m
+    restart: unless-stopped
+    networks:
+      - ms-network
+
+  # ===================== MICROSERVICIOS =====================
+  ms-usuario:
+    build:
+      context: .
+      dockerfile: ms_usuario/Dockerfile
+    container_name: ms-usuario
+    ports:
+      - "8081:8081"
+    environment:
+      SPRING_PROFILES_ACTIVE: "docker"
+      JAVA_TOOL_OPTIONS: "-Xmx256m -Xms128m"
+    mem_limit: 384m
+    depends_on:
+      mysql:
+        condition: service_healthy
+      eureka-server:
+        condition: service_started
+    restart: unless-stopped
+    networks:
+      - ms-network
+
+  ms-clientes:
+    build:
+      context: .
+      dockerfile: ms_clientes/Dockerfile
+    container_name: ms-clientes
+    ports:
+      - "8082:8082"
+    environment:
+      SPRING_PROFILES_ACTIVE: "docker"
+      JAVA_TOOL_OPTIONS: "-Xmx256m -Xms128m"
+    mem_limit: 384m
+    depends_on:
+      mysql:
+        condition: service_healthy
+      eureka-server:
+        condition: service_started
+    restart: unless-stopped
+    networks:
+      - ms-network
+
+  ms-pago:
+    build:
+      context: .
+      dockerfile: ms_pago/Dockerfile
+    container_name: ms-pago
+    ports:
+      - "8083:8083"
+    environment:
+      SPRING_PROFILES_ACTIVE: "docker"
+      JAVA_TOOL_OPTIONS: "-Xmx256m -Xms128m"
+    mem_limit: 384m
+    depends_on:
+      mysql:
+        condition: service_healthy
+      eureka-server:
+        condition: service_started
+    restart: unless-stopped
+    networks:
+      - ms-network
+
+  ms-envio:
+    build:
+      context: .
+      dockerfile: ms_envio/Dockerfile
+    container_name: ms-envio
+    ports:
+      - "8084:8084"
+    environment:
+      SPRING_PROFILES_ACTIVE: "docker"
+      JAVA_TOOL_OPTIONS: "-Xmx256m -Xms128m"
+    mem_limit: 384m
+    depends_on:
+      mysql:
+        condition: service_healthy
+      eureka-server:
+        condition: service_started
+    restart: unless-stopped
+    networks:
+      - ms-network
+
+  ms-producto:
+    build:
+      context: .
+      dockerfile: ms_producto/Dockerfile
+    container_name: ms-producto
+    ports:
+      - "8085:8085"
+    environment:
+      SPRING_PROFILES_ACTIVE: "docker"
+      JAVA_TOOL_OPTIONS: "-Xmx256m -Xms128m"
+    mem_limit: 384m
+    depends_on:
+      mysql:
+        condition: service_healthy
+      eureka-server:
+        condition: service_started
+    restart: unless-stopped
+    networks:
+      - ms-network
+
+  ms-proveedores:
+    build:
+      context: .
+      dockerfile: ms_proveedores/Dockerfile
+    container_name: ms-proveedores
+    ports:
+      - "8086:8086"
+    environment:
+      SPRING_PROFILES_ACTIVE: "docker"
+      JAVA_TOOL_OPTIONS: "-Xmx256m -Xms128m"
+    mem_limit: 384m
+    depends_on:
+      mysql:
+        condition: service_healthy
+      eureka-server:
+        condition: service_started
+    restart: unless-stopped
+    networks:
+      - ms-network
+
+  ms-inventario:
+    build:
+      context: .
+      dockerfile: ms_inventario/Dockerfile
+    container_name: ms-inventario
+    ports:
+      - "8087:8087"
+    environment:
+      SPRING_PROFILES_ACTIVE: "docker"
+      JAVA_TOOL_OPTIONS: "-Xmx256m -Xms128m"
+    mem_limit: 384m
+    depends_on:
+      mysql:
+        condition: service_healthy
+      eureka-server:
+        condition: service_started
+    restart: unless-stopped
+    networks:
+      - ms-network
+
+  ms-boleta:
+    build:
+      context: .
+      dockerfile: ms_boleta/Dockerfile
+    container_name: ms-boleta
+    ports:
+      - "8088:8088"
+    environment:
+      SPRING_PROFILES_ACTIVE: "docker"
+      JAVA_TOOL_OPTIONS: "-Xmx256m -Xms128m"
+    mem_limit: 384m
+    depends_on:
+      mysql:
+        condition: service_healthy
+      eureka-server:
+        condition: service_started
+    restart: unless-stopped
+    networks:
+      - ms-network
+
+  ms-categoria:
+    build:
+      context: .
+      dockerfile: ms_categoria/Dockerfile
+    container_name: ms-categoria
+    ports:
+      - "8089:8089"
+    environment:
+      SPRING_PROFILES_ACTIVE: "docker"
+      JAVA_TOOL_OPTIONS: "-Xmx256m -Xms128m"
+    mem_limit: 384m
+    depends_on:
+      mysql:
+        condition: service_healthy
+      eureka-server:
+        condition: service_started
+    restart: unless-stopped
+    networks:
+      - ms-network
+
+  ms-pedidos:
+    build:
+      context: .
+      dockerfile: ms_pedidos/Dockerfile
+    container_name: ms-pedidos
+    ports:
+      - "8090:8090"
+    environment:
+      SPRING_PROFILES_ACTIVE: "docker"
+      JAVA_TOOL_OPTIONS: "-Xmx256m -Xms128m"
+    mem_limit: 384m
+    depends_on:
+      mysql:
+        condition: service_healthy
+      eureka-server:
+        condition: service_started
+    restart: unless-stopped
+    networks:
+      - ms-network
+
+networks:
+  ms-network:
+    driver: bridge
+
+volumes:
+  ms-mysql-data:
