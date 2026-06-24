@@ -29,18 +29,18 @@ public class ClienteControllerV2 {
     private final ClienteModelAssembler assembler;
 
     @PostMapping(produces = MediaTypes.HAL_JSON_VALUE)
-    public ResponseEntity<EntityModel<ClienteResponseDto>> crear(@Valid @RequestBody ClienteRequestDto dto) {
+    public ResponseEntity<EntityModel<ClienteResponseDto>> crearCliente(@Valid @RequestBody ClienteRequestDto dto) {
         log.info("Solicitud v2 para crear cliente con email: {}", dto.getEmail());
 
         ClienteResponseDto nuevoCliente = clienteService.crear(dto);
 
         return ResponseEntity
-                .created(linkTo(methodOn(ClienteControllerV2.class).obtenerPorId(nuevoCliente.getId())).toUri())
+                .created(linkTo(methodOn(ClienteControllerV2.class).obtenerClientePorId(nuevoCliente.getId())).toUri())
                 .body(assembler.toModel(nuevoCliente));
     }
 
     @GetMapping(produces = MediaTypes.HAL_JSON_VALUE)
-    public CollectionModel<EntityModel<ClienteResponseDto>> listar() {
+    public CollectionModel<EntityModel<ClienteResponseDto>> listarClientes() {
         log.debug("Solicitud v2 para listar clientes");
 
         List<EntityModel<ClienteResponseDto>> clientes = clienteService.listar().stream()
@@ -49,12 +49,12 @@ public class ClienteControllerV2 {
 
         return CollectionModel.of(
                 clientes,
-                linkTo(methodOn(ClienteControllerV2.class).listar()).withSelfRel()
+                linkTo(methodOn(ClienteControllerV2.class).listarClientes()).withSelfRel()
         );
     }
 
     @GetMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
-    public EntityModel<ClienteResponseDto> obtenerPorId(@PathVariable Long id) {
+    public EntityModel<ClienteResponseDto> obtenerClientePorId(@PathVariable Long id) {
         log.debug("Solicitud v2 para obtener cliente con id: {}", id);
 
         ClienteResponseDto cliente = clienteService.obtenerPorId(id);
@@ -62,7 +62,7 @@ public class ClienteControllerV2 {
     }
 
     @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
-    public ResponseEntity<EntityModel<ClienteResponseDto>> actualizar(
+    public ResponseEntity<EntityModel<ClienteResponseDto>> actualizarCliente(
             @PathVariable Long id,
             @Valid @RequestBody ClienteUpdateDto dto) {
 
@@ -72,8 +72,8 @@ public class ClienteControllerV2 {
         return ResponseEntity.ok(assembler.toModel(actualizado));
     }
 
-    @DeleteMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
-    public ResponseEntity<Void> eliminar(@PathVariable Long id) {
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> eliminarCliente(@PathVariable Long id) {
         log.warn("Solicitud v2 para eliminar cliente con id: {}", id);
 
         clienteService.eliminar(id);

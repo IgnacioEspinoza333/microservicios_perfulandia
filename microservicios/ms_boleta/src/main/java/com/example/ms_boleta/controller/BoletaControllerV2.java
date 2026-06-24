@@ -52,12 +52,13 @@ public class BoletaControllerV2 {
         );
     }
 
-    @DeleteMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
-    public ResponseEntity<Void> eliminar(@PathVariable Long id) {
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> eliminarBoleta(@PathVariable Long id) {
         boletaService.eliminarBoleta(id);
         return ResponseEntity.noContent().build();
     }
-     @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+
+    @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
     public ResponseEntity<EntityModel<BoletaResponseDTO>> actualizarBoleta(
             @PathVariable Long id,
             @Valid @RequestBody BoletaRequestDTO request) {
