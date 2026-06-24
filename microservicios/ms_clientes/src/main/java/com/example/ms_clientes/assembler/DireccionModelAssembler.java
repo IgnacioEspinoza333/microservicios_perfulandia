@@ -16,7 +16,9 @@ public class DireccionModelAssembler implements RepresentationModelAssembler<Dir
         return EntityModel.of(
                 direccion,
                 linkTo(methodOn(DireccionControllerV2.class).obtenerPorId(direccion.getId())).withSelfRel(),
-                linkTo(methodOn(DireccionControllerV2.class).listar()).withRel("direcciones")
+                linkTo(methodOn(DireccionControllerV2.class).listar()).withRel("direcciones"),
+                linkTo(methodOn(DireccionControllerV2.class).actualizarDireccion(direccion.getId(), null)).withRel("actualizar"),
+                linkTo(methodOn(DireccionControllerV2.class).eliminarDireccion(direccion.getId())).withRel("eliminar")
         );
     }
 }

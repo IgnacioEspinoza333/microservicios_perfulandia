@@ -16,7 +16,10 @@ public class CategoriaModelAssembler implements RepresentationModelAssembler<Cat
         return EntityModel.of(
                 categoria,
                 linkTo(methodOn(CategoriaControllerV2.class).obtener(categoria.getId())).withSelfRel(),
-                linkTo(methodOn(CategoriaControllerV2.class).listar()).withRel("categorias")
+                linkTo(methodOn(CategoriaControllerV2.class).listar()).withRel("categorias"),
+                linkTo(methodOn(CategoriaControllerV2.class).actualizarCategoria(categoria.getId(), null)).withRel("actualizar"),
+                linkTo(methodOn(CategoriaControllerV2.class).eliminarCategoria(categoria.getId())).withRel("eliminar")
+
         );
     }
 }
