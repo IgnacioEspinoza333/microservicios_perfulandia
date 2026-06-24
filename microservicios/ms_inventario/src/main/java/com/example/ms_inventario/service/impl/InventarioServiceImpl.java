@@ -1,14 +1,18 @@
 package com.example.ms_inventario.service.impl;
 
+import com.example.ms_inventario.client.ProductoClient;
 import com.example.ms_inventario.dto.InventarioRequestDto;
 import com.example.ms_inventario.dto.InventarioResponseDto;
 import com.example.ms_inventario.dto.InventarioUpdateDto;
 import com.example.ms_inventario.dto.MessageResponseDto;
+import com.example.ms_inventario.dto.ProductoResumenExternoDto;
+import com.example.ms_inventario.exception.BusinessException;
 import com.example.ms_inventario.exception.DuplicateResourceException;
 import com.example.ms_inventario.exception.ResourceNotFoundException;
 import com.example.ms_inventario.model.Inventario;
 import com.example.ms_inventario.repository.InventarioRepository;
 import com.example.ms_inventario.service.InventarioService;
+import feign.FeignException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -23,6 +27,7 @@ import java.util.List;
 public class InventarioServiceImpl implements InventarioService {
 
     private final InventarioRepository inventarioRepository;
+    private final ProductoClient productoClient;
 
     @Override
     public InventarioResponseDto crear(InventarioRequestDto dto) {
@@ -33,6 +38,8 @@ public class InventarioServiceImpl implements InventarioService {
             throw new DuplicateResourceException("Ya existe un inventario para ese producto");
         }
 
+        ProductoResumenExternoDto producto = obtenerProductoActivoOrThrow(dto.getProductoId());
+
         Inventario inventario = new Inventario();
         inventario.setProductoId(dto.getProductoId());
         inventario.setStock(dto.getStock());
@@ -40,16 +47,17 @@ public class InventarioServiceImpl implements InventarioService {
         inventario = inventarioRepository.save(inventario);
 
         log.info("Inventario creado correctamente con id: {}", inventario.getId());
-        return mapToResponse(inventario);
+        return mapToResponse(inventario, producto);
     }
 
     @Override
     @Transactional(readOnly = true)
     public List<InventarioResponseDto> listar() {
         log.debug("Listando todos los inventarios");
+
         return inventarioRepository.findAll()
                 .stream()
-                .map(this::mapToResponse)
+                .map(inventario -> mapToResponse(inventario, null)) // NO enriquecer listado
                 .toList();
     }
 
@@ -57,8 +65,11 @@ public class InventarioServiceImpl implements InventarioService {
     @Transactional(readOnly = true)
     public InventarioResponseDto obtenerPorId(Long id) {
         log.debug("Buscando inventario con id: {}", id);
+
         Inventario inventario = getInventarioOrThrow(id);
-        return mapToResponse(inventario);
+        ProductoResumenExternoDto producto = obtenerProductoOrThrow(inventario.getProductoId());
+
+        return mapToResponse(inventario, producto);
     }
 
     @Override
@@ -72,7 +83,9 @@ public class InventarioServiceImpl implements InventarioService {
                     return new ResourceNotFoundException("Inventario no encontrado para productoId: " + productoId);
                 });
 
-        return mapToResponse(inventario);
+        ProductoResumenExternoDto producto = obtenerProductoOrThrow(productoId);
+
+        return mapToResponse(inventario, producto);
     }
 
     @Override
@@ -86,13 +99,15 @@ public class InventarioServiceImpl implements InventarioService {
             throw new DuplicateResourceException("Ya existe otro inventario para ese producto");
         }
 
+        ProductoResumenExternoDto producto = obtenerProductoActivoOrThrow(dto.getProductoId());
+
         inventario.setProductoId(dto.getProductoId());
         inventario.setStock(dto.getStock());
 
         inventario = inventarioRepository.save(inventario);
 
         log.info("Inventario actualizado correctamente con id: {}", id);
-        return mapToResponse(inventario);
+        return mapToResponse(inventario, producto);
     }
 
     @Override
@@ -114,12 +129,42 @@ public class InventarioServiceImpl implements InventarioService {
                 });
     }
 
-    private InventarioResponseDto mapToResponse(Inventario inventario) {
+    private ProductoResumenExternoDto obtenerProductoOrThrow(Long productoId) {
+        try {
+            return productoClient.obtenerResumenPorId(productoId);
+
+        } catch (FeignException.NotFound ex) {
+            log.warn("Producto no encontrado en ms_producto. productoId={}", productoId);
+            throw new BusinessException("El producto con id " + productoId + " no existe");
+
+        } catch (FeignException.Unauthorized | FeignException.Forbidden ex) {
+            log.error("Error de autenticación/autorización consultando ms_producto");
+            throw new BusinessException("No fue posible autenticarse contra ms_producto");
+
+        } catch (FeignException ex) {
+            log.error("Error consultando ms_producto. status={}, body={}", ex.status(), ex.contentUTF8());
+            throw new BusinessException("Error al consultar ms_producto");
+        }
+    }
+
+    private ProductoResumenExternoDto obtenerProductoActivoOrThrow(Long productoId) {
+        ProductoResumenExternoDto producto = obtenerProductoOrThrow(productoId);
+
+        if (producto.getActivo() == null || !producto.getActivo()) {
+            log.warn("Producto inactivo en ms_producto. productoId={}", productoId);
+            throw new BusinessException("El producto con id " + productoId + " está inactivo");
+        }
+
+        return producto;
+    }
+
+    private InventarioResponseDto mapToResponse(Inventario inventario, ProductoResumenExternoDto producto) {
         return new InventarioResponseDto(
                 inventario.getId(),
                 inventario.getProductoId(),
                 inventario.getStock(),
-                inventario.getVersion()
+                inventario.getVersion(),
+                producto
         );
     }
 }

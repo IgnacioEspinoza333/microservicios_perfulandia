@@ -42,4 +42,12 @@ public class Producto {
     @NotNull
     @Column(nullable = false)
     private Boolean activo;
+
+    @NotNull(message = "La categoriaId es obligatoria")
+    @Column(name = "categoria_id", nullable = false)
+    private Long categoriaId;
+
+    @NotNull(message = "La proveedorId es obligatoria")
+    @Column(name = "proveedor_id", nullable = false)
+    private Long proveedorId;
 }

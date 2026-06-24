@@ -2,12 +2,12 @@ package com.example.ms_producto;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
+@EnableFeignClients
 @SpringBootApplication
 public class MsProductoApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(MsProductoApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(MsProductoApplication.class, args);
+    }
 }
