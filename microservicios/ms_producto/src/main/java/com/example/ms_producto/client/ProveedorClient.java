@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @FeignClient(
-        name = "ms_proveedores",
+        name = "ms-proveedores",
         configuration = FeignBasicAuthConfig.class
 )
 public interface ProveedorClient {

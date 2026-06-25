@@ -1,1030 +1,66 @@
-2026-06-25 10:56:38 [restartedMain] INFO  c.e.m.MsInventarioApplication - Starting MsInventarioApplication using Java 21.0.10 with PID 16204 (C:\Users\PAAPCAXXTRXXX\Documents\GitHub\microservicios_perfulandia\microservicios\ms_inventario\target\classes started by PAAPCA02TR628 in C:\Users\PAAPCAXXTRXXX\Documents\GitHub\microservicios_perfulandia)
-2026-06-25 10:56:38 [restartedMain] DEBUG c.e.m.MsInventarioApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
-2026-06-25 10:56:38 [restartedMain] INFO  c.e.m.MsInventarioApplication - The following 1 profile is active: "dev"
-2026-06-25 10:56:38 [restartedMain] DEBUG o.s.boot.SpringApplication - Loading source class com.example.ms_inventario.MsInventarioApplication
-2026-06-25 10:56:38 [restartedMain] DEBUG o.s.b.d.restart.ChangeableUrls - Matching URLs for reloading : [file:/C:/Users/PAAPCAXXTRXXX/Documents/GitHub/microservicios_perfulandia/microservicios/ms_inventario/target/classes/]
-2026-06-25 10:56:38 [restartedMain] DEBUG o.s.b.d.settings.DevToolsSettings - Included patterns for restart : []
-2026-06-25 10:56:38 [restartedMain] DEBUG o.s.b.d.settings.DevToolsSettings - Excluded patterns for restart : [/spring-boot-starter-[\w-]+/, /spring-boot/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot-actuator/(bin|build|out)/, /spring-boot-autoconfigure/(bin|build|out)/]
-2026-06-25 10:56:38 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-06-25 10:56:38 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-06-25 10:56:38 [restartedMain] DEBUG o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@708f288d
-2026-06-25 10:56:38 [restartedMain] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Service id not legal hostname (ms_producto)
-2026-06-25 10:56:38 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Creating new Restarter for thread Thread[#1,main,5,main]
-2026-06-25 10:56:38 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Immediately restarting application
-2026-06-25 10:56:38 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Starting application com.example.ms_inventario.MsInventarioApplication with URLs [file:/C:/Users/PAAPCAXXTRXXX/Documents/GitHub/microservicios_perfulandia/microservicios/ms_inventario/target/classes/]
-2026-06-25 10:56:38 [restartedMain] DEBUG o.s.b.a.l.ConditionEvaluationReportLogger - 
-
-
-============================
-CONDITIONS EVALUATION REPORT
-============================
-
-
-Positive matches:
------------------
-
-   AopAutoConfiguration matched:
-      - @ConditionalOnBooleanProperty (spring.aop.auto=true) matched (OnPropertyCondition)
-
-   AopAutoConfiguration.AspectJAutoProxyingConfiguration matched:
-      - @ConditionalOnClass found required class 'org.aspectj.weaver.Advice' (OnClassCondition)
-
-   AopAutoConfiguration.AspectJAutoProxyingConfiguration.CglibAutoProxyConfiguration matched:
-      - @ConditionalOnBooleanProperty (spring.aop.proxy-target-class=true) matched (OnPropertyCondition)
-
-   AutoServiceRegistrationAutoConfiguration matched:
-      - @ConditionalOnProperty (spring.cloud.service-registry.auto-registration.enabled) matched (OnPropertyCondition)
-
-   AutoServiceRegistrationConfiguration matched:
-      - @ConditionalOnProperty (spring.cloud.service-registry.auto-registration.enabled) matched (OnPropertyCondition)
-
-   BlockingLoadBalancerClientAutoConfiguration matched:
-      - @ConditionalOnProperty (spring.cloud.loadbalancer.enabled=true) matched (OnPropertyCondition)
-
-   CacheAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.cache.CacheManager' (OnClassCondition)
-
-   CacheAutoConfiguration.CacheManagerEntityManagerFactoryDependsOnConfiguration matched:
-      - @ConditionalOnClass found required classes 'org.springframework.boot.jpa.autoconfigure.EntityManagerFactoryDependsOnPostProcessor', 'org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean' (OnClassCondition)
-
-   CloudHypermediaAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.hateoas.Link' (OnClassCondition)
-
-   CommonsClientAutoConfiguration.CircuitBreakerInterfaceClientsAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'org.springframework.cloud.client.circuitbreaker.CircuitBreaker', 'org.springframework.web.client.support.RestClientHttpServiceGroupConfigurer' (OnClassCondition)
-      - @ConditionalOnProperty (spring.cloud.circuitbreaker.http-services.enabled=true) matched (OnPropertyCondition)
-
-   CompatibilityVerifierAutoConfiguration matched:
-      - @ConditionalOnProperty (spring.cloud.compatibility-verifier.enabled) matched (OnPropertyCondition)
-
-   DataJpaRepositoriesAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.data.jpa.repository.JpaRepository' (OnClassCondition)
-      - @ConditionalOnBooleanProperty (spring.data.jpa.repositories.enabled=true) matched (OnPropertyCondition)
-
-   DataSourceAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType' (OnClassCondition)
-
-   DataSourceAutoConfiguration.PooledDataSourceConfiguration matched:
-      - AnyNestedCondition 1 matched 1 did not; NestedCondition on DataSourceAutoConfiguration.PooledDataSourceCondition.PooledDataSourceAvailable PooledDataSource found supported DataSource; NestedCondition on DataSourceAutoConfiguration.PooledDataSourceCondition.ExplicitType @ConditionalOnProperty (spring.datasource.type) did not find property 'spring.datasource.type' (DataSourceAutoConfiguration.PooledDataSourceCondition)
-
-   DataSourceConfiguration.Hikari matched:
-      - @ConditionalOnClass found required class 'com.zaxxer.hikari.HikariDataSource' (OnClassCondition)
-      - @ConditionalOnProperty (spring.datasource.type=com.zaxxer.hikari.HikariDataSource) matched (OnPropertyCondition)
-
-   DataSourceInitializationAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.jdbc.datasource.init.DatabasePopulator' (OnClassCondition)
-      - SQL InitializationDatabase Initialization default value is EMBEDDED (OnSqlInitializationCondition)
-
-   DataSourcePoolMetadataProvidersConfiguration.HikariPoolDataSourceMetadataProviderConfiguration matched:
-      - @ConditionalOnClass found required class 'com.zaxxer.hikari.HikariDataSource' (OnClassCondition)
-
-   DataSourceTransactionManagerAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.core.JdbcTemplate', 'org.springframework.transaction.TransactionManager' (OnClassCondition)
-
-   DataWebAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'org.springframework.data.web.PageableHandlerMethodArgumentResolver', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
-      - found 'session' scope (OnWebApplicationCondition)
-
-   DevToolsDataSourceAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'javax.sql.DataSource' (OnClassCondition)
-      - Devtools devtools enabled. (OnEnabledDevToolsCondition)
-
-   DevToolsDataSourceAutoConfiguration.DatabaseShutdownExecutorEntityManagerFactoryDependsOnConfiguration matched:
-      - @ConditionalOnClass found required classes 'org.springframework.boot.jpa.autoconfigure.EntityManagerFactoryDependsOnPostProcessor', 'org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean' (OnClassCondition)
-
-   DispatcherServletAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.web.servlet.DispatcherServlet' (OnClassCondition)
-      - found 'session' scope (OnWebApplicationCondition)
-
-   DispatcherServletAutoConfiguration.DispatcherServletConfiguration matched:
-      - @ConditionalOnClass found required class 'jakarta.servlet.ServletRegistration' (OnClassCondition)
-      - Default DispatcherServlet did not find dispatcher servlet beans (DispatcherServletAutoConfiguration.DefaultDispatcherServletCondition)
-
-   DispatcherServletAutoConfiguration.DispatcherServletRegistrationConfiguration matched:
-      - @ConditionalOnClass found required class 'jakarta.servlet.ServletRegistration' (OnClassCondition)
-      - DispatcherServlet Registration did not find servlet registration bean (DispatcherServletAutoConfiguration.DispatcherServletRegistrationCondition)
-
-   ErrorMvcAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet' (OnClassCondition)
-      - found 'session' scope (OnWebApplicationCondition)
-
-   ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration matched:
-      - @ConditionalOnBooleanProperty (spring.web.error.whitelabel.enabled=true) matched (OnPropertyCondition)
-      - ErrorTemplate Missing did not find error template view (ErrorMvcAutoConfiguration.ErrorTemplateMissingCondition)
-
-   EurekaClientAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'com.netflix.discovery.EurekaClientConfig' (OnClassCondition)
-      - @ConditionalOnProperty (eureka.client.enabled) matched; @ConditionalOnProperty (spring.cloud.discovery.enabled) matched (OnPropertyCondition)
-
-   EurekaClientAutoConfiguration.RefreshableEurekaClientConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.cloud.context.scope.refresh.RefreshScope' (OnClassCondition)
-      - @ConditionalOnProperty (eureka.client.refresh.enable=true) matched (OnPropertyCondition)
-
-   EurekaDiscoveryClientConfiguration matched:
-      - @ConditionalOnClass found required class 'com.netflix.discovery.EurekaClientConfig' (OnClassCondition)
-      - @ConditionalOnProperty (eureka.client.enabled) matched; @ConditionalOnProperty (spring.cloud.discovery.enabled) matched; @ConditionalOnProperty (spring.cloud.discovery.blocking.enabled) matched (OnPropertyCondition)
-
-   EurekaDiscoveryClientConfiguration.EurekaClientConfigurationRefresher matched:
-      - @ConditionalOnClass found required class 'org.springframework.cloud.context.scope.refresh.RefreshScopeRefreshedEvent' (OnClassCondition)
-
-   FeignAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'feign.Feign' (OnClassCondition)
-
-   FeignAutoConfiguration.DefaultFeignTargeterConfiguration matched:
-      - AnyNestedCondition 1 matched 1 did not; NestedCondition on FeignCircuitBreakerDisabledConditions.CircuitBreakerDisabled @ConditionalOnProperty (spring.cloud.openfeign.circuitbreaker.enabled=false) matched; NestedCondition on FeignCircuitBreakerDisabledConditions.CircuitBreakerClassMissing @ConditionalOnMissingClass found unwanted class 'org.springframework.cloud.client.circuitbreaker.CircuitBreaker' (FeignCircuitBreakerDisabledConditions)
-
-   FeignAutoConfiguration.FeignJacksonConfiguration matched:
-      - @ConditionalOnClass found required classes 'java.lang.Module', 'org.springframework.data.domain.Page', 'org.springframework.data.domain.Sort' (OnClassCondition)
-      - @ConditionalOnProperty (spring.cloud.openfeign.autoconfiguration.jackson.enabled=true) matched (OnPropertyCondition)
-
-   FeignHalAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.hateoas.config.WebConverters' (OnClassCondition)
-      - @ConditionalOnWebApplication (required) found 'session' scope (OnWebApplicationCondition)
-
-   FeignLoadBalancerAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'feign.Feign' (OnClassCondition)
-
-   GenericCacheConfiguration matched:
-      - Cache org.springframework.boot.cache.autoconfigure.GenericCacheConfiguration automatic cache type (CacheCondition)
-
-   GsonHttpMessageConvertersConfiguration matched:
-      - @ConditionalOnClass found required class 'com.google.gson.Gson' (OnClassCondition)
-
-   HibernateJpaAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean', 'jakarta.persistence.EntityManager', 'org.hibernate.engine.spi.SessionImplementor' (OnClassCondition)
-
-   HttpEncodingAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.web.filter.CharacterEncodingFilter' (OnClassCondition)
-      - found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnBooleanProperty (spring.servlet.encoding.enabled=true) matched (OnPropertyCondition)
-
-   HttpMessageConvertersAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.http.converter.HttpMessageConverter' (OnClassCondition)
-      - NoneNestedConditions 0 matched 1 did not; NestedCondition on HttpMessageConvertersAutoConfiguration.NotReactiveWebApplicationCondition.ReactiveWebApplication did not find reactive web application classes (HttpMessageConvertersAutoConfiguration.NotReactiveWebApplicationCondition)
-
-   HttpServiceClientAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.web.client.support.RestClientAdapter' (OnClassCondition)
-
-   HypermediaAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'org.springframework.hateoas.EntityModel', 'org.springframework.web.bind.annotation.RequestMapping', 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter', 'org.springframework.plugin.core.Plugin', 'tools.jackson.databind.json.JsonMapper' (OnClassCondition)
-      - @ConditionalOnWebApplication (required) found 'session' scope (OnWebApplicationCondition)
-
-   ImperativeHttpClientAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.http.client.ClientHttpRequestFactory' (OnClassCondition)
-      - NoneNestedConditions 0 matched 1 did not; NestedCondition on NotReactiveWebApplicationCondition.ReactiveWebApplication did not find reactive web application classes (NotReactiveWebApplicationCondition)
-
-   Jackson2AutoConfiguration matched:
-      - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
-
-   Jackson2AutoConfiguration.Jackson2ObjectMapperBuilderCustomizerConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' (OnClassCondition)
-
-   Jackson2AutoConfiguration.JacksonObjectMapperBuilderConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' (OnClassCondition)
-
-   Jackson2AutoConfiguration.JacksonObjectMapperConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.http.converter.json.Jackson2ObjectMapperBuilder' (OnClassCondition)
-
-   Jackson2AutoConfiguration.ParameterNamesModuleConfiguration matched:
-      - @ConditionalOnClass found required class 'com.fasterxml.jackson.module.paramnames.ParameterNamesModule' (OnClassCondition)
-
-   Jackson2HttpMessageConvertersConfiguration.MappingJackson2HttpMessageConverterConfiguration matched:
-      - @ConditionalOnClass found required class 'com.fasterxml.jackson.databind.ObjectMapper' (OnClassCondition)
-
-   JacksonAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'tools.jackson.databind.json.JsonMapper' (OnClassCondition)
-
-   JacksonAutoConfiguration.JsonProblemDetailsConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.http.ProblemDetail' (OnClassCondition)
-
-   JacksonHttpMessageConvertersConfiguration.JacksonJsonHttpMessageConverterConfiguration matched:
-      - @ConditionalOnClass found required class 'tools.jackson.databind.json.JsonMapper' (OnClassCondition)
-      - @ConditionalOnProperty (spring.http.converters.preferred-json-mapper=jackson) matched (OnPropertyCondition)
-
-   JdbcTemplateAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.core.JdbcTemplate' (OnClassCondition)
-
-   JpaBaseConfiguration.JpaWebConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
-      - found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnBooleanProperty (spring.jpa.open-in-view=true) matched (OnPropertyCondition)
-
-   JtaAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'jakarta.transaction.Transaction' (OnClassCondition)
-      - @ConditionalOnBooleanProperty (spring.jta.enabled=true) matched (OnPropertyCondition)
-
-   LoadBalancerAutoConfiguration matched:
-      - @ConditionalOnProperty (spring.cloud.loadbalancer.enabled=true) matched (OnPropertyCondition)
-
-   LoadBalancerAutoConfiguration.DeferringLoadBalancerInterceptorHttpClientConfig matched:
-      - @ConditionalOnClass found required class 'org.springframework.boot.http.client.autoconfigure.service.HttpServiceClientProperties' (OnClassCondition)
-
-   LoadBalancerAutoConfiguration.DeferringLoadBalancerInterceptorRestTemplateBuilderConfig matched:
-      - @ConditionalOnClass found required class 'org.springframework.boot.restclient.RestTemplateBuilder' (OnClassCondition)
-
-   LoadBalancerCacheAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'org.springframework.cache.CacheManager', 'org.springframework.boot.cache.autoconfigure.CacheAutoConfiguration' (OnClassCondition)
-
-   LoadBalancerCacheAutoConfiguration.DefaultLoadBalancerCacheManagerConfiguration matched:
-      - @ConditionalOnClass found required class 'com.stoyanr.evictor.ConcurrentMapWithTimedEviction' (OnClassCondition)
-
-   LoadBalancerEurekaAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientConfigurationRegistrar' (OnClassCondition)
-      - @ConditionalOnProperty (eureka.client.enabled) matched (OnPropertyCondition)
-
-   LocalDevToolsAutoConfiguration matched:
-      - Initialized Restarter Condition available and initialized (OnInitializedRestarterCondition)
-
-   LocalDevToolsAutoConfiguration.RestartConfiguration matched:
-      - @ConditionalOnBooleanProperty (spring.devtools.restart.enabled=true) matched (OnPropertyCondition)
-
-   MultipartAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.multipart.support.StandardServletMultipartResolver', 'jakarta.servlet.MultipartConfigElement' (OnClassCondition)
-      - found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnBooleanProperty (spring.servlet.multipart.enabled=true) matched (OnPropertyCondition)
-
-   MultipleOpenApiSupportConfiguration matched:
-      - found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnProperty (springdoc.api-docs.enabled) matched (OnPropertyCondition)
-
-   MultipleOpenApiSupportConfiguration.SpringDocWebMvcActuatorDifferentConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.boot.webmvc.actuate.endpoint.web.WebMvcEndpointHandlerMapping' (OnClassCondition)
-
-   NoOpCacheConfiguration matched:
-      - Cache org.springframework.boot.cache.autoconfigure.NoOpCacheConfiguration automatic cache type (CacheCondition)
-
-   PersistenceExceptionTranslationAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor' (OnClassCondition)
-
-   ReactiveHttpClientAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'org.springframework.http.client.reactive.ClientHttpConnector', 'reactor.core.publisher.Mono' (OnClassCondition)
-      - Detected ClientHttpConnectorBuilder (ConditionalOnClientHttpConnectorBuilderDetection)
-
-   ReactiveUserDetailsServiceAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.security.authentication.ReactiveAuthenticationManager' (OnClassCondition)
-      - AnyNestedCondition 3 matched 0 did not; NestedCondition on MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) matched; NestedCondition on MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) matched; NestedCondition on MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured)
-
-   RefreshAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.cloud.context.scope.refresh.RefreshScope' (OnClassCondition)
-      - @ConditionalOnProperty (spring.cloud.refresh.enabled) matched (OnPropertyCondition)
-
-   ResourceServerTokenRelayAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
-      - found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnProperty (spring.cloud.mvc.token-relay.enabled) matched (OnPropertyCondition)
-
-   RestClientAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.web.client.RestClient' (OnClassCondition)
-
-   RestClientAutoConfiguration.HttpMessageConvertersConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.http.converter.HttpMessageConverters' (OnClassCondition)
-
-   RestTemplateAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'org.springframework.web.client.RestTemplate', 'org.springframework.http.converter.HttpMessageConverters' (OnClassCondition)
-      - NoneNestedConditions 0 matched 1 did not; NestedCondition on NotReactiveWebApplicationCondition.ReactiveWebApplication did not find reactive web application classes (NotReactiveWebApplicationCondition)
-
-   SecurityAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.security.authentication.DefaultAuthenticationEventPublisher' (OnClassCondition)
-
-   SecurityFilterAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer', 'org.springframework.security.config.http.SessionCreationPolicy' (OnClassCondition)
-      - found 'session' scope (OnWebApplicationCondition)
-
-   ServletWebSecurityAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
-      - found 'session' scope (OnWebApplicationCondition)
-
-   ServletWebSecurityAutoConfiguration.EnableWebSecurityConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
-
-   ServletWebSecurityAutoConfiguration.PathPatternRequestMatcherBuilderConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.boot.webmvc.autoconfigure.DispatcherServletPath' (OnClassCondition)
-
-   SimpleCacheConfiguration matched:
-      - Cache org.springframework.boot.cache.autoconfigure.SimpleCacheConfiguration automatic cache type (CacheCondition)
-
-   SimpleDiscoveryClientConfigurations.WebApplicationSimpleDiscoveryClientConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.boot.web.server.context.WebServerInitializedEvent' (OnClassCondition)
-
-   SpringDocConfigProperties matched:
-      - @ConditionalOnProperty (springdoc.api-docs.enabled) matched (OnPropertyCondition)
-
-   SpringDocConfiguration matched:
-      - @ConditionalOnWebApplication (required) found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnProperty (springdoc.api-docs.enabled) matched (OnPropertyCondition)
-
-   SpringDocConfiguration.QuerydslProvider matched:
-      - @ConditionalOnClass found required class 'org.springframework.data.querydsl.binding.QuerydslBindingsFactory' (OnClassCondition)
-
-   SpringDocConfiguration.SpringDocSpringDataWebPropertiesProvider matched:
-      - @ConditionalOnClass found required class 'org.springframework.boot.data.autoconfigure.web.DataWebProperties' (OnClassCondition)
-
-   SpringDocConfiguration.SpringDocWebFluxSupportConfiguration matched:
-      - @ConditionalOnClass found required class 'reactor.core.publisher.Flux' (OnClassCondition)
-
-   SpringDocConfiguration.WebConversionServiceConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.boot.autoconfigure.web.format.WebConversionService' (OnClassCondition)
-
-   SpringDocHateoasConfiguration matched:
-      - @ConditionalOnClass found required classes 'org.springframework.hateoas.server.LinkRelationProvider', 'org.springframework.boot.hateoas.autoconfigure.HateoasProperties' (OnClassCondition)
-      - @ConditionalOnWebApplication (required) found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnExpression (#{${springdoc.api-docs.enabled:true} and ${springdoc.enable-hateoas:true}}) resulted in true (OnExpressionCondition)
-
-   SpringDocPageableConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.data.domain.Pageable' (OnClassCondition)
-      - @ConditionalOnWebApplication (required) found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnProperty (springdoc.api-docs.enabled) matched (OnPropertyCondition)
-
-   SpringDocSecurityConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.security.web.SecurityFilterChain' (OnClassCondition)
-      - @ConditionalOnWebApplication (required) found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnExpression (#{${springdoc.api-docs.enabled:true} and ${springdoc.enable-spring-security:true}}) resulted in true (OnExpressionCondition)
-
-   SpringDocSecurityConfiguration.SpringSecurityLoginEndpointConfiguration matched:
-      - @ConditionalOnClass found required class 'jakarta.servlet.Filter' (OnClassCondition)
-
-   SpringDocSortConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.data.domain.Sort' (OnClassCondition)
-      - @ConditionalOnWebApplication (required) found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnProperty (springdoc.api-docs.enabled) matched (OnPropertyCondition)
-
-   SpringDocWebMvcConfiguration matched:
-      - found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnProperty (springdoc.api-docs.enabled) matched (OnPropertyCondition)
-
-   SpringDocWebMvcConfiguration.SpringDocWebMvcActuatorConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.boot.webmvc.actuate.endpoint.web.WebMvcEndpointHandlerMapping' (OnClassCondition)
-
-   SpringDocWebMvcConfiguration.SpringDocWebMvcRouterConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.web.servlet.function.RouterFunction' (OnClassCondition)
-
-   SpringDocWebServerConfiguration.EmbeddedWebServerConfiguration matched:
-      - @ConditionalOnClass found required classes 'org.springframework.boot.web.server.context.WebServerInitializedEvent', 'org.springframework.boot.web.server.autoconfigure.ServerProperties' (OnClassCondition)
-
-   SwaggerConfig matched:
-      - found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnProperty (springdoc.swagger-ui.enabled) matched (OnPropertyCondition)
-
-   SwaggerUiConfigProperties matched:
-      - @ConditionalOnProperty (springdoc.swagger-ui.enabled) matched (OnPropertyCondition)
-
-   SwaggerUiOAuthProperties matched:
-      - @ConditionalOnProperty (springdoc.swagger-ui.enabled) matched (OnPropertyCondition)
-
-   TaskExecutionAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor' (OnClassCondition)
-
-   TaskSchedulingAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler' (OnClassCondition)
-
-   TomcatServletWebServerAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'jakarta.servlet.ServletRequest', 'org.apache.catalina.startup.Tomcat', 'org.apache.coyote.UpgradeProtocol', 'org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory' (OnClassCondition)
-      - found 'session' scope (OnWebApplicationCondition)
-
-   TomcatWebServerConfiguration matched:
-      - @ConditionalOnWarDeployment the application is not deployed as a WAR file. (OnWarDeploymentCondition)
-
-   TomcatWebServerConfiguration.TomcatWebSocketConfiguration matched:
-      - @ConditionalOnClass found required class 'org.apache.tomcat.websocket.server.WsSci' (OnClassCondition)
-
-   TransactionAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.transaction.PlatformTransactionManager' (OnClassCondition)
-
-   TransactionAutoConfiguration.EnableTransactionManagementConfiguration.CglibAutoProxyConfiguration matched:
-      - @ConditionalOnBooleanProperty (spring.aop.proxy-target-class=true) matched (OnPropertyCondition)
-
-   TransactionManagerCustomizationAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.transaction.PlatformTransactionManager' (OnClassCondition)
-
-   UserDetailsServiceAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
-      - found 'session' scope (OnWebApplicationCondition)
-      - AnyNestedCondition 3 matched 0 did not; NestedCondition on MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) matched; NestedCondition on MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) matched; NestedCondition on MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (MissingAlternativeUserDetailsManagerOrUserPropertiesConfigured)
-
-   UtilAutoConfiguration matched:
-      - @ConditionalOnProperty (spring.cloud.util.enabled) matched (OnPropertyCondition)
-
-   ValidationAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'jakarta.validation.executable.ExecutableValidator' (OnClassCondition)
-      - @ConditionalOnResource found location classpath:META-INF/services/jakarta.validation.spi.ValidationProvider (OnResourceCondition)
-
-   WebMvcAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
-      - found 'session' scope (OnWebApplicationCondition)
-
-   WebMvcAutoConfiguration.ResourceChainCustomizerConfiguration matched:
-      - @ConditionalOnEnabledResourceChain found class org.webjars.WebJarVersionLocator (OnEnabledResourceChainCondition)
-
-   XADataSourceAutoConfiguration matched:
-      - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'jakarta.transaction.TransactionManager', 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType' (OnClassCondition)
-
-
-Negative matches:
------------------
-
-   AopAutoConfiguration.AspectJAutoProxyingConfiguration.JdkDynamicAutoProxyConfiguration:
-      Did not match:
-         - @ConditionalOnBooleanProperty (spring.aop.proxy-target-class=false) did not find property 'spring.aop.proxy-target-class' (OnPropertyCondition)
-
-   AopAutoConfiguration.ClassProxyingConfiguration:
-      Did not match:
-         - @ConditionalOnMissingClass found unwanted class 'org.aspectj.weaver.Advice' (OnClassCondition)
-
-   BlockingLoadBalancerClientAutoConfiguration.BlockingLoadBalancerRetryConfig:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.retry.support.RetryTemplate' (OnClassCondition)
-
-   Cache2kCacheConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.cache2k.Cache2kBuilder' (OnClassCondition)
-
-   CacheMetricsAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.micrometer.core.instrument.MeterRegistry' (OnClassCondition)
-
-   CachesEndpointAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.endpoint.condition.ConditionalOnAvailableEndpoint' (OnClassCondition)
-
-   CaffeineCacheConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.github.benmanes.caffeine.cache.Caffeine' (OnClassCondition)
-
-   CommonsClientAutoConfiguration.ActuatorConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.endpoint.annotation.Endpoint' (OnClassCondition)
-
-   CommonsClientAutoConfiguration.DiscoveryLoadBalancerConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.health.contributor.HealthIndicator' (OnClassCondition)
-
-   CommonsClientAutoConfiguration.ReactiveCircuitBreakerInterfaceClientsAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.support.WebClientHttpServiceGroupConfigurer' (OnClassCondition)
-
-   CouchbaseCacheConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.couchbase.client.java.Cluster' (OnClassCondition)
-
-   DataRepositoryMetricsAutoConfiguration:
-      Did not match:
-         - @ConditionalOnBean did not find required type 'io.micrometer.core.instrument.MeterRegistry' (OnBeanCondition)
-
-   DataSourceAutoConfiguration.EmbeddedDatabaseConfiguration:
-      Did not match:
-         - EmbeddedDataSource spring.datasource.url is set (DataSourceAutoConfiguration.EmbeddedDatabaseCondition)
-
-   DataSourceCheckpointRestoreConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.crac.Resource' (OnClassCondition)
-
-   DataSourceConfiguration.Dbcp2:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.apache.commons.dbcp2.BasicDataSource' (OnClassCondition)
-
-   DataSourceConfiguration.Generic:
-      Did not match:
-         - @ConditionalOnProperty (spring.datasource.type) did not find property 'spring.datasource.type' (OnPropertyCondition)
-
-   DataSourceConfiguration.OracleUcp:
-      Did not match:
-         - @ConditionalOnClass did not find required classes 'oracle.ucp.jdbc.PoolDataSourceImpl', 'oracle.jdbc.OracleConnection' (OnClassCondition)
-
-   DataSourceConfiguration.Tomcat:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.apache.tomcat.jdbc.pool.DataSource' (OnClassCondition)
-
-   DataSourceHealthContributorAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.health.autoconfigure.contributor.ConditionalOnEnabledHealthIndicator' (OnClassCondition)
-
-   DataSourceJmxConfiguration:
-      Did not match:
-         - @ConditionalOnBooleanProperty (spring.jmx.enabled=true) did not find property 'spring.jmx.enabled' (OnPropertyCondition)
-
-   DataSourcePoolMetadataProvidersConfiguration.CommonsDbcp2PoolDataSourceMetadataProviderConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.apache.commons.dbcp2.BasicDataSource' (OnClassCondition)
-
-   DataSourcePoolMetadataProvidersConfiguration.OracleUcpPoolDataSourceMetadataProviderConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required classes 'oracle.ucp.jdbc.PoolDataSource', 'oracle.jdbc.OracleConnection' (OnClassCondition)
-
-   DataSourcePoolMetadataProvidersConfiguration.TomcatDataSourcePoolMetadataProviderConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.apache.tomcat.jdbc.pool.DataSource' (OnClassCondition)
-
-   DataSourcePoolMetricsAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.micrometer.core.instrument.MeterRegistry' (OnClassCondition)
-
-   DevToolsR2dbcAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.r2dbc.spi.ConnectionFactory' (OnClassCondition)
-
-   DiscoveryClientOptionalArgsConfiguration.WebClientConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
-
-   DiscoveryClientOptionalArgsConfiguration.WebClientNotFoundConfiguration:
-      Did not match:
-         - @ConditionalOnProperty (eureka.client.webclient.enabled=true) did not find property 'webclient.enabled' (OnPropertyCondition)
-      Matched:
-         - @ConditionalOnMissingClass did not find unwanted class 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
-
-   EurekaClientAutoConfiguration.EurekaHealthIndicatorConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.health.contributor.Health' (OnClassCondition)
-
-   EurekaClientConfigServerAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.cloud.config.server.config.ConfigServerProperties' (OnClassCondition)
-
-   EurekaDiscoveryClientConfiguration.EurekaHealthCheckHandlerConfiguration:
-      Did not match:
-         - @ConditionalOnProperty (eureka.client.healthcheck.enabled) did not find property 'eureka.client.healthcheck.enabled' (OnPropertyCondition)
-
-   EurekaReactiveDiscoveryClientConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
-
-   FeignAcceptGzipEncodingAutoConfiguration:
-      Did not match:
-         - @ConditionalOnProperty (spring.cloud.openfeign.compression.response.enabled) did not find property 'spring.cloud.openfeign.compression.response.enabled' (OnPropertyCondition)
-      Matched:
-         - @ConditionalOnClass found required class 'feign.Feign' (OnClassCondition)
-
-   FeignAutoConfiguration.CircuitBreakerPresentFeignTargeterConfiguration:
-      Did not match:
-         - @ConditionalOnProperty (spring.cloud.openfeign.circuitbreaker.enabled=true) did not find property 'spring.cloud.openfeign.circuitbreaker.enabled' (OnPropertyCondition)
-      Matched:
-         - @ConditionalOnClass found required class 'org.springframework.cloud.client.circuitbreaker.CircuitBreaker' (OnClassCondition)
-
-   FeignAutoConfiguration.Http2ClientFeignConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'feign.http2client.Http2Client' (OnClassCondition)
-
-   FeignAutoConfiguration.HttpClient5FeignConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'feign.hc5.ApacheHttp5Client' (OnClassCondition)
-
-   FeignAutoConfiguration.Oauth2FeignConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.client.OAuth2AuthorizedClientManager' (OnClassCondition)
-
-   FeignContentGzipEncodingAutoConfiguration:
-      Did not match:
-         - @ConditionalOnProperty (spring.cloud.openfeign.compression.request.enabled) did not find property 'spring.cloud.openfeign.compression.request.enabled' (OnPropertyCondition)
-      Matched:
-         - @ConditionalOnClass found required class 'feign.Feign' (OnClassCondition)
-
-   HazelcastCacheConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.hazelcast.core.HazelcastInstance' (OnClassCondition)
-
-   HibernateMetricsAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.micrometer.core.instrument.MeterRegistry' (OnClassCondition)
-
-   Http2ClientFeignLoadBalancerConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'feign.http2client.Http2Client' (OnClassCondition)
-
-   HttpClient5FeignLoadBalancerConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'feign.hc5.ApacheHttp5Client' (OnClassCondition)
-
-   HttpClientMetricsAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.micrometer.core.instrument.MeterRegistry' (OnClassCondition)
-
-   InfinispanCacheConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.infinispan.spring.embedded.provider.SpringEmbeddedCacheManager' (OnClassCondition)
-
-   JCacheCacheConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'javax.cache.Caching' (OnClassCondition)
-
-   Jackson2HttpMessageConvertersConfiguration.MappingJackson2XmlHttpMessageConverterConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.fasterxml.jackson.dataformat.xml.XmlMapper' (OnClassCondition)
-
-   JacksonAutoConfiguration.CborConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'tools.jackson.dataformat.cbor.CBORMapper' (OnClassCondition)
-
-   JacksonAutoConfiguration.XmlConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'tools.jackson.dataformat.xml.XmlMapper' (OnClassCondition)
-
-   JacksonHttpMessageConvertersConfiguration.JacksonXmlHttpMessageConverterConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'tools.jackson.dataformat.xml.XmlMapper' (OnClassCondition)
-
-   JmxAutoConfiguration:
-      Did not match:
-         - @ConditionalOnBooleanProperty (spring.jmx.enabled=true) did not find property 'spring.jmx.enabled' (OnPropertyCondition)
-      Matched:
-         - @ConditionalOnClass found required class 'org.springframework.jmx.export.MBeanExporter' (OnClassCondition)
-
-   JndiDataSourceAutoConfiguration:
-      Did not match:
-         - @ConditionalOnProperty (spring.datasource.jndi-name) did not find property 'spring.datasource.jndi-name' (OnPropertyCondition)
-      Matched:
-         - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType' (OnClassCondition)
-
-   JndiJtaConfiguration:
-      Did not match:
-         - @ConditionalOnJndi JNDI environment is not available (OnJndiCondition)
-      Matched:
-         - @ConditionalOnClass found required class 'org.springframework.transaction.jta.JtaTransactionManager' (OnClassCondition)
-
-   JsonbHttpMessageConvertersConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'jakarta.json.bind.Jsonb' (OnClassCondition)
-
-   KotlinSerializationHttpMessageConvertersConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required classes 'kotlinx.serialization.Serializable', 'kotlinx.serialization.json.Json' (OnClassCondition)
-
-   LoadBalancerAutoConfiguration.RetryAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.retry.support.RetryTemplate' (OnClassCondition)
-
-   LoadBalancerAutoConfiguration.RetryInterceptorAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.retry.support.RetryTemplate' (OnClassCondition)
-
-   LoadBalancerBeanPostProcessorAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
-
-   LoadBalancerCacheAutoConfiguration.CaffeineLoadBalancerCacheManagerConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.github.benmanes.caffeine.cache.Caffeine' (OnClassCondition)
-
-   LoadBalancerStatsAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.micrometer.core.instrument.MeterRegistry' (OnClassCondition)
-
-   LocalDevToolsAutoConfiguration.LiveReloadConfiguration:
-      Did not match:
-         - @ConditionalOnBooleanProperty (spring.devtools.livereload.enabled=true) did not find property 'spring.devtools.livereload.enabled' (OnPropertyCondition)
-
-   ManagementWebSecurityAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration' (OnClassCondition)
-
-   MessageSourceAutoConfiguration:
-      Did not match:
-         - ResourceBundle did not find bundle with basename messages (MessageSourceAutoConfiguration.ResourceBundleCondition)
-
-   OAuth2LoadBalancerClientAutoConfiguration:
-      Did not match:
-         - @ConditionalOnProperty (spring.cloud.oauth2.load-balanced.enabled) did not find property 'spring.cloud.oauth2.load-balanced.enabled' (OnPropertyCondition)
-
-   RSocketSecurityAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.rsocket.server.RSocketServerCustomizer' (OnClassCondition)
-
-   ReactiveCommonsClientAutoConfiguration.ReactiveDiscoveryLoadBalancerConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required classes 'org.springframework.boot.health.contributor.ReactiveHealthIndicator', 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
-
-   ReactiveCompositeDiscoveryClientAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
-
-   ReactiveHttpClientAutoConfiguration.ReactorNetty:
-      Did not match:
-         - @ConditionalOnClass did not find required classes 'reactor.netty.http.client.HttpClient', 'org.springframework.boot.reactor.netty.autoconfigure.ReactorNettyConfigurations' (OnClassCondition)
-
-   ReactiveManagementWebSecurityAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointAutoConfiguration' (OnClassCondition)
-
-   ReactiveWebSecurityAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.config.WebFluxConfigurer' (OnClassCondition)
-
-   ReactorLoadBalancerClientAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
-
-   RedisCacheConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.redis.connection.RedisConnectionFactory' (OnClassCondition)
-
-   RefreshEndpointAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.endpoint.EndpointAutoConfiguration' (OnClassCondition)
-
-   RemoteDevToolsAutoConfiguration:
-      Did not match:
-         - @ConditionalOnProperty (spring.devtools.remote.secret) did not find property 'spring.devtools.remote.secret' (OnPropertyCondition)
-      Matched:
-         - @ConditionalOnClass found required classes 'jakarta.servlet.Filter', 'org.springframework.http.server.ServerHttpRequest', 'org.springframework.boot.web.server.autoconfigure.ServerProperties' (OnClassCondition)
-
-   RestClientObservationAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.micrometer.observation.autoconfigure.ObservationProperties' (OnClassCondition)
-
-   RestTemplateObservationAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.micrometer.observation.autoconfigure.ObservationProperties' (OnClassCondition)
-
-   SecurityAutoConfiguration.SecurityDataConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.data.repository.query.SecurityEvaluationContextExtension' (OnClassCondition)
-
-   ServiceRegistryAutoConfiguration.ServiceRegistryEndpointConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.endpoint.annotation.Endpoint' (OnClassCondition)
-
-   ServletHttpExchangesAutoConfiguration:
-      Did not match:
-         - @ConditionalOnBean did not find required type 'org.springframework.boot.actuate.web.exchanges.HttpExchangeRepository' (OnBeanCondition)
-
-   ServletManagementContextAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties' (OnClassCondition)
-
-   ServletMappingsAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.endpoint.condition.ConditionalOnAvailableEndpoint' (OnClassCondition)
-
-   SimpleDiscoveryClientConfigurations.StandardSimpleDiscoveryClientConfiguration:
-      Did not match:
-         - @ConditionalOnMissingClass found unwanted class 'org.springframework.boot.web.server.context.WebServerInitializedEvent' (OnClassCondition)
-
-   SimpleReactiveDiscoveryClientAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
-
-   SpringApplicationAdminJmxAutoConfiguration:
-      Did not match:
-         - @ConditionalOnBooleanProperty (spring.application.admin.enabled=true) did not find property 'spring.application.admin.enabled' (OnPropertyCondition)
-
-   SpringDocConfiguration.SpringDocActuatorConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties' (OnClassCondition)
-
-   SpringDocConfiguration.SpringDocRepositoryRestConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.rest.core.config.RepositoryRestConfiguration' (OnClassCondition)
-
-   SpringDocDataRestConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.data.rest.core.config.RepositoryRestConfiguration' (OnClassCondition)
-
-   SpringDocFunctionCatalogConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.cloud.function.web.function.FunctionEndpointInitializer' (OnClassCondition)
-
-   SpringDocGroovyConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'groovy.lang.MetaClass' (OnClassCondition)
-
-   SpringDocJacksonKotlinModuleConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.fasterxml.jackson.module.kotlin.KotlinModule' (OnClassCondition)
-
-   SpringDocJavadocConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'com.github.therapi.runtimejavadoc.CommentFormatter' (OnClassCondition)
-
-   SpringDocKotlinConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'kotlin.coroutines.Continuation' (OnClassCondition)
-
-   SpringDocKotlinxConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'kotlinx.coroutines.flow.Flow' (OnClassCondition)
-
-   SpringDocSecurityConfiguration.SpringDocSecurityOAuth2ClientConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.client.annotation.RegisteredOAuth2AuthorizedClient' (OnClassCondition)
-
-   SpringDocSecurityConfiguration.SpringDocSecurityOAuth2Configuration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.security.oauth2.server.authorization.OAuth2AuthorizationService' (OnClassCondition)
-
-   SpringDocWebServerConfiguration.DeployedWebServerConfiguration:
-      Did not match:
-         - @ConditionalOnMissingClass found unwanted classes 'org.springframework.boot.web.server.context.WebServerInitializedEvent', 'org.springframework.boot.web.server.autoconfigure.ServerProperties' (OnClassCondition)
-
-   SwaggerConfig.SwaggerActuatorWelcomeConfiguration:
-      Did not match:
-         - @ConditionalOnProperty (springdoc.use-management-port) did not find property 'springdoc.use-management-port' (OnPropertyCondition)
-      Matched:
-         - @ConditionalOnClass found required class 'org.springframework.boot.webmvc.actuate.endpoint.web.WebMvcEndpointHandlerMapping' (OnClassCondition)
-
-   TomcatMetricsAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'io.micrometer.core.instrument.binder.tomcat.TomcatMetrics' (OnClassCondition)
-
-   TomcatReactiveManagementContextAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextFactory' (OnClassCondition)
-
-   TomcatReactiveWebServerAutoConfiguration:
-      Did not match:
-         - @ConditionalOnWebApplication did not find reactive web application classes (OnWebApplicationCondition)
-
-   TomcatServletManagementContextAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextFactory' (OnClassCondition)
-
-   TransactionAutoConfiguration.EnableTransactionManagementConfiguration.JdkDynamicAutoProxyConfiguration:
-      Did not match:
-         - @ConditionalOnBooleanProperty (spring.aop.proxy-target-class=false) did not find property 'spring.aop.proxy-target-class' (OnPropertyCondition)
-
-   WebMvcAutoConfiguration.ProblemDetailsErrorHandlingConfiguration:
-      Did not match:
-         - @ConditionalOnBooleanProperty (spring.mvc.problemdetails.enabled=true) did not find property 'spring.mvc.problemdetails.enabled' (OnPropertyCondition)
-
-   WebMvcHealthEndpointExtensionAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.health.actuate.endpoint.HealthEndpoint' (OnClassCondition)
-
-   WebMvcMappingsAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.endpoint.condition.ConditionalOnAvailableEndpoint' (OnClassCondition)
-
-   WebMvcObservationAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.micrometer.observation.autoconfigure.ObservationProperties' (OnClassCondition)
-
-   WritableEnvironmentEndpointAutoConfiguration:
-      Did not match:
-         - @ConditionalOnClass did not find required class 'org.springframework.boot.actuate.autoconfigure.env.EnvironmentEndpointProperties' (OnClassCondition)
-
-
-Exclusions:
------------
-
-    None
-
-
-Unconditional classes:
-----------------------
-
-    org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration
-
-    org.springdoc.core.configuration.SpringDocWebServerConfiguration.EmbeddedWebServerConfiguration
-
-    org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
-
-    org.springframework.cloud.client.ReactiveCommonsClientAutoConfiguration
-
-    org.springframework.boot.http.client.autoconfigure.service.HttpServiceClientPropertiesAutoConfiguration
-
-    org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration
-
-    org.springframework.cloud.client.discovery.simple.SimpleDiscoveryClientAutoConfiguration
-
-    org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration
-
-    org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration
-
-    org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration
-
-    org.springframework.cloud.client.CommonsClientAutoConfiguration
-
-    org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration
-
-    org.springframework.boot.jdbc.autoconfigure.JdbcClientAutoConfiguration
-
-    org.springdoc.core.configuration.SpringDocWebServerConfiguration.DeployedWebServerConfiguration
-
-    org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration
-
-    org.springframework.boot.http.client.autoconfigure.HttpClientAutoConfiguration
-
-    org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration
-
-    org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClientAutoConfiguration
-
-    org.springframework.cloud.client.serviceregistry.ServiceRegistryAutoConfiguration
-
-    org.springframework.cloud.autoconfigure.LifecycleMvcEndpointAutoConfiguration
-
-    org.springdoc.core.configuration.SpringDocSpecPropertiesConfiguration
-
-    org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration
-
-    org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
-
-
-
-2026-06-25 10:56:38 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
-java.lang.IllegalStateException: Service id not legal hostname (ms_producto)
-	at org.springframework.util.Assert.state(Assert.java:80)
-	at org.springframework.cloud.openfeign.FeignClientsRegistrar.getName(FeignClientsRegistrar.java:111)
-	at org.springframework.cloud.openfeign.FeignClientsRegistrar.getName(FeignClientsRegistrar.java:336)
-	at org.springframework.cloud.openfeign.FeignClientsRegistrar.eagerlyRegisterFeignClientBeanDefinition(FeignClientsRegistrar.java:228)
-	at org.springframework.cloud.openfeign.FeignClientsRegistrar.registerFeignClient(FeignClientsRegistrar.java:215)
-	at org.springframework.cloud.openfeign.FeignClientsRegistrar.registerFeignClients(FeignClientsRegistrar.java:204)
-	at org.springframework.cloud.openfeign.FeignClientsRegistrar.registerBeanDefinitions(FeignClientsRegistrar.java:154)
-	at org.springframework.context.annotation.ImportBeanDefinitionRegistrar.registerBeanDefinitions(ImportBeanDefinitionRegistrar.java:86)
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromImportBeanDefinitionRegistrars$0(ConfigurationClassBeanDefinitionReader.java:422)
-	at java.base/java.util.LinkedHashMap.forEach(Unknown Source)
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromImportBeanDefinitionRegistrars(ConfigurationClassBeanDefinitionReader.java:421)
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:152)
-	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:124)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:464)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:316)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:795)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:603)
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at com.example.ms_inventario.MsInventarioApplication.main(MsInventarioApplication.java:12)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
-2026-06-25 11:10:05 [restartedMain] INFO  c.e.m.MsInventarioApplication - Starting MsInventarioApplication using Java 21.0.10 with PID 18852 (C:\Users\PAAPCAXXTRXXX\Documents\GitHub\microservicios_perfulandia\microservicios\ms_inventario\target\classes started by PAAPCA02TR628 in C:\Users\PAAPCAXXTRXXX\Documents\GitHub\microservicios_perfulandia)
-2026-06-25 11:10:05 [restartedMain] DEBUG c.e.m.MsInventarioApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
-2026-06-25 11:10:05 [restartedMain] INFO  c.e.m.MsInventarioApplication - The following 1 profile is active: "dev"
-2026-06-25 11:10:05 [restartedMain] DEBUG o.s.boot.SpringApplication - Loading source class com.example.ms_inventario.MsInventarioApplication
-2026-06-25 11:10:05 [restartedMain] DEBUG o.s.b.d.restart.ChangeableUrls - Matching URLs for reloading : [file:/C:/Users/PAAPCAXXTRXXX/Documents/GitHub/microservicios_perfulandia/microservicios/ms_inventario/target/classes/]
-2026-06-25 11:10:05 [restartedMain] DEBUG o.s.b.d.settings.DevToolsSettings - Included patterns for restart : []
-2026-06-25 11:10:05 [restartedMain] DEBUG o.s.b.d.settings.DevToolsSettings - Excluded patterns for restart : [/spring-boot-starter-[\w-]+/, /spring-boot/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot-actuator/(bin|build|out)/, /spring-boot-autoconfigure/(bin|build|out)/]
-2026-06-25 11:10:05 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-06-25 11:10:05 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-06-25 11:10:05 [restartedMain] DEBUG o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@1e4b1a87
-2026-06-25 11:10:06 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-25 11:10:06 [restartedMain] DEBUG o.s.b.a.AutoConfigurationPackages - @EnableAutoConfiguration was declared on a class in the package 'com.example.ms_inventario'. Automatic @Repository and @Entity scanning is enabled.
-2026-06-25 11:10:06 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 100 ms. Found 1 JPA repository interface.
-2026-06-25 11:10:06 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=b5b41b93-89ea-3c78-b3e5-393585196e86
-2026-06-25 11:10:07 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - Code archive: C:\Users\PAAPCAXXTRXXX\.m2\repository\org\springframework\boot\spring-boot-web-server\4.0.7\spring-boot-web-server-4.0.7.jar
-2026-06-25 11:10:07 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - Code archive: C:\Users\PAAPCAXXTRXXX\.m2\repository\org\springframework\boot\spring-boot-web-server\4.0.7\spring-boot-web-server-4.0.7.jar
-2026-06-25 11:10:07 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
-2026-06-25 11:10:07 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8087 (http)
-2026-06-25 11:10:07 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-06-25 11:10:07 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
-2026-06-25 11:10:07 [restartedMain] DEBUG o.s.b.w.c.s.WebApplicationContextInitializer - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
-2026-06-25 11:10:07 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1853 ms
-2026-06-25 11:10:07 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
-2026-06-25 11:10:07 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
-2026-06-25 11:10:07 [restartedMain] DEBUG o.s.b.s.f.OrderedRequestContextFilter - Filter 'requestContextFilter' configured for use
-2026-06-25 11:10:07 [restartedMain] DEBUG o.s.b.s.f.OrderedCharacterEncodingFilter - Filter 'characterEncodingFilter' configured for use
-2026-06-25 11:10:07 [restartedMain] DEBUG o.s.b.w.s.DelegatingFilterProxyRegistrationBean$1 - Filter 'springSecurityFilterChain' configured for use
-2026-06-25 11:10:07 [restartedMain] DEBUG o.s.b.s.f.OrderedFormContentFilter - Filter 'formContentFilter' configured for use
-2026-06-25 11:10:07 [restartedMain] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-06-25 11:10:07 [restartedMain] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
-2026-06-25 11:10:08 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-25 11:10:08 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-06-25 11:10:08 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@128777e7
-2026-06-25 11:10:08 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-06-25 11:10:08 [restartedMain] WARN  org.hibernate.orm.core - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2026-06-25 11:10:08 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-06-25 11:10:08 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/ms_inventario]
+2026-06-25 11:07:55 [main] INFO  c.e.m.MsCategoriaApplicationTests - Starting MsCategoriaApplicationTests using Java 21.0.10 with PID 23288 (started by PAAPCA02TR628 in C:\Users\PAAPCAXXTRXXX\Documents\GitHub\microservicios_perfulandia\microservicios\ms_categoria)
+2026-06-25 11:07:55 [main] DEBUG c.e.m.MsCategoriaApplicationTests - Running with Spring Boot v4.0.7, Spring v7.0.8
+2026-06-25 11:07:55 [main] INFO  c.e.m.MsCategoriaApplicationTests - The following 1 profile is active: "dev"
+2026-06-25 11:07:55 [main] DEBUG o.s.boot.SpringApplication - Loading source class com.example.ms_categoria.MsCategoriaApplication
+2026-06-25 11:07:55 [main] DEBUG o.s.b.d.settings.DevToolsSettings - Included patterns for restart : []
+2026-06-25 11:07:55 [main] DEBUG o.s.b.d.settings.DevToolsSettings - Excluded patterns for restart : [/spring-boot-starter-[\w-]+/, /spring-boot/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot-actuator/(bin|build|out)/, /spring-boot-autoconfigure/(bin|build|out)/]
+2026-06-25 11:07:55 [main] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@7e2c64
+2026-06-25 11:07:56 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-25 11:07:56 [main] DEBUG o.s.b.a.AutoConfigurationPackages - @EnableAutoConfiguration was declared on a class in the package 'com.example.ms_categoria'. Automatic @Repository and @Entity scanning is enabled.
+2026-06-25 11:07:56 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 95 ms. Found 1 JPA repository interface.
+2026-06-25 11:07:56 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=f329d41b-433a-3381-86c5-e539b4c019c2
+2026-06-25 11:07:57 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-25 11:07:57 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-06-25 11:07:57 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-25 11:07:57 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-25 11:07:57 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@694f0655
+2026-06-25 11:07:57 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-25 11:07:57 [main] WARN  org.hibernate.orm.core - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-25 11:07:57 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-25 11:07:57 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/ms_categorias?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
 	Database version: 5.5.5
-	Default catalog/schema: ms_inventario/undefined
+	Default catalog/schema: ms_categorias/undefined
 	Autocommit mode: undefined/unknown
 	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
 	JDBC fetch size: none
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-06-25 11:10:08 [restartedMain] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-25 11:10:08 [restartedMain] DEBUG org.hibernate.SQL - 
-    create table inventarios (
-        id bigint not null auto_increment,
-        producto_id bigint not null,
-        stock integer not null,
-        version bigint,
-        primary key (id),
-        check ((stock>=0))
-    ) engine=InnoDB
-2026-06-25 11:10:08 [restartedMain] DEBUG org.hibernate.SQL - 
-    alter table inventarios 
-       drop index uk_inventario_producto
-2026-06-25 11:10:08 [restartedMain] DEBUG org.hibernate.SQL - 
-    alter table inventarios 
-       add constraint uk_inventario_producto unique (producto_id)
-2026-06-25 11:10:09 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-25 11:10:09 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-06-25 11:10:09 [restartedMain] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'basicAuthRequestInterceptor' defined in com.example.ms_inventario.config.FeignBasicAuthConfig: Unexpected exception during bean creation
-2026-06-25 11:10:09 [restartedMain] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'inventarioController' defined in file [C:\Users\PAAPCAXXTRXXX\Documents\GitHub\microservicios_perfulandia\microservicios\ms_inventario\target\classes\com\example\ms_inventario\controller\InventarioController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'inventarioServiceImpl' defined in file [C:\Users\PAAPCAXXTRXXX\Documents\GitHub\microservicios_perfulandia\microservicios\ms_inventario\target\classes\com\example\ms_inventario\service\impl\InventarioServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'com.example.ms_inventario.client.ProductoClient': FactoryBean threw exception on object creation
-2026-06-25 11:10:09 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-06-25 11:10:09 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-06-25 11:10:09 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-06-25 11:10:09 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2026-06-25 11:10:09 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Creating new Restarter for thread Thread[#1,main,5,main]
-2026-06-25 11:10:09 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Immediately restarting application
-2026-06-25 11:10:09 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Starting application com.example.ms_inventario.MsInventarioApplication with URLs [file:/C:/Users/PAAPCAXXTRXXX/Documents/GitHub/microservicios_perfulandia/microservicios/ms_inventario/target/classes/]
-2026-06-25 11:10:09 [restartedMain] DEBUG o.s.b.a.l.ConditionEvaluationReportLogger - 
+2026-06-25 11:07:58 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-25 11:07:58 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-25 11:07:58 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-25 11:07:58 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-25 11:07:59 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-06-25 11:07:59 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 16 mappings in 'requestMappingHandlerMapping'
+2026-06-25 11:07:59 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /doc/swagger-ui/**, /doc/swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.2/*swagger-initializer.js] in 'resourceHandlerMapping'
+2026-06-25 11:07:59 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-06-25 11:07:59 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-06-25 11:08:00 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-06-25 11:08:01 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-06-25 11:08:01 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestClient.
+2026-06-25 11:08:01 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-25 11:08:01 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2026-06-25 11:08:01 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2026-06-25 11:08:01 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-06-25 11:08:01 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-06-25 11:08:01 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-06-25 11:08:01 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-06-25 11:08:01 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2026-06-25 11:08:01 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-06-25 11:08:01 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2026-06-25 11:08:01 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-06-25 11:08:02 [main] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 11:08:02 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2026-06-25 11:08:02 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2026-06-25 11:08:02 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-25 11:08:02 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1782400082273 with initial instances count: 1
+2026-06-25 11:08:02 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application MS_CATEGORIA with eureka with status UP
+2026-06-25 11:08:02 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1782400082277, current=UP, previous=STARTING]
+2026-06-25 11:08:02 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS_CATEGORIA/localhost:ms_categoria:8089: registering service...
+2026-06-25 11:08:02 [main] DEBUG o.s.b.a.l.ConditionEvaluationReportLogger - 
 
 
 ============================
@@ -1130,15 +166,6 @@ Positive matches:
    DefaultFeignLoadBalancerConfiguration#feignClient matched:
       - AnyNestedCondition 2 matched 1 did not; NestedCondition on OnRetryNotEnabledCondition.OnLoadBalancerRetryEnabledCondition @ConditionalOnProperty (spring.cloud.loadbalancer.retry.enabled=false) did not find property 'spring.cloud.loadbalancer.retry.enabled'; NestedCondition on OnRetryNotEnabledCondition.OnRetryFactoryCondition @ConditionalOnMissingBean (types: org.springframework.cloud.client.loadbalancer.LoadBalancedRetryFactory; SearchStrategy: all) did not find any beans; NestedCondition on OnRetryNotEnabledCondition.OnNoRetryTemplateCondition @ConditionalOnMissingClass did not find unwanted class 'org.springframework.retry.support.RetryTemplate' (OnRetryNotEnabledCondition)
       - @ConditionalOnMissingBean (types: feign.Client; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
-   DevToolsDataSourceAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'javax.sql.DataSource' (OnClassCondition)
-      - Devtools devtools enabled. (OnEnabledDevToolsCondition)
-      - DevTools DataSource Condition found auto-configured DataSource (DevToolsDataSourceAutoConfiguration.DevToolsDataSourceCondition)
-
-   DevToolsDataSourceAutoConfiguration.DatabaseShutdownExecutorEntityManagerFactoryDependsOnConfiguration matched:
-      - @ConditionalOnClass found required classes 'org.springframework.boot.jpa.autoconfigure.EntityManagerFactoryDependsOnPostProcessor', 'org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean' (OnClassCondition)
-      - @ConditionalOnBean (types: org.springframework.orm.jpa.AbstractEntityManagerFactoryBean; SearchStrategy: all) found bean '&entityManagerFactory' (OnBeanCondition)
 
    DiscoveryClientOptionalArgsConfiguration.RestClientConfiguration matched:
       - AllNestedConditions 3 matched 0 did not; NestedCondition on DiscoveryClientOptionalArgsConfiguration.OnRestClientPresentAndEnabledCondition.OnWebClientDisabled @ConditionalOnProperty (eureka.client.webclient.enabled=false) matched; NestedCondition on DiscoveryClientOptionalArgsConfiguration.OnRestClientPresentAndEnabledCondition.OnJerseyClientNotPresentOrNotEnabled AnyNestedCondition 1 matched 1 did not; NestedCondition on DiscoveryClientOptionalArgsConfiguration.OnJerseyClientNotPresentOrNotEnabledCondition.OnJerseyClientDisabled @ConditionalOnProperty (eureka.client.jersey.enabled=false) did not find property 'eureka.client.jersey.enabled'; NestedCondition on DiscoveryClientOptionalArgsConfiguration.OnJerseyClientNotPresentOrNotEnabledCondition.OnJerseyClientMissing @ConditionalOnMissingClass did not find unwanted class 'org.glassfish.jersey.client.JerseyClient'; NestedCondition on DiscoveryClientOptionalArgsConfiguration.OnRestClientPresentAndEnabledCondition.OnRestClientPresent @ConditionalOnClass found required class 'org.springframework.web.client.RestClient' (DiscoveryClientOptionalArgsConfiguration.OnRestClientPresentAndEnabledCondition)
@@ -1461,21 +488,6 @@ Positive matches:
 
    LoadBalancerEurekaAutoConfiguration#eurekaLoadBalancerProperties matched:
       - @ConditionalOnMissingBean (types: org.springframework.cloud.netflix.eureka.loadbalancer.EurekaLoadBalancerProperties; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
-   LocalDevToolsAutoConfiguration matched:
-      - Initialized Restarter Condition available and initialized (OnInitializedRestarterCondition)
-
-   LocalDevToolsAutoConfiguration.RestartConfiguration matched:
-      - @ConditionalOnBooleanProperty (spring.devtools.restart.enabled=true) matched (OnPropertyCondition)
-
-   LocalDevToolsAutoConfiguration.RestartConfiguration#classPathFileSystemWatcher matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.devtools.classpath.ClassPathFileSystemWatcher; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
-   LocalDevToolsAutoConfiguration.RestartConfiguration#classPathRestartStrategy matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.devtools.classpath.ClassPathRestartStrategy; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
-   LocalDevToolsAutoConfiguration.RestartConfiguration#conditionEvaluationDeltaLoggingListener matched:
-      - @ConditionalOnBooleanProperty (spring.devtools.restart.log-condition-evaluation-delta=true) matched (OnPropertyCondition)
 
    MultipartAutoConfiguration matched:
       - @ConditionalOnClass found required classes 'jakarta.servlet.Servlet', 'org.springframework.web.multipart.support.StandardServletMultipartResolver', 'jakarta.servlet.MultipartConfigElement' (OnClassCondition)
@@ -1836,12 +848,6 @@ Positive matches:
    TomcatServletWebServerAutoConfiguration#tomcatServletWebServerFactory matched:
       - @ConditionalOnMissingBean (types: org.springframework.boot.web.server.servlet.ServletWebServerFactory; SearchStrategy: current) did not find any beans (OnBeanCondition)
 
-   TomcatWebServerConfiguration matched:
-      - @ConditionalOnWarDeployment the application is not deployed as a WAR file. (OnWarDeploymentCondition)
-
-   TomcatWebServerConfiguration.TomcatWebSocketConfiguration matched:
-      - @ConditionalOnClass found required class 'org.apache.tomcat.websocket.server.WsSci' (OnClassCondition)
-
    TransactionAutoConfiguration matched:
       - @ConditionalOnClass found required class 'org.springframework.transaction.PlatformTransactionManager' (OnClassCondition)
 
@@ -2020,7 +1026,7 @@ Negative matches:
 
    DataSourceJmxConfiguration:
       Did not match:
-         - @ConditionalOnBooleanProperty (spring.jmx.enabled=true) did not find property 'spring.jmx.enabled' (OnPropertyCondition)
+         - @ConditionalOnBooleanProperty (spring.jmx.enabled=true) found different value in property 'spring.jmx.enabled' (OnPropertyCondition)
 
    DataSourcePoolMetadataProvidersConfiguration.CommonsDbcp2PoolDataSourceMetadataProviderConfiguration:
       Did not match:
@@ -2045,6 +1051,12 @@ Negative matches:
    DefaultFeignLoadBalancerConfiguration#feignRetryClient:
       Did not match:
          - @ConditionalOnClass did not find required class 'org.springframework.retry.support.RetryTemplate' (OnClassCondition)
+
+   DevToolsDataSourceAutoConfiguration:
+      Did not match:
+         - Devtools devtools is disabled for current context. (OnEnabledDevToolsCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'javax.sql.DataSource' (OnClassCondition)
 
    DevToolsR2dbcAutoConfiguration:
       Did not match:
@@ -2186,7 +1198,7 @@ Negative matches:
 
    JmxAutoConfiguration:
       Did not match:
-         - @ConditionalOnBooleanProperty (spring.jmx.enabled=true) did not find property 'spring.jmx.enabled' (OnPropertyCondition)
+         - @ConditionalOnBooleanProperty (spring.jmx.enabled=true) found different value in property 'spring.jmx.enabled' (OnPropertyCondition)
       Matched:
          - @ConditionalOnClass found required class 'org.springframework.jmx.export.MBeanExporter' (OnClassCondition)
 
@@ -2242,9 +1254,9 @@ Negative matches:
       Did not match:
          - @ConditionalOnClass did not find required class 'io.micrometer.core.instrument.MeterRegistry' (OnClassCondition)
 
-   LocalDevToolsAutoConfiguration.LiveReloadConfiguration:
+   LocalDevToolsAutoConfiguration:
       Did not match:
-         - @ConditionalOnBooleanProperty (spring.devtools.livereload.enabled=true) did not find property 'spring.devtools.livereload.enabled' (OnPropertyCondition)
+         - Initialized Restarter Condition initialized without URLs (OnInitializedRestarterCondition)
 
    ManagementWebSecurityAutoConfiguration:
       Did not match:
@@ -2530,9 +1542,9 @@ Negative matches:
       Did not match:
          - @ConditionalOnProperty (server.forward-headers-strategy=framework) did not find property 'server.forward-headers-strategy' (OnPropertyCondition)
 
-   TomcatWebServerConfiguration#tomcatVirtualThreadsProtocolHandlerCustomizer:
+   TomcatWebServerConfiguration:
       Did not match:
-         - @ConditionalOnThreading did not find VIRTUAL (OnThreadingCondition)
+         - Application is deployed as a WAR file. (OnWarDeploymentCondition)
 
    TransactionAutoConfiguration#transactionalOperator:
       Did not match:
@@ -2640,99 +1652,22 @@ Unconditional classes:
 
 
 
-2026-06-25 11:10:09 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'inventarioController' defined in file [C:\Users\PAAPCAXXTRXXX\Documents\GitHub\microservicios_perfulandia\microservicios\ms_inventario\target\classes\com\example\ms_inventario\controller\InventarioController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'inventarioServiceImpl' defined in file [C:\Users\PAAPCAXXTRXXX\Documents\GitHub\microservicios_perfulandia\microservicios\ms_inventario\target\classes\com\example\ms_inventario\service\impl\InventarioServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'com.example.ms_inventario.client.ProductoClient': FactoryBean threw exception on object creation
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1380)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
-	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at com.example.ms_inventario.MsInventarioApplication.main(MsInventarioApplication.java:12)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'inventarioServiceImpl' defined in file [C:\Users\PAAPCAXXTRXXX\Documents\GitHub\microservicios_perfulandia\microservicios\ms_inventario\target\classes\com\example\ms_inventario\service\impl\InventarioServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'com.example.ms_inventario.client.ProductoClient': FactoryBean threw exception on object creation
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1380)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:229)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1769)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1658)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
-	... 24 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.example.ms_inventario.client.ProductoClient': FactoryBean threw exception on object creation
-	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:209)
-	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:149)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1879)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getObjectForBeanInstance(AbstractAutowireCapableBeanFactory.java:1302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:343)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:229)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1769)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1658)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
-	... 38 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'basicAuthRequestInterceptor' defined in com.example.ms_inventario.config.FeignBasicAuthConfig: Unexpected exception during bean creation
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:538)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
-	at org.springframework.cloud.context.named.NamedContextFactory.createContext(NamedContextFactory.java:141)
-	at org.springframework.cloud.context.named.NamedContextFactory.getContext(NamedContextFactory.java:125)
-	at org.springframework.cloud.context.named.NamedContextFactory.getInstance(NamedContextFactory.java:202)
-	at org.springframework.cloud.openfeign.FeignClientFactoryBean.get(FeignClientFactoryBean.java:398)
-	at org.springframework.cloud.openfeign.FeignClientFactoryBean.feign(FeignClientFactoryBean.java:136)
-	at org.springframework.cloud.openfeign.FeignClientFactoryBean.getTarget(FeignClientFactoryBean.java:468)
-	at org.springframework.cloud.openfeign.FeignClientFactoryBean.getObject(FeignClientFactoryBean.java:456)
-	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:203)
-	... 48 common frames omitted
-Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'integraciones.auth.username' in value "${integraciones.auth.username}"
-	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81)
-	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:296)
-	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:129)
-	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:96)
-	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:286)
-	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:257)
-	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:184)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:959)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1679)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1658)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1360)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
-	... 65 common frames omitted
+2026-06-25 11:08:02 [main] INFO  c.e.m.MsCategoriaApplicationTests - Started MsCategoriaApplicationTests in 8.011 seconds (process running for 10.385)
+2026-06-25 11:08:02 [main] DEBUG o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+2026-06-25 11:08:02 [main] DEBUG o.s.boot.devtools.restart.Restarter - Creating new Restarter for thread Thread[#1,main,5,main]
+2026-06-25 11:08:02 [main] DEBUG o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2026-06-25 11:08:02 [DiscoveryClient-InstanceInfoReplicator-%d] DEBUG o.s.web.client.DefaultRestClient - Writing [InstanceInfo [instanceId = localhost:ms_categoria:8089, appName = MS_CATEGORIA, hostName = 192.168.112.239, status = UP, ipAddr = 192.168.112.239, port = 8089, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@3fc261b7] as "application/json" with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
+2026-06-25 11:08:02 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS_CATEGORIA/localhost:ms_categoria:8089 - registration status: 204
+2026-06-25 11:08:02 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@7e2c64, started on Thu Jun 25 11:07:55 CLT 2026
+2026-06-25 11:08:02 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application MS_CATEGORIA with eureka with status DOWN
+2026-06-25 11:08:02 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1782400082670, current=DOWN, previous=UP]
+2026-06-25 11:08:02 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS_CATEGORIA/localhost:ms_categoria:8089: registering service...
+2026-06-25 11:08:02 [DiscoveryClient-InstanceInfoReplicator-%d] DEBUG o.s.web.client.DefaultRestClient - Writing [InstanceInfo [instanceId = localhost:ms_categoria:8089, appName = MS_CATEGORIA, hostName = 192.168.112.239, status = DOWN, ipAddr = 192.168.112.239, port = 8089, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@3fc261b7] as "application/json" with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
+2026-06-25 11:08:02 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-25 11:08:02 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS_CATEGORIA/localhost:ms_categoria:8089 - registration status: 204
+2026-06-25 11:08:02 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-25 11:08:02 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-25 11:08:02 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2026-06-25 11:08:05 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2026-06-25 11:08:05 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS_CATEGORIA/localhost:ms_categoria:8089 - deregister  status: 200
+2026-06-25 11:08:05 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
