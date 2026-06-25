@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ms_producto
+    name: ms-producto
 
 server:
   port: 8085

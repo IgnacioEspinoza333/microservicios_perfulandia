@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ms_boleta
+    name: ms-boleta
 
 server:
   port: 8088

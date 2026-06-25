@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @FeignClient(
-        name = "ms_producto",
+        name = "ms-producto",
         configuration = FeignBasicAuthConfig.class
 )
 public interface ProductoClient {

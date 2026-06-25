@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ms_categoria
+    name: ms-categoria
 
 server:
   port: 8089

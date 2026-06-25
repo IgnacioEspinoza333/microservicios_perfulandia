@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ms_envio
+    name: ms-envio
 
 server:
   port: 8084

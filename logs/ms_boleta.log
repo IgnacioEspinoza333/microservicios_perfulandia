@@ -1,38 +1,38 @@
-2026-06-21 15:05:14 [restartedMain] INFO  c.e.ms_boleta.MsBoletaApplication - Starting MsBoletaApplication using Java 21.0.9 with PID 404 (C:\Users\Nacho\Documents\GitHub\microservicios_perfulandia\microservicios\ms_boleta\target\classes started by Nacho in C:\Users\Nacho\Documents\GitHub\microservicios_perfulandia)
-2026-06-21 15:05:14 [restartedMain] DEBUG c.e.ms_boleta.MsBoletaApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
-2026-06-21 15:05:14 [restartedMain] INFO  c.e.ms_boleta.MsBoletaApplication - The following 1 profile is active: "dev"
-2026-06-21 15:05:14 [restartedMain] DEBUG o.s.boot.SpringApplication - Loading source class com.example.ms_boleta.MsBoletaApplication
-2026-06-21 15:05:14 [restartedMain] DEBUG o.s.b.d.restart.ChangeableUrls - Matching URLs for reloading : [file:/C:/Users/Nacho/Documents/GitHub/microservicios_perfulandia/microservicios/ms_boleta/target/classes/]
-2026-06-21 15:05:14 [restartedMain] DEBUG o.s.b.d.settings.DevToolsSettings - Included patterns for restart : []
-2026-06-21 15:05:14 [restartedMain] DEBUG o.s.b.d.settings.DevToolsSettings - Excluded patterns for restart : [/spring-boot-starter-[\w-]+/, /spring-boot/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot-actuator/(bin|build|out)/, /spring-boot-autoconfigure/(bin|build|out)/]
-2026-06-21 15:05:14 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-06-21 15:05:14 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-06-21 15:05:14 [restartedMain] DEBUG o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@66caaefe
-2026-06-21 15:05:15 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-21 15:05:15 [restartedMain] DEBUG o.s.b.a.AutoConfigurationPackages - @EnableAutoConfiguration was declared on a class in the package 'com.example.ms_boleta'. Automatic @Repository and @Entity scanning is enabled.
-2026-06-21 15:05:15 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 106 ms. Found 1 JPA repository interface.
-2026-06-21 15:05:16 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=2a4a1015-1b85-3bb4-b569-5fe5eb574e5c
-2026-06-21 15:05:16 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - Code archive: C:\Users\Nacho\.m2\repository\org\springframework\boot\spring-boot-web-server\4.0.7\spring-boot-web-server-4.0.7.jar
-2026-06-21 15:05:16 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - Code archive: C:\Users\Nacho\.m2\repository\org\springframework\boot\spring-boot-web-server\4.0.7\spring-boot-web-server-4.0.7.jar
-2026-06-21 15:05:16 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
-2026-06-21 15:05:16 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8088 (http)
-2026-06-21 15:05:16 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-06-21 15:05:16 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
-2026-06-21 15:05:16 [restartedMain] DEBUG o.s.b.w.c.s.WebApplicationContextInitializer - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
-2026-06-21 15:05:16 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1688 ms
-2026-06-21 15:05:16 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
-2026-06-21 15:05:16 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
-2026-06-21 15:05:16 [restartedMain] DEBUG o.s.b.s.f.OrderedRequestContextFilter - Filter 'requestContextFilter' configured for use
-2026-06-21 15:05:16 [restartedMain] DEBUG o.s.b.s.f.OrderedCharacterEncodingFilter - Filter 'characterEncodingFilter' configured for use
-2026-06-21 15:05:16 [restartedMain] DEBUG o.s.b.w.s.DelegatingFilterProxyRegistrationBean$1 - Filter 'springSecurityFilterChain' configured for use
-2026-06-21 15:05:16 [restartedMain] DEBUG o.s.b.s.f.OrderedFormContentFilter - Filter 'formContentFilter' configured for use
-2026-06-21 15:05:16 [restartedMain] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-06-21 15:05:16 [restartedMain] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
-2026-06-21 15:05:17 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-21 15:05:17 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-06-21 15:05:18 [restartedMain] WARN  org.hibernate.orm.jdbc.error - HHH000247: ErrorCode: 1049, SQLState: 42000
-2026-06-21 15:05:18 [restartedMain] WARN  org.hibernate.orm.jdbc.error - Unknown database 'ms_boletas'
-2026-06-21 15:05:18 [restartedMain] WARN  org.hibernate.orm.jdbc - HHH100046: Could not obtain connection to query JDBC database metadata
+2026-06-25 10:53:54 [restartedMain] INFO  c.e.ms_boleta.MsBoletaApplication - Starting MsBoletaApplication using Java 21.0.10 with PID 15888 (C:\Users\PAAPCAXXTRXXX\Documents\GitHub\microservicios_perfulandia\microservicios\ms_boleta\target\classes started by PAAPCA02TR628 in C:\Users\PAAPCAXXTRXXX\Documents\GitHub\microservicios_perfulandia)
+2026-06-25 10:53:54 [restartedMain] DEBUG c.e.ms_boleta.MsBoletaApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
+2026-06-25 10:53:54 [restartedMain] INFO  c.e.ms_boleta.MsBoletaApplication - The following 1 profile is active: "dev"
+2026-06-25 10:53:54 [restartedMain] DEBUG o.s.boot.SpringApplication - Loading source class com.example.ms_boleta.MsBoletaApplication
+2026-06-25 10:53:54 [restartedMain] DEBUG o.s.b.d.restart.ChangeableUrls - Matching URLs for reloading : [file:/C:/Users/PAAPCAXXTRXXX/Documents/GitHub/microservicios_perfulandia/microservicios/ms_boleta/target/classes/]
+2026-06-25 10:53:54 [restartedMain] DEBUG o.s.b.d.settings.DevToolsSettings - Included patterns for restart : []
+2026-06-25 10:53:54 [restartedMain] DEBUG o.s.b.d.settings.DevToolsSettings - Excluded patterns for restart : [/spring-boot-starter-[\w-]+/, /spring-boot/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot-actuator/(bin|build|out)/, /spring-boot-autoconfigure/(bin|build|out)/]
+2026-06-25 10:53:54 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-25 10:53:54 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-25 10:53:54 [restartedMain] DEBUG o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@30541b1a
+2026-06-25 10:53:55 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-25 10:53:55 [restartedMain] DEBUG o.s.b.a.AutoConfigurationPackages - @EnableAutoConfiguration was declared on a class in the package 'com.example.ms_boleta'. Automatic @Repository and @Entity scanning is enabled.
+2026-06-25 10:53:55 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 113 ms. Found 1 JPA repository interface.
+2026-06-25 10:53:56 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=2a4a1015-1b85-3bb4-b569-5fe5eb574e5c
+2026-06-25 10:53:56 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - Code archive: C:\Users\PAAPCAXXTRXXX\.m2\repository\org\springframework\boot\spring-boot-web-server\4.0.7\spring-boot-web-server-4.0.7.jar
+2026-06-25 10:53:56 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - Code archive: C:\Users\PAAPCAXXTRXXX\.m2\repository\org\springframework\boot\spring-boot-web-server\4.0.7\spring-boot-web-server-4.0.7.jar
+2026-06-25 10:53:56 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2026-06-25 10:53:56 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8088 (http)
+2026-06-25 10:53:56 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-25 10:53:56 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-25 10:53:56 [restartedMain] DEBUG o.s.b.w.c.s.WebApplicationContextInitializer - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2026-06-25 10:53:56 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2032 ms
+2026-06-25 10:53:56 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2026-06-25 10:53:56 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+2026-06-25 10:53:56 [restartedMain] DEBUG o.s.b.s.f.OrderedRequestContextFilter - Filter 'requestContextFilter' configured for use
+2026-06-25 10:53:56 [restartedMain] DEBUG o.s.b.s.f.OrderedCharacterEncodingFilter - Filter 'characterEncodingFilter' configured for use
+2026-06-25 10:53:56 [restartedMain] DEBUG o.s.b.w.s.DelegatingFilterProxyRegistrationBean$1 - Filter 'springSecurityFilterChain' configured for use
+2026-06-25 10:53:56 [restartedMain] DEBUG o.s.b.s.f.OrderedFormContentFilter - Filter 'formContentFilter' configured for use
+2026-06-25 10:53:56 [restartedMain] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-25 10:53:57 [restartedMain] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-06-25 10:53:57 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-25 10:53:57 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-25 10:53:58 [restartedMain] WARN  org.hibernate.orm.jdbc.error - HHH000247: ErrorCode: 1049, SQLState: 42000
+2026-06-25 10:53:58 [restartedMain] WARN  org.hibernate.orm.jdbc.error - Unknown database 'ms_boletas'
+2026-06-25 10:53:58 [restartedMain] WARN  org.hibernate.orm.jdbc - HHH100046: Could not obtain connection to query JDBC database metadata
 org.hibernate.exception.SQLGrammarException: Unable to obtain isolated JDBC connection [Unknown database 'ms_boletas'] [n/a]
 	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:63)
 	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
@@ -76,8 +76,8 @@ org.hibernate.exception.SQLGrammarException: Unable to obtain isolated JDBC conn
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
 	at com.example.ms_boleta.MsBoletaApplication.main(MsBoletaApplication.java:10)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
 Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'ms_boletas'
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
@@ -97,8 +97,8 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'ms_boletas'
 	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508)
 	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:48)
 	... 40 common frames omitted
-2026-06-21 15:05:18 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-06-21 15:05:18 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2026-06-25 10:53:58 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-25 10:53:58 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [undefined/unknown]
 	Database driver: undefined/unknown
 	Database dialect: MySQLDialect
@@ -110,17 +110,17 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'ms_boletas'
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-06-21 15:05:19 [restartedMain] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-21 15:05:19 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-06-21 15:05:20 [restartedMain] WARN  org.hibernate.orm.jdbc.error - HHH000247: ErrorCode: 1049, SQLState: 42000
-2026-06-21 15:05:20 [restartedMain] WARN  org.hibernate.orm.jdbc.error - Unknown database 'ms_boletas'
-2026-06-21 15:05:20 [restartedMain] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'ms_boletas'] [n/a]
-2026-06-21 15:05:20 [restartedMain] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'ms_boletas'] [n/a]
-2026-06-21 15:05:20 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2026-06-21 15:05:20 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Creating new Restarter for thread Thread[#1,main,5,main]
-2026-06-21 15:05:20 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Immediately restarting application
-2026-06-21 15:05:20 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Starting application com.example.ms_boleta.MsBoletaApplication with URLs [file:/C:/Users/Nacho/Documents/GitHub/microservicios_perfulandia/microservicios/ms_boleta/target/classes/]
-2026-06-21 15:05:20 [restartedMain] DEBUG o.s.b.a.l.ConditionEvaluationReportLogger - 
+2026-06-25 10:53:59 [restartedMain] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-25 10:53:59 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-25 10:54:00 [restartedMain] WARN  org.hibernate.orm.jdbc.error - HHH000247: ErrorCode: 1049, SQLState: 42000
+2026-06-25 10:54:00 [restartedMain] WARN  org.hibernate.orm.jdbc.error - Unknown database 'ms_boletas'
+2026-06-25 10:54:00 [restartedMain] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'ms_boletas'] [n/a]
+2026-06-25 10:54:00 [restartedMain] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'ms_boletas'] [n/a]
+2026-06-25 10:54:00 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-06-25 10:54:00 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Creating new Restarter for thread Thread[#1,main,5,main]
+2026-06-25 10:54:00 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Immediately restarting application
+2026-06-25 10:54:00 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Starting application com.example.ms_boleta.MsBoletaApplication with URLs [file:/C:/Users/PAAPCAXXTRXXX/Documents/GitHub/microservicios_perfulandia/microservicios/ms_boleta/target/classes/]
+2026-06-25 10:54:00 [restartedMain] DEBUG o.s.b.a.l.ConditionEvaluationReportLogger - 
 
 
 ============================
@@ -1736,7 +1736,7 @@ Unconditional classes:
 
 
 
-2026-06-21 15:05:20 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+2026-06-25 10:54:00 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'ms_boletas'] [n/a]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1815)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
@@ -1754,8 +1754,8 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
 	at com.example.ms_boleta.MsBoletaApplication.main(MsBoletaApplication.java:10)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
 Caused by: jakarta.persistence.PersistenceException: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'ms_boletas'] [n/a]
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:448)
@@ -1782,7 +1782,7 @@ Caused by: org.hibernate.exception.SQLGrammarException: Unable to open JDBC Conn
 	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:96)
 	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:269)
 	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at java.base/java.util.HashMap.forEach(Unknown Source)
 	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100)
 	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35)
 	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33)
@@ -1812,43 +1812,43 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'ms_boletas'
 	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508)
 	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44)
 	... 45 common frames omitted
-2026-06-21 15:05:36 [restartedMain] INFO  c.e.ms_boleta.MsBoletaApplication - Starting MsBoletaApplication using Java 21.0.9 with PID 20668 (C:\Users\Nacho\Documents\GitHub\microservicios_perfulandia\microservicios\ms_boleta\target\classes started by Nacho in C:\Users\Nacho\Documents\GitHub\microservicios_perfulandia)
-2026-06-21 15:05:36 [restartedMain] DEBUG c.e.ms_boleta.MsBoletaApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
-2026-06-21 15:05:36 [restartedMain] INFO  c.e.ms_boleta.MsBoletaApplication - The following 1 profile is active: "dev"
-2026-06-21 15:05:36 [restartedMain] DEBUG o.s.boot.SpringApplication - Loading source class com.example.ms_boleta.MsBoletaApplication
-2026-06-21 15:05:36 [restartedMain] DEBUG o.s.b.d.restart.ChangeableUrls - Matching URLs for reloading : [file:/C:/Users/Nacho/Documents/GitHub/microservicios_perfulandia/microservicios/ms_boleta/target/classes/]
-2026-06-21 15:05:36 [restartedMain] DEBUG o.s.b.d.settings.DevToolsSettings - Included patterns for restart : []
-2026-06-21 15:05:36 [restartedMain] DEBUG o.s.b.d.settings.DevToolsSettings - Excluded patterns for restart : [/spring-boot-starter-[\w-]+/, /spring-boot/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot-actuator/(bin|build|out)/, /spring-boot-autoconfigure/(bin|build|out)/]
-2026-06-21 15:05:36 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-06-21 15:05:36 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-06-21 15:05:36 [restartedMain] DEBUG o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@b0e48a6
-2026-06-21 15:05:37 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-21 15:05:37 [restartedMain] DEBUG o.s.b.a.AutoConfigurationPackages - @EnableAutoConfiguration was declared on a class in the package 'com.example.ms_boleta'. Automatic @Repository and @Entity scanning is enabled.
-2026-06-21 15:05:37 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 106 ms. Found 1 JPA repository interface.
-2026-06-21 15:05:37 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=2a4a1015-1b85-3bb4-b569-5fe5eb574e5c
-2026-06-21 15:05:38 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - Code archive: C:\Users\Nacho\.m2\repository\org\springframework\boot\spring-boot-web-server\4.0.7\spring-boot-web-server-4.0.7.jar
-2026-06-21 15:05:38 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - Code archive: C:\Users\Nacho\.m2\repository\org\springframework\boot\spring-boot-web-server\4.0.7\spring-boot-web-server-4.0.7.jar
-2026-06-21 15:05:38 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
-2026-06-21 15:05:38 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8088 (http)
-2026-06-21 15:05:38 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-06-21 15:05:38 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
-2026-06-21 15:05:38 [restartedMain] DEBUG o.s.b.w.c.s.WebApplicationContextInitializer - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
-2026-06-21 15:05:38 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1614 ms
-2026-06-21 15:05:38 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
-2026-06-21 15:05:38 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
-2026-06-21 15:05:38 [restartedMain] DEBUG o.s.b.s.f.OrderedRequestContextFilter - Filter 'requestContextFilter' configured for use
-2026-06-21 15:05:38 [restartedMain] DEBUG o.s.b.s.f.OrderedCharacterEncodingFilter - Filter 'characterEncodingFilter' configured for use
-2026-06-21 15:05:38 [restartedMain] DEBUG o.s.b.w.s.DelegatingFilterProxyRegistrationBean$1 - Filter 'springSecurityFilterChain' configured for use
-2026-06-21 15:05:38 [restartedMain] DEBUG o.s.b.s.f.OrderedFormContentFilter - Filter 'formContentFilter' configured for use
-2026-06-21 15:05:38 [restartedMain] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-06-21 15:05:38 [restartedMain] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
-2026-06-21 15:05:39 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-21 15:05:39 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-06-21 15:05:39 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1cba2540
-2026-06-21 15:05:39 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-06-21 15:05:39 [restartedMain] WARN  org.hibernate.orm.core - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2026-06-21 15:05:39 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-06-21 15:05:39 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2026-06-25 10:54:46 [restartedMain] INFO  c.e.ms_boleta.MsBoletaApplication - Starting MsBoletaApplication using Java 21.0.10 with PID 11956 (C:\Users\PAAPCAXXTRXXX\Documents\GitHub\microservicios_perfulandia\microservicios\ms_boleta\target\classes started by PAAPCA02TR628 in C:\Users\PAAPCAXXTRXXX\Documents\GitHub\microservicios_perfulandia)
+2026-06-25 10:54:46 [restartedMain] DEBUG c.e.ms_boleta.MsBoletaApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
+2026-06-25 10:54:46 [restartedMain] INFO  c.e.ms_boleta.MsBoletaApplication - The following 1 profile is active: "dev"
+2026-06-25 10:54:46 [restartedMain] DEBUG o.s.boot.SpringApplication - Loading source class com.example.ms_boleta.MsBoletaApplication
+2026-06-25 10:54:46 [restartedMain] DEBUG o.s.b.d.restart.ChangeableUrls - Matching URLs for reloading : [file:/C:/Users/PAAPCAXXTRXXX/Documents/GitHub/microservicios_perfulandia/microservicios/ms_boleta/target/classes/]
+2026-06-25 10:54:46 [restartedMain] DEBUG o.s.b.d.settings.DevToolsSettings - Included patterns for restart : []
+2026-06-25 10:54:46 [restartedMain] DEBUG o.s.b.d.settings.DevToolsSettings - Excluded patterns for restart : [/spring-boot-starter-[\w-]+/, /spring-boot/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot-actuator/(bin|build|out)/, /spring-boot-autoconfigure/(bin|build|out)/]
+2026-06-25 10:54:46 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-25 10:54:46 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-25 10:54:46 [restartedMain] DEBUG o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@20a777ff
+2026-06-25 10:54:47 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-25 10:54:47 [restartedMain] DEBUG o.s.b.a.AutoConfigurationPackages - @EnableAutoConfiguration was declared on a class in the package 'com.example.ms_boleta'. Automatic @Repository and @Entity scanning is enabled.
+2026-06-25 10:54:47 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 98 ms. Found 1 JPA repository interface.
+2026-06-25 10:54:48 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=2a4a1015-1b85-3bb4-b569-5fe5eb574e5c
+2026-06-25 10:54:48 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - Code archive: C:\Users\PAAPCAXXTRXXX\.m2\repository\org\springframework\boot\spring-boot-web-server\4.0.7\spring-boot-web-server-4.0.7.jar
+2026-06-25 10:54:48 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - Code archive: C:\Users\PAAPCAXXTRXXX\.m2\repository\org\springframework\boot\spring-boot-web-server\4.0.7\spring-boot-web-server-4.0.7.jar
+2026-06-25 10:54:48 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2026-06-25 10:54:48 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8088 (http)
+2026-06-25 10:54:48 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-25 10:54:48 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-25 10:54:48 [restartedMain] DEBUG o.s.b.w.c.s.WebApplicationContextInitializer - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2026-06-25 10:54:48 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1897 ms
+2026-06-25 10:54:48 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2026-06-25 10:54:48 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+2026-06-25 10:54:48 [restartedMain] DEBUG o.s.b.s.f.OrderedRequestContextFilter - Filter 'requestContextFilter' configured for use
+2026-06-25 10:54:48 [restartedMain] DEBUG o.s.b.s.f.OrderedCharacterEncodingFilter - Filter 'characterEncodingFilter' configured for use
+2026-06-25 10:54:48 [restartedMain] DEBUG o.s.b.w.s.DelegatingFilterProxyRegistrationBean$1 - Filter 'springSecurityFilterChain' configured for use
+2026-06-25 10:54:48 [restartedMain] DEBUG o.s.b.s.f.OrderedFormContentFilter - Filter 'formContentFilter' configured for use
+2026-06-25 10:54:49 [restartedMain] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-25 10:54:49 [restartedMain] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-06-25 10:54:49 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-25 10:54:49 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-25 10:54:49 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72c08ddc
+2026-06-25 10:54:49 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-25 10:54:49 [restartedMain] WARN  org.hibernate.orm.core - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-25 10:54:49 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-25 10:54:49 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/ms_boletas?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
@@ -1860,8 +1860,8 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'ms_boletas'
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-06-21 15:05:40 [restartedMain] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-21 15:05:40 [restartedMain] DEBUG org.hibernate.SQL - 
+2026-06-25 10:54:50 [restartedMain] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-25 10:54:50 [restartedMain] DEBUG org.hibernate.SQL - 
     create table boletas (
         id bigint not null auto_increment,
         cliente varchar(50) not null,
@@ -1870,39 +1870,38 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'ms_boletas'
         numero varchar(20) not null,
         primary key (id)
     ) engine=InnoDB
-2026-06-21 15:05:40 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-21 15:05:40 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-06-21 15:05:40 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-21 15:05:40 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
-2026-06-21 15:05:40 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 16 mappings in 'requestMappingHandlerMapping'
-2026-06-21 15:05:40 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /doc/swagger-ui/**, /doc/swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.2/*swagger-initializer.js] in 'resourceHandlerMapping'
-2026-06-21 15:05:40 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-06-21 15:05:41 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-06-21 15:05:41 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestClient.
-2026-06-21 15:05:41 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-06-21 15:05:41 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
-2026-06-21 15:05:41 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
-2026-06-21 15:05:41 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
-2026-06-21 15:05:41 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
-2026-06-21 15:05:41 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
-2026-06-21 15:05:41 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
-2026-06-21 15:05:41 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
-2026-06-21 15:05:41 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
-2026-06-21 15:05:41 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
-2026-06-21 15:05:41 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
-2026-06-21 15:05:41 [restartedMain] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
-2026-06-21 15:05:41 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
-2026-06-21 15:05:41 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
-2026-06-21 15:05:41 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-06-21 15:05:41 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1782068741672 with initial instances count: 6
-2026-06-21 15:05:41 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application MS_BOLETA with eureka with status UP
-2026-06-21 15:05:41 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1782068741675, current=UP, previous=STARTING]
-2026-06-21 15:05:41 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS_BOLETA/DESKTOP-VFAPE9K:ms_boleta:8088: registering service...
-2026-06-21 15:05:41 [DiscoveryClient-InstanceInfoReplicator-%d] DEBUG o.s.web.client.DefaultRestClient - Writing [InstanceInfo [instanceId = DESKTOP-VFAPE9K:ms_boleta:8088, appName = MS_BOLETA, hostName = 192.168.1.88, status = UP, ipAddr = 192.168.1.88, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2f282445] as "application/json" with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
-2026-06-21 15:05:41 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8088 (http) with context path '/'
-2026-06-21 15:05:41 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8088
-2026-06-21 15:05:41 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS_BOLETA/DESKTOP-VFAPE9K:ms_boleta:8088 - registration status: 204
-2026-06-21 15:05:41 [restartedMain] DEBUG o.s.b.a.l.ConditionEvaluationReportLogger - 
+2026-06-25 10:54:50 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-25 10:54:50 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-25 10:54:50 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-25 10:54:50 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-06-25 10:54:51 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 16 mappings in 'requestMappingHandlerMapping'
+2026-06-25 10:54:51 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /doc/swagger-ui/**, /doc/swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.2/*swagger-initializer.js] in 'resourceHandlerMapping'
+2026-06-25 10:54:51 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-06-25 10:54:51 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-06-25 10:54:51 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestClient.
+2026-06-25 10:54:51 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-25 10:54:51 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2026-06-25 10:54:51 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2026-06-25 10:54:51 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-06-25 10:54:51 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-06-25 10:54:51 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-06-25 10:54:51 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-06-25 10:54:51 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2026-06-25 10:54:51 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-06-25 10:54:51 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2026-06-25 10:54:51 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-06-25 10:54:51 [restartedMain] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 10:54:51 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2026-06-25 10:54:51 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2026-06-25 10:54:51 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-25 10:54:51 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1782399291895 with initial instances count: 0
+2026-06-25 10:54:51 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application MS_BOLETA with eureka with status UP
+2026-06-25 10:54:51 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1782399291899, current=UP, previous=STARTING]
+2026-06-25 10:54:51 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS_BOLETA/PAAPCA02TR628.duoc.acad:ms_boleta:8088: registering service...
+2026-06-25 10:54:51 [DiscoveryClient-InstanceInfoReplicator-%d] DEBUG o.s.web.client.DefaultRestClient - Writing [InstanceInfo [instanceId = PAAPCA02TR628.duoc.acad:ms_boleta:8088, appName = MS_BOLETA, hostName = 192.168.56.1, status = UP, ipAddr = 192.168.56.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@3cf3dc6b] as "application/json" with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
+2026-06-25 10:54:51 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8088 (http) with context path '/'
+2026-06-25 10:54:51 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8088
+2026-06-25 10:54:51 [restartedMain] DEBUG o.s.b.a.l.ConditionEvaluationReportLogger - 
 
 
 ============================
@@ -3518,11 +3517,148 @@ Unconditional classes:
 
 
 
-2026-06-21 15:05:41 [restartedMain] INFO  c.e.ms_boleta.MsBoletaApplication - Started MsBoletaApplication in 5.334 seconds (process running for 5.981)
-2026-06-21 15:05:41 [restartedMain] DEBUG o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
-2026-06-21 15:05:41 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Creating new Restarter for thread Thread[#1,main,5,main]
-2026-06-21 15:05:41 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Immediately restarting application
-2026-06-21 15:05:41 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Starting application com.example.ms_boleta.MsBoletaApplication with URLs [file:/C:/Users/Nacho/Documents/GitHub/microservicios_perfulandia/microservicios/ms_boleta/target/classes/]
-2026-06-21 15:05:41 [restartedMain] DEBUG o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
-2026-06-21 15:06:11 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
-2026-06-21 15:06:41 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 10:54:51 [restartedMain] INFO  c.e.ms_boleta.MsBoletaApplication - Started MsBoletaApplication in 5.55 seconds (process running for 6.255)
+2026-06-25 10:54:51 [restartedMain] DEBUG o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+2026-06-25 10:54:51 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Creating new Restarter for thread Thread[#1,main,5,main]
+2026-06-25 10:54:51 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Immediately restarting application
+2026-06-25 10:54:51 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Starting application com.example.ms_boleta.MsBoletaApplication with URLs [file:/C:/Users/PAAPCAXXTRXXX/Documents/GitHub/microservicios_perfulandia/microservicios/ms_boleta/target/classes/]
+2026-06-25 10:54:51 [restartedMain] DEBUG o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2026-06-25 10:54:52 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS_BOLETA/PAAPCA02TR628.duoc.acad:ms_boleta:8088 - registration status: 204
+2026-06-25 10:55:21 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-06-25 10:55:21 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-06-25 10:55:21 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-06-25 10:55:21 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2026-06-25 10:55:21 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-06-25 10:55:21 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2026-06-25 10:55:21 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-06-25 10:55:21 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 10:55:21 [DiscoveryClient-CacheRefreshExecutor-%d] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2026-06-25 10:55:50 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 10:56:19 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 10:56:48 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 10:57:25 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 10:57:55 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 10:58:25 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 10:58:55 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 10:59:25 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 10:59:54 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-06-25 10:59:55 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 11:00:25 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 11:00:55 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 11:01:25 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 11:01:55 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 11:02:25 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 11:02:55 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 11:03:25 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 11:03:55 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 11:04:25 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 11:04:54 [AsyncResolver-bootstrap-executor-%d] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-06-25 11:04:55 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 11:04:55 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 11:05:25 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 11:05:25 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 11:05:54 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-06-25 11:05:54 [File Watcher] DEBUG o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Change set: [C:\Users\PAAPCAXXTRXXX\Documents\GitHub\microservicios_perfulandia\microservicios\ms_boleta\target\classes [C:\Users\PAAPCAXXTRXXX\Documents\GitHub\microservicios_perfulandia\microservicios\ms_boleta\target\classes\application.yml (MODIFY)]]
+2026-06-25 11:05:54 [File Watcher] DEBUG o.s.boot.devtools.restart.Restarter - Restarting application
+2026-06-25 11:05:54 [Thread-1] DEBUG o.s.boot.devtools.restart.Restarter - Stopping application
+2026-06-25 11:05:54 [Thread-1] DEBUG o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2026-06-25 11:05:54 [Thread-1] DEBUG o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@20a777ff, started on Thu Jun 25 10:54:46 CLT 2026
+2026-06-25 11:05:54 [Thread-1] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application MS_BOLETA with eureka with status DOWN
+2026-06-25 11:05:54 [Thread-1] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1782399954253, current=DOWN, previous=UP]
+2026-06-25 11:05:54 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS_BOLETA/PAAPCA02TR628.duoc.acad:ms_boleta:8088: registering service...
+2026-06-25 11:05:54 [DiscoveryClient-InstanceInfoReplicator-%d] DEBUG o.s.web.client.DefaultRestClient - Writing [InstanceInfo [instanceId = PAAPCA02TR628.duoc.acad:ms_boleta:8088, appName = MS_BOLETA, hostName = 192.168.56.1, status = DOWN, ipAddr = 192.168.56.1, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@3cf3dc6b] as "application/json" with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
+2026-06-25 11:05:54 [Thread-1] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-25 11:05:54 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-25 11:05:54 [Thread-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-25 11:05:54 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS_BOLETA/PAAPCA02TR628.duoc.acad:ms_boleta:8088 - registration status: 204
+2026-06-25 11:05:54 [Thread-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-25 11:05:54 [Thread-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-25 11:05:54 [Thread-1] INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2026-06-25 11:05:55 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 11:05:55 [DiscoveryClient-CacheRefreshExecutor-%d] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 11:05:57 [Thread-1] INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2026-06-25 11:05:57 [DiscoveryClient-%d] WARN  c.n.discovery.TimedSupervisorTask - task supervisor shutting down, can't accept the task
+2026-06-25 11:05:57 [Thread-1] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS_BOLETA/PAAPCA02TR628.duoc.acad:ms_boleta:8088 - deregister  status: 200
+2026-06-25 11:05:57 [Thread-1] INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2026-06-25 11:05:57 [Thread-1] DEBUG o.s.boot.devtools.restart.Restarter - Starting application com.example.ms_boleta.MsBoletaApplication with URLs [file:/C:/Users/PAAPCAXXTRXXX/Documents/GitHub/microservicios_perfulandia/microservicios/ms_boleta/target/classes/]
+2026-06-25 11:05:58 [restartedMain] INFO  c.e.ms_boleta.MsBoletaApplication - Starting MsBoletaApplication using Java 21.0.10 with PID 11956 (C:\Users\PAAPCAXXTRXXX\Documents\GitHub\microservicios_perfulandia\microservicios\ms_boleta\target\classes started by PAAPCA02TR628 in C:\Users\PAAPCAXXTRXXX\Documents\GitHub\microservicios_perfulandia)
+2026-06-25 11:05:58 [restartedMain] DEBUG c.e.ms_boleta.MsBoletaApplication - Running with Spring Boot v4.0.7, Spring v7.0.8
+2026-06-25 11:05:58 [restartedMain] INFO  c.e.ms_boleta.MsBoletaApplication - The following 1 profile is active: "dev"
+2026-06-25 11:05:58 [restartedMain] DEBUG o.s.boot.SpringApplication - Loading source class com.example.ms_boleta.MsBoletaApplication
+2026-06-25 11:05:58 [restartedMain] DEBUG o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@3d5987f6
+2026-06-25 11:05:58 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-25 11:05:58 [restartedMain] DEBUG o.s.b.a.AutoConfigurationPackages - @EnableAutoConfiguration was declared on a class in the package 'com.example.ms_boleta'. Automatic @Repository and @Entity scanning is enabled.
+2026-06-25 11:05:58 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 1 JPA repository interface.
+2026-06-25 11:05:58 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=2a4a1015-1b85-3bb4-b569-5fe5eb574e5c
+2026-06-25 11:05:58 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - Code archive: C:\Users\PAAPCAXXTRXXX\.m2\repository\org\springframework\boot\spring-boot-web-server\4.0.7\spring-boot-web-server-4.0.7.jar
+2026-06-25 11:05:58 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - Code archive: C:\Users\PAAPCAXXTRXXX\.m2\repository\org\springframework\boot\spring-boot-web-server\4.0.7\spring-boot-web-server-4.0.7.jar
+2026-06-25 11:05:58 [restartedMain] DEBUG o.s.b.t.s.TomcatServletWebServerFactory - None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2026-06-25 11:05:58 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8088 (http)
+2026-06-25 11:05:58 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-25 11:05:58 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-25 11:05:58 [restartedMain] DEBUG o.s.b.w.c.s.WebApplicationContextInitializer - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2026-06-25 11:05:58 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 369 ms
+2026-06-25 11:05:58 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2026-06-25 11:05:58 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+2026-06-25 11:05:58 [restartedMain] DEBUG o.s.b.s.f.OrderedRequestContextFilter - Filter 'requestContextFilter' configured for use
+2026-06-25 11:05:58 [restartedMain] DEBUG o.s.b.s.f.OrderedCharacterEncodingFilter - Filter 'characterEncodingFilter' configured for use
+2026-06-25 11:05:58 [restartedMain] DEBUG o.s.b.w.s.DelegatingFilterProxyRegistrationBean$1 - Filter 'springSecurityFilterChain' configured for use
+2026-06-25 11:05:58 [restartedMain] DEBUG o.s.b.s.f.OrderedFormContentFilter - Filter 'formContentFilter' configured for use
+2026-06-25 11:05:58 [restartedMain] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-25 11:05:58 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-25 11:05:58 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-06-25 11:05:58 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@818dc92
+2026-06-25 11:05:58 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-06-25 11:05:58 [restartedMain] WARN  org.hibernate.orm.core - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-25 11:05:58 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-25 11:05:58 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/ms_boletas?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: ms_boletas/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-25 11:05:58 [restartedMain] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-25 11:05:58 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-25 11:05:58 [restartedMain] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-25 11:05:59 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-06-25 11:05:59 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 16 mappings in 'requestMappingHandlerMapping'
+2026-06-25 11:05:59 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /doc/swagger-ui/**, /doc/swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.2/*swagger-initializer.js] in 'resourceHandlerMapping'
+2026-06-25 11:05:59 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-06-25 11:05:59 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-06-25 11:06:00 [restartedMain] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-06-25 11:06:00 [File Watcher] INFO  o.s.b.f.s.DefaultListableBeanFactory - Obtaining singleton bean 'eurekaAutoServiceRegistration' in thread "File Watcher" while other thread holds singleton lock for other beans [eurekaServiceRegistry, eurekaAutoServiceRegistration, eurekaInstanceConfigBean, org.springframework.cloud.client.serviceregistry.AutoServiceRegistrationAutoConfiguration]
+2026-06-25 11:06:01 [restartedMain] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2026-06-25 11:06:01 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2026-06-25 11:06:01 [File Watcher] DEBUG o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Change set: [C:\Users\PAAPCAXXTRXXX\Documents\GitHub\microservicios_perfulandia\microservicios\ms_boleta\target\classes [C:\Users\PAAPCAXXTRXXX\Documents\GitHub\microservicios_perfulandia\microservicios\ms_boleta\target\classes\application.yml (MODIFY), C:\Users\PAAPCAXXTRXXX\Documents\GitHub\microservicios_perfulandia\microservicios\ms_boleta\target\classes\com\example\ms_boleta\assembler\BoletaModelAssembler.class (MODIFY), C:\Users\PAAPCAXXTRXXX\Documents\GitHub\microservicios_perfulandia\microservicios\ms_boleta\target\classes\com\example\ms_boleta\controller\BoletaControllerV2.class (MODIFY)]]
+2026-06-25 11:06:01 [File Watcher] DEBUG o.s.boot.devtools.restart.Restarter - Restarting application
+2026-06-25 11:06:01 [Thread-7] DEBUG o.s.boot.devtools.restart.Restarter - Stopping application
+2026-06-25 11:06:01 [restartedMain] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestClient.
+2026-06-25 11:06:01 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-25 11:06:01 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2026-06-25 11:06:01 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2026-06-25 11:06:01 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-06-25 11:06:01 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-06-25 11:06:01 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-06-25 11:06:01 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-06-25 11:06:01 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2026-06-25 11:06:01 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-06-25 11:06:01 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2026-06-25 11:06:01 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-06-25 11:06:01 [restartedMain] DEBUG o.s.web.client.DefaultRestClient - Reading to [com.netflix.discovery.shared.Applications]
+2026-06-25 11:06:01 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2026-06-25 11:06:01 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2026-06-25 11:06:01 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-25 11:06:01 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1782399961182 with initial instances count: 5
+2026-06-25 11:06:01 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application MS_BOLETA with eureka with status UP
+2026-06-25 11:06:01 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1782399961183, current=UP, previous=STARTING]
+2026-06-25 11:06:01 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS_BOLETA/localhost:ms_boleta:8088: registering service...
+2026-06-25 11:06:01 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8088 (http) with context path '/'
+2026-06-25 11:06:01 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8088
+2026-06-25 11:06:01 [DiscoveryClient-InstanceInfoReplicator-%d] DEBUG o.s.web.client.DefaultRestClient - Writing [InstanceInfo [instanceId = localhost:ms_boleta:8088, appName = MS_BOLETA, hostName = 192.168.112.239, status = UP, ipAddr = 192.168.112.239, port = 8088, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@18dd1fab] as "application/json" with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
+2026-06-25 11:06:01 [DiscoveryClient-InstanceInfoReplicator-%d] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_MS_BOLETA/localhost:ms_boleta:8088 - registration status: 204

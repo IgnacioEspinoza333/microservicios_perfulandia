@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ms_inventario
+    name: ms-inventario
 
 server:
   port: 8087

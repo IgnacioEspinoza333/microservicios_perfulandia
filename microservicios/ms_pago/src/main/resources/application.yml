@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ms_pago
+    name: ms-pago
 
 server:
   port: 8083

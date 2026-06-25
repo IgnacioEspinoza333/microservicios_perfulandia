@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ms_pedidos
+    name: ms-pedidos
 
 server:
   port: 8090

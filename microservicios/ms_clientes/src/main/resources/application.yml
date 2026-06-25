@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ms_clientes
+    name: ms-clientes
 
 server:
   port: 8082
