@@ -22,13 +22,15 @@ public class SecurityConfig {
         http
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
+
                 .requestMatchers("/api/public/**").permitAll()
 
-                // V1
+                /* Permite monitoreo y registro en Eureka */
+                .requestMatchers("/actuator/**").permitAll()
+
                 .requestMatchers("/api/clientes/**", "/api/direcciones/**")
                     .hasAnyRole("USER", "ADMIN")
 
-                // V2
                 .requestMatchers("/api/v2/clientes/**", "/api/v2/direcciones/**")
                     .hasAnyRole("USER", "ADMIN")
 
@@ -41,6 +43,7 @@ public class SecurityConfig {
 
     @Bean
     public UserDetailsService userDetailsService(PasswordEncoder encoder) {
+
         UserDetails user = User
             .withUsername("user")
             .password(encoder.encode("1234"))
