@@ -22,7 +22,12 @@ public class SecurityConfig {
         http
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
+
+                // PUBLICO
                 .requestMatchers("/api/public/**").permitAll()
+
+                // ACTUATOR
+                .requestMatchers("/actuator/**").permitAll()
 
                 // internos
                 .requestMatchers("/api/internal/productos/**")
@@ -45,6 +50,7 @@ public class SecurityConfig {
 
     @Bean
     public UserDetailsService userDetailsService(PasswordEncoder encoder) {
+
         UserDetails user = User
             .withUsername("user")
             .password(encoder.encode("1234"))

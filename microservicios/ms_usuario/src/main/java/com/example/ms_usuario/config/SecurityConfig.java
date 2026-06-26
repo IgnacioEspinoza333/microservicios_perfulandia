@@ -22,20 +22,26 @@ public class SecurityConfig {
         http
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
+
+                // ✅ PÚBLICO
                 .requestMatchers("/api/public/**").permitAll()
 
-                // V1
+                // ✅ 🔥 ACTUATOR (CLAVE PARA ARREGLAR TU ERROR)
+                .requestMatchers("/actuator/**").permitAll()
+
+                // ✅ V1
                 .requestMatchers("/api/usuarios/**").hasAnyRole("USER", "ADMIN")
                 .requestMatchers("/api/empleados/**").hasAnyRole("USER", "ADMIN")
                 .requestMatchers("/api/roles/**").hasRole("ADMIN")
                 .requestMatchers("/api/permisos/**").hasRole("ADMIN")
 
-                // V2
+                // ✅ V2
                 .requestMatchers("/api/v2/usuarios/**").hasAnyRole("USER", "ADMIN")
                 .requestMatchers("/api/v2/empleados/**").hasAnyRole("USER", "ADMIN")
                 .requestMatchers("/api/v2/roles/**").hasRole("ADMIN")
                 .requestMatchers("/api/v2/permisos/**").hasRole("ADMIN")
 
+                // ✅ TODO LO DEMÁS REQUIERE LOGIN
                 .anyRequest().authenticated()
             )
             .httpBasic(Customizer.withDefaults());
@@ -45,6 +51,7 @@ public class SecurityConfig {
 
     @Bean
     public UserDetailsService userDetailsService(PasswordEncoder encoder) {
+
         UserDetails user = User
             .withUsername("user")
             .password(encoder.encode("1234"))

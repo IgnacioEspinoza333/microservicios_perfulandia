@@ -22,13 +22,15 @@ public class SecurityConfig {
         http
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
+
                 .requestMatchers("/api/public/**").permitAll()
 
-                // V1
+                /* Permite acceso a Actuator para monitoreo */
+                .requestMatchers("/actuator/**").permitAll()
+
                 .requestMatchers("/api/pedidos/**")
                     .hasAnyRole("USER", "ADMIN")
 
-                // V2
                 .requestMatchers("/api/v2/pedidos/**")
                     .hasAnyRole("USER", "ADMIN")
 
@@ -41,6 +43,7 @@ public class SecurityConfig {
 
     @Bean
     public UserDetailsService userDetailsService(PasswordEncoder encoder) {
+
         UserDetails user = User
             .withUsername("user")
             .password(encoder.encode("1234"))

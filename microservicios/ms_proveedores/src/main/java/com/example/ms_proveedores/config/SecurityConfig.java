@@ -22,7 +22,12 @@ public class SecurityConfig {
         http
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
+
+                // PÚBLICO
                 .requestMatchers("/api/public/**").permitAll()
+
+                //  ACTUATOR (LO QUE TE FALTABA)
+                .requestMatchers("/actuator/**").permitAll()
 
                 // V1
                 .requestMatchers("/api/proveedores/**", "/api/abastecimientos/**")
@@ -32,6 +37,7 @@ public class SecurityConfig {
                 .requestMatchers("/api/v2/proveedores/**", "/api/v2/abastecimientos/**")
                     .hasAnyRole("USER", "ADMIN")
 
+                // TODO LO DEMÁS
                 .anyRequest().authenticated()
             )
             .httpBasic(Customizer.withDefaults());
@@ -41,6 +47,7 @@ public class SecurityConfig {
 
     @Bean
     public UserDetailsService userDetailsService(PasswordEncoder encoder) {
+
         UserDetails user = User
             .withUsername("user")
             .password(encoder.encode("1234"))
