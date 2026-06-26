@@ -5,7 +5,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- ✅ IDENTIDAD DEL PROYECTO -->
+    <!-- Identidad del proyecto -->
     <groupId>com.example</groupId>
     <artifactId>microservicios</artifactId>
     <version>1.0.0</version>
@@ -14,7 +14,7 @@
     <name>microservicios</name>
     <description>Proyecto multi-módulo de microservicios</description>
 
-    <!-- ✅ MÓDULOS -->
+    <!-- Módulos -->
     <modules>
         <module>eureka-server</module>
         <module>ms_usuario</module>
@@ -29,14 +29,14 @@
         <module>ms_boleta</module>
     </modules>
 
-    <!-- ✅ PROPIEDADES GLOBALES -->
+    <!-- Propiedades globales -->
     <properties>
         <java.version>21</java.version>
         <spring.boot.version>4.0.7</spring.boot.version>
         <spring.cloud.version>2025.1.1</spring.cloud.version>
     </properties>
 
-    <!-- ✅ GESTIÓN DE DEPENDENCIAS -->
+    <!-- Gestión de dependencias -->
     <dependencyManagement>
         <dependencies>
 
@@ -61,7 +61,7 @@
         </dependencies>
     </dependencyManagement>
 
-    <!-- ✅ PLUGINS COMUNES -->
+    <!-- Plugins -->
     <build>
         <pluginManagement>
             <plugins>
