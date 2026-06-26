@@ -19,16 +19,31 @@ import java.util.stream.Collectors;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 @RestController
 @RequestMapping("/api/v2/abastecimientos")
 @RequiredArgsConstructor
 @Slf4j
+@Tag(name = "Abastecimientos", description = "API para la gestión de abastecimientos con soporte HATEOAS")
 public class AbastecimientoControllerV2 {
 
     private final AbastecimientoService abastecimientoService;
     private final AbastecimientoModelAssembler assembler;
 
     @PostMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @Operation(summary = "Crear abastecimiento", description = "Registra un nuevo abastecimiento para un proveedor")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "201", description = "Abastecimiento creado correctamente",
+                    content = @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = AbastecimientoResponseDto.class))),
+            @ApiResponse(responseCode = "400", description = "Datos inválidos")
+    })
     public ResponseEntity<EntityModel<AbastecimientoResponseDto>> crear(@Valid @RequestBody AbastecimientoRequestDto dto) {
         log.info("Solicitud v2 para crear abastecimiento para proveedorId: {}", dto.getProveedorId());
 
@@ -40,6 +55,10 @@ public class AbastecimientoControllerV2 {
     }
 
     @GetMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @Operation(summary = "Listar abastecimientos", description = "Obtiene todos los abastecimientos registrados")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Listado obtenido correctamente")
+    })
     public CollectionModel<EntityModel<AbastecimientoResponseDto>> listar() {
         log.debug("Solicitud v2 para listar abastecimientos");
 
@@ -54,6 +73,13 @@ public class AbastecimientoControllerV2 {
     }
 
     @GetMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @Operation(summary = "Obtener abastecimiento por ID", description = "Obtiene un abastecimiento según su identificador")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Abastecimiento encontrado",
+                    content = @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = AbastecimientoResponseDto.class))),
+            @ApiResponse(responseCode = "404", description = "Abastecimiento no encontrado")
+    })
     public EntityModel<AbastecimientoResponseDto> obtenerPorId(@PathVariable Long id) {
         log.debug("Solicitud v2 para obtener abastecimiento con id: {}", id);
 
@@ -62,6 +88,11 @@ public class AbastecimientoControllerV2 {
     }
 
     @GetMapping(value = "/proveedor/{proveedorId}", produces = MediaTypes.HAL_JSON_VALUE)
+    @Operation(summary = "Listar abastecimientos por proveedor", description = "Obtiene los abastecimientos asociados a un proveedor")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Listado obtenido correctamente"),
+            @ApiResponse(responseCode = "404", description = "Proveedor no encontrado")
+    })
     public CollectionModel<EntityModel<AbastecimientoResponseDto>> listarPorProveedor(@PathVariable Long proveedorId) {
         log.debug("Solicitud v2 para listar abastecimientos del proveedor con id: {}", proveedorId);
 
@@ -78,6 +109,11 @@ public class AbastecimientoControllerV2 {
     }
 
     @GetMapping(value = "/producto/{productoId}", produces = MediaTypes.HAL_JSON_VALUE)
+    @Operation(summary = "Listar abastecimientos por producto", description = "Obtiene los abastecimientos asociados a un producto")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Listado obtenido correctamente"),
+            @ApiResponse(responseCode = "404", description = "Producto no encontrado")
+    })
     public CollectionModel<EntityModel<AbastecimientoResponseDto>> listarPorProducto(@PathVariable Long productoId) {
         log.debug("Solicitud v2 para listar abastecimientos del producto con id: {}", productoId);
 
@@ -93,6 +129,14 @@ public class AbastecimientoControllerV2 {
     }
 
     @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @Operation(summary = "Actualizar abastecimiento", description = "Actualiza un abastecimiento existente")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Abastecimiento actualizado correctamente",
+                    content = @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = AbastecimientoResponseDto.class))),
+            @ApiResponse(responseCode = "400", description = "Datos inválidos"),
+            @ApiResponse(responseCode = "404", description = "Abastecimiento no encontrado")
+    })
     public ResponseEntity<EntityModel<AbastecimientoResponseDto>> actualizar(
             @PathVariable Long id,
             @Valid @RequestBody AbastecimientoUpdateDto dto) {
@@ -104,6 +148,11 @@ public class AbastecimientoControllerV2 {
     }
 
     @DeleteMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @Operation(summary = "Eliminar abastecimiento", description = "Elimina un abastecimiento por su ID")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "204", description = "Abastecimiento eliminado correctamente"),
+            @ApiResponse(responseCode = "404", description = "Abastecimiento no encontrado")
+    })
     public ResponseEntity<Void> eliminar(@PathVariable Long id) {
         log.warn("Solicitud v2 para eliminar abastecimiento con id: {}", id);
 

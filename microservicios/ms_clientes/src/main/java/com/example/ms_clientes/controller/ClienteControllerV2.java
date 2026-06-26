@@ -19,16 +19,31 @@ import java.util.stream.Collectors;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 @RestController
 @RequestMapping("/api/v2/clientes")
 @RequiredArgsConstructor
 @Slf4j
+@Tag(name = "Clientes", description = "API para la gestión de clientes con soporte HATEOAS")
 public class ClienteControllerV2 {
 
     private final ClienteService clienteService;
     private final ClienteModelAssembler assembler;
 
     @PostMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @Operation(summary = "Crear cliente", description = "Registra un nuevo cliente en el sistema")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "201", description = "Cliente creado correctamente",
+                    content = @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = ClienteResponseDto.class))),
+            @ApiResponse(responseCode = "400", description = "Datos inválidos")
+    })
     public ResponseEntity<EntityModel<ClienteResponseDto>> crearCliente(@Valid @RequestBody ClienteRequestDto dto) {
         log.info("Solicitud v2 para crear cliente con email: {}", dto.getEmail());
 
@@ -40,6 +55,10 @@ public class ClienteControllerV2 {
     }
 
     @GetMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @Operation(summary = "Listar clientes", description = "Obtiene todos los clientes registrados")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Listado obtenido correctamente")
+    })
     public CollectionModel<EntityModel<ClienteResponseDto>> listarClientes() {
         log.debug("Solicitud v2 para listar clientes");
 
@@ -54,6 +73,13 @@ public class ClienteControllerV2 {
     }
 
     @GetMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @Operation(summary = "Obtener cliente por ID", description = "Obtiene un cliente según su identificador")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Cliente encontrado",
+                    content = @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = ClienteResponseDto.class))),
+            @ApiResponse(responseCode = "404", description = "Cliente no encontrado")
+    })
     public EntityModel<ClienteResponseDto> obtenerClientePorId(@PathVariable Long id) {
         log.debug("Solicitud v2 para obtener cliente con id: {}", id);
 
@@ -62,6 +88,14 @@ public class ClienteControllerV2 {
     }
 
     @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @Operation(summary = "Actualizar cliente", description = "Actualiza los datos de un cliente existente")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Cliente actualizado correctamente",
+                    content = @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = ClienteResponseDto.class))),
+            @ApiResponse(responseCode = "400", description = "Datos inválidos"),
+            @ApiResponse(responseCode = "404", description = "Cliente no encontrado")
+    })
     public ResponseEntity<EntityModel<ClienteResponseDto>> actualizarCliente(
             @PathVariable Long id,
             @Valid @RequestBody ClienteUpdateDto dto) {
@@ -73,6 +107,11 @@ public class ClienteControllerV2 {
     }
 
     @DeleteMapping("/{id}")
+    @Operation(summary = "Eliminar cliente", description = "Elimina un cliente por su ID")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "204", description = "Cliente eliminado correctamente"),
+            @ApiResponse(responseCode = "404", description = "Cliente no encontrado")
+    })
     public ResponseEntity<Void> eliminarCliente(@PathVariable Long id) {
         log.warn("Solicitud v2 para eliminar cliente con id: {}", id);
 
