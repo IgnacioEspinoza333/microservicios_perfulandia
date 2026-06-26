@@ -12,11 +12,14 @@ import java.util.Base64;
 @Configuration
 public class FeignBasicAuthConfig {
 
+    @Value("${integraciones.auth.username:user}")
+    private String username;
+
+    @Value("${integraciones.auth.password:1234}")
+    private String password;
+
     @Bean
-    public RequestInterceptor basicAuthRequestInterceptor(
-            @Value("${integraciones.auth.username}") String username,
-            @Value("${integraciones.auth.password}") String password
-    ) {
+    public RequestInterceptor basicAuthRequestInterceptor() {
         return requestTemplate -> {
             String auth = username + ":" + password;
             String encoded = Base64.getEncoder()
