@@ -19,16 +19,31 @@ import java.util.stream.Collectors;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 @RestController
 @RequestMapping("/api/v2/inventarios")
 @RequiredArgsConstructor
 @Slf4j
+@Tag(name = "Inventarios", description = "API para la gestión de inventarios con soporte HATEOAS")
 public class InventarioControllerV2 {
 
     private final InventarioService inventarioService;
     private final InventarioModelAssembler assembler;
 
     @PostMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @Operation(summary = "Crear inventario", description = "Registra un nuevo inventario para un producto")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "201", description = "Inventario creado correctamente",
+                    content = @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = InventarioResponseDto.class))),
+            @ApiResponse(responseCode = "400", description = "Datos inválidos")
+    })
     public ResponseEntity<EntityModel<InventarioResponseDto>> crear(@Valid @RequestBody InventarioRequestDto dto) {
         log.info("Solicitud v2 para crear inventario para productoId: {}", dto.getProductoId());
 
@@ -40,6 +55,10 @@ public class InventarioControllerV2 {
     }
 
     @GetMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @Operation(summary = "Listar inventarios", description = "Obtiene todos los inventarios registrados")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Listado obtenido correctamente")
+    })
     public CollectionModel<EntityModel<InventarioResponseDto>> listar() {
         log.debug("Solicitud v2 para listar inventarios");
 
@@ -54,6 +73,13 @@ public class InventarioControllerV2 {
     }
 
     @GetMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @Operation(summary = "Obtener inventario por ID", description = "Obtiene un inventario según su identificador")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Inventario encontrado",
+                    content = @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = InventarioResponseDto.class))),
+            @ApiResponse(responseCode = "404", description = "Inventario no encontrado")
+    })
     public EntityModel<InventarioResponseDto> obtenerPorId(@PathVariable Long id) {
         log.debug("Solicitud v2 para obtener inventario con id: {}", id);
 
@@ -62,6 +88,13 @@ public class InventarioControllerV2 {
     }
 
     @GetMapping(value = "/producto/{productoId}", produces = MediaTypes.HAL_JSON_VALUE)
+    @Operation(summary = "Obtener inventario por producto", description = "Obtiene el inventario asociado a un producto específico")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Inventario encontrado",
+                    content = @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = InventarioResponseDto.class))),
+            @ApiResponse(responseCode = "404", description = "Inventario no encontrado")
+    })
     public EntityModel<InventarioResponseDto> obtenerPorProductoId(@PathVariable Long productoId) {
         log.debug("Solicitud v2 para obtener inventario por productoId: {}", productoId);
 
@@ -74,6 +107,14 @@ public class InventarioControllerV2 {
     }
 
     @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @Operation(summary = "Actualizar inventario", description = "Actualiza un inventario existente")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Inventario actualizado correctamente",
+                    content = @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = InventarioResponseDto.class))),
+            @ApiResponse(responseCode = "400", description = "Datos inválidos"),
+            @ApiResponse(responseCode = "404", description = "Inventario no encontrado")
+    })
     public ResponseEntity<EntityModel<InventarioResponseDto>> actualizar(
             @PathVariable Long id,
             @Valid @RequestBody InventarioUpdateDto dto) {
@@ -85,6 +126,11 @@ public class InventarioControllerV2 {
     }
 
     @DeleteMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @Operation(summary = "Eliminar inventario", description = "Elimina un inventario por su ID")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "204", description = "Inventario eliminado correctamente"),
+            @ApiResponse(responseCode = "404", description = "Inventario no encontrado")
+    })
     public ResponseEntity<Void> eliminar(@PathVariable Long id) {
         log.warn("Solicitud v2 para eliminar inventario con id: {}", id);
 

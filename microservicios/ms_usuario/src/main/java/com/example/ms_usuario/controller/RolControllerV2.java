@@ -17,15 +17,27 @@ import java.util.stream.Collectors;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 @RestController
 @RequestMapping("/api/v2/roles")
 @RequiredArgsConstructor
+@Tag(name = "Roles", description = "API para la gestión de roles con soporte HATEOAS")
 public class RolControllerV2 {
 
     private final RolService rolService;
     private final RolModelAssembler assembler;
 
     @GetMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @Operation(summary = "Listar roles", description = "Obtiene todos los roles registrados")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Listado obtenido correctamente")
+    })
     public CollectionModel<EntityModel<RolResponseDto>> listar() {
         List<EntityModel<RolResponseDto>> roles = rolService.listar().stream()
                 .map(assembler::toModel)
@@ -38,12 +50,26 @@ public class RolControllerV2 {
     }
 
     @GetMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @Operation(summary = "Obtener rol por ID", description = "Obtiene un rol según su identificador")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Rol encontrado",
+                    content = @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = RolResponseDto.class))),
+            @ApiResponse(responseCode = "404", description = "Rol no encontrado")
+    })
     public EntityModel<RolResponseDto> obtenerPorId(@PathVariable Long id) {
         RolResponseDto rol = rolService.obtenerPorId(id);
         return assembler.toModel(rol);
     }
 
     @PostMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @Operation(summary = "Crear rol", description = "Registra un nuevo rol en el sistema")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "201", description = "Rol creado correctamente",
+                    content = @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = RolResponseDto.class))),
+            @ApiResponse(responseCode = "400", description = "Datos inválidos")
+    })
     public ResponseEntity<EntityModel<RolResponseDto>> crear(
             @Valid @RequestBody RolRequestDto dto) {
 
@@ -56,6 +82,14 @@ public class RolControllerV2 {
     }
 
     @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @Operation(summary = "Actualizar rol", description = "Actualiza un rol existente")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Rol actualizado correctamente",
+                    content = @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = RolResponseDto.class))),
+            @ApiResponse(responseCode = "400", description = "Datos inválidos"),
+            @ApiResponse(responseCode = "404", description = "Rol no encontrado")
+    })
     public ResponseEntity<EntityModel<RolResponseDto>> actualizar(
             @PathVariable Long id,
             @Valid @RequestBody RolRequestDto dto) {
@@ -65,6 +99,11 @@ public class RolControllerV2 {
     }
 
     @DeleteMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @Operation(summary = "Eliminar rol", description = "Elimina un rol por su ID")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "204", description = "Rol eliminado correctamente"),
+            @ApiResponse(responseCode = "404", description = "Rol no encontrado")
+    })
     public ResponseEntity<Void> eliminar(@PathVariable Long id) {
         rolService.eliminar(id);
         return ResponseEntity.noContent().build();
