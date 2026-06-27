@@ -18,9 +18,17 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import java.util.List;
 
-import static org.mockito.Mockito.*;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.doNothing;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
+
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ExtendWith(MockitoExtension.class)
 class DireccionControllerV2Test {
@@ -40,7 +48,9 @@ class DireccionControllerV2Test {
 
     @BeforeEach
     void setup() {
-        mockMvc = MockMvcBuilders.standaloneSetup(controller).build();
+        mockMvc = MockMvcBuilders
+                .standaloneSetup(controller)
+                .build();
         mapper = new ObjectMapper();
     }
 
@@ -59,6 +69,8 @@ class DireccionControllerV2Test {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(mapper.writeValueAsString(dto)))
                 .andExpect(status().isCreated());
+
+        verify(service).crear(eq(1L), any());
     }
 
     @Test
@@ -71,6 +83,8 @@ class DireccionControllerV2Test {
 
         mockMvc.perform(get("/api/v2/direcciones"))
                 .andExpect(status().isOk());
+
+        verify(service).listar();
     }
 
     @Test
@@ -79,5 +93,7 @@ class DireccionControllerV2Test {
 
         mockMvc.perform(delete("/api/v2/direcciones/1"))
                 .andExpect(status().isNoContent());
+
+        verify(service).eliminar(1L);
     }
 }
