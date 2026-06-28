@@ -28,6 +28,8 @@ public class SecurityConfig {
                 /* Necesario para monitoreo */
                 .requestMatchers("/actuator/**").permitAll()
 
+                .requestMatchers("/doc/**").permitAll()
+
                 .requestMatchers("/api/categorias/**")
                     .hasAnyRole("USER", "ADMIN")
 

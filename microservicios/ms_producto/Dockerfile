@@ -14,7 +14,7 @@ COPY ms_categoria ms_categoria
 COPY ms_proveedores ms_proveedores
 COPY ms_boleta ms_boleta
 
-RUN mvn -pl ms_producto -am clean package -DskipTests
+RUN mvn clean package -DskipTests -Dmaven.test.skip=true
 
 FROM eclipse-temurin:21-jre-jammy
 WORKDIR /app

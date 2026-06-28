@@ -28,6 +28,8 @@ public class SecurityConfig {
                 /* Permite acceso a Actuator para monitoreo */
                 .requestMatchers("/actuator/**").permitAll()
 
+                .requestMatchers("/doc/**").permitAll()
+
                 .requestMatchers("/api/pedidos/**")
                     .hasAnyRole("USER", "ADMIN")
 

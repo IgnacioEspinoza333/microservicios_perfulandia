@@ -13,8 +13,8 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>ms_pedidos</artifactId>
-    <name>ms_pedidos</name>
+    <artifactId>ms_producto</artifactId>
+     <name>ms_producto</name>
     <description>Microservicio de pedidos</description>
 
     <dependencies>
@@ -157,6 +157,13 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
                     <excludes>
                         <exclude>

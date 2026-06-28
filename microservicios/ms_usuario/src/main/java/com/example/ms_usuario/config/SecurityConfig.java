@@ -30,6 +30,7 @@ public class SecurityConfig {
                 .requestMatchers("/actuator/**").permitAll()
 
                 // ✅ V1
+                .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
                 .requestMatchers("/api/usuarios/**").hasAnyRole("USER", "ADMIN")
                 .requestMatchers("/api/empleados/**").hasAnyRole("USER", "ADMIN")
                 .requestMatchers("/api/roles/**").hasRole("ADMIN")
@@ -42,6 +43,7 @@ public class SecurityConfig {
                 .requestMatchers("/api/v2/permisos/**").hasRole("ADMIN")
 
                 // ✅ TODO LO DEMÁS REQUIERE LOGIN
+                
                 .anyRequest().authenticated()
             )
             .httpBasic(Customizer.withDefaults());

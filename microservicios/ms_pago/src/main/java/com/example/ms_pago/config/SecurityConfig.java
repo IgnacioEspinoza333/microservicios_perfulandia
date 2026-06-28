@@ -28,6 +28,8 @@ public class SecurityConfig {
                 /* Necesario para acceso a métricas y Eureka */
                 .requestMatchers("/actuator/**").permitAll()
 
+                .requestMatchers("/doc/**").permitAll()
+
                 .requestMatchers("/api/pagos/**")
                     .hasAnyRole("USER", "ADMIN")
 

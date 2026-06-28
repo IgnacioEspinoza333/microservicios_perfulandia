@@ -28,6 +28,8 @@ public class SecurityConfig {
                 /* Permite acceso a endpoints de monitoreo */
                 .requestMatchers("/actuator/**").permitAll()
 
+                .requestMatchers("/doc/**").permitAll()
+
                 .requestMatchers("/api/boletas/**")
                     .hasAnyRole("USER", "ADMIN")
 

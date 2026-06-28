@@ -13,8 +13,8 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>ms_envio</artifactId>
-    <name>ms_envio</name>
+    <artifactId>ms_clientes</artifactId>
+    <name>ms_clientes</name>
     <description>Microservicio de envíos</description>
 
     <dependencies>
@@ -150,6 +150,13 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
                     <excludes>
                         <exclude>
