@@ -29,6 +29,8 @@ public class SecurityConfig {
                 // ACTUATOR
                 .requestMatchers("/actuator/**").permitAll()
 
+                .requestMatchers("/doc/**").permitAll()
+
                 // internos
                 .requestMatchers("/api/internal/productos/**")
                     .hasAnyRole("USER", "ADMIN")

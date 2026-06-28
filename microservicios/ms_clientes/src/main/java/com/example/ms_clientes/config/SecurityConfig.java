@@ -28,6 +28,8 @@ public class SecurityConfig {
                 /* Permite monitoreo y registro en Eureka */
                 .requestMatchers("/actuator/**").permitAll()
 
+                .requestMatchers("/doc/**").permitAll()
+
                 .requestMatchers("/api/clientes/**", "/api/direcciones/**")
                     .hasAnyRole("USER", "ADMIN")
 

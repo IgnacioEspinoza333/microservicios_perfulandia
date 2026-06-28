@@ -29,6 +29,8 @@ public class SecurityConfig {
                 //  ACTUATOR (LO QUE TE FALTABA)
                 .requestMatchers("/actuator/**").permitAll()
 
+                .requestMatchers("/doc/**").permitAll()
+
                 // V1
                 .requestMatchers("/api/proveedores/**", "/api/abastecimientos/**")
                     .hasAnyRole("USER", "ADMIN")
