@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.MediaTypes;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,7 +34,7 @@ public class BoletaControllerV2 {
     private final BoletaService boletaService;
     private final BoletaModelAssembler assembler;
 
-    @PostMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @PostMapping(produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Crear boleta", description = "Registra una nueva boleta en el sistema")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Boleta creada correctamente",
@@ -49,7 +50,7 @@ public class BoletaControllerV2 {
                 .body(assembler.toModel(nuevaBoleta));
     }
 
-    @GetMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Obtener boleta por ID", description = "Obtiene una boleta según su identificador")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Boleta encontrada",
@@ -62,7 +63,7 @@ public class BoletaControllerV2 {
         return assembler.toModel(boleta);
     }
 
-    @GetMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Listar boletas", description = "Obtiene todas las boletas registradas")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Listado obtenido correctamente")
@@ -89,7 +90,7 @@ public class BoletaControllerV2 {
         return ResponseEntity.noContent().build();
     }
 
-    @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @PutMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Actualizar boleta", description = "Actualiza una boleta existente")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Boleta actualizada correctamente",

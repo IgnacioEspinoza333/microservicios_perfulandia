@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.MediaTypes;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,7 +35,7 @@ public class PagoControllerV2 {
     private final PagoService pagoService;
     private final PagoModelAssembler assembler;
 
-    @PostMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @PostMapping(produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Crear pago", description = "Registra un nuevo pago en el sistema")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Pago creado correctamente",
@@ -50,7 +51,7 @@ public class PagoControllerV2 {
                 .body(assembler.toModel(nuevoPago));
     }
 
-    @GetMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Obtener pago por ID", description = "Obtiene un pago según su identificador")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Pago encontrado",
@@ -63,7 +64,7 @@ public class PagoControllerV2 {
         return assembler.toModel(pago);
     }
 
-    @GetMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Listar pagos", description = "Obtiene todos los pagos registrados")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Listado obtenido correctamente")
@@ -79,7 +80,7 @@ public class PagoControllerV2 {
         );
     }
 
-    @DeleteMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @DeleteMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Eliminar pago", description = "Elimina un pago por su ID")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "204", description = "Pago eliminado correctamente"),
@@ -90,7 +91,7 @@ public class PagoControllerV2 {
         return ResponseEntity.noContent().build();
     }
 
-    @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @PutMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Actualizar pago", description = "Actualiza la información de un pago existente")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Pago actualizado correctamente",

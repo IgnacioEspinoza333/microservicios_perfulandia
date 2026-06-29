@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.MediaTypes;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,7 +34,7 @@ public class PermisoControllerV2 {
     private final PermisoService permisoService;
     private final PermisoModelAssembler assembler;
 
-    @GetMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Listar permisos", description = "Obtiene todos los permisos registrados")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Listado obtenido correctamente")
@@ -49,7 +50,7 @@ public class PermisoControllerV2 {
         );
     }
 
-    @GetMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Obtener permiso por ID", description = "Obtiene un permiso según su identificador")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Permiso encontrado",
@@ -62,7 +63,7 @@ public class PermisoControllerV2 {
         return assembler.toModel(permiso);
     }
 
-    @PostMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @PostMapping(produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Crear permiso", description = "Registra un nuevo permiso en el sistema")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Permiso creado correctamente",
@@ -81,7 +82,7 @@ public class PermisoControllerV2 {
                 .body(assembler.toModel(nuevoPermiso));
     }
 
-    @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @PutMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Actualizar permiso", description = "Actualiza un permiso existente")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Permiso actualizado correctamente",
@@ -98,7 +99,7 @@ public class PermisoControllerV2 {
         return ResponseEntity.ok(assembler.toModel(actualizado));
     }
 
-    @DeleteMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @DeleteMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Eliminar permiso", description = "Elimina un permiso por su ID")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "204", description = "Permiso eliminado correctamente"),

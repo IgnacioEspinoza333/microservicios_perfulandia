@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.MediaTypes;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,7 +37,7 @@ public class ProveedorControllerV2 {
     private final ProveedorService proveedorService;
     private final ProveedorModelAssembler assembler;
 
-    @PostMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @PostMapping(produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Crear proveedor", description = "Registra un nuevo proveedor en el sistema")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Proveedor creado correctamente",
@@ -54,7 +55,7 @@ public class ProveedorControllerV2 {
                 .body(assembler.toModel(nuevoProveedor));
     }
 
-    @GetMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Listar proveedores", description = "Obtiene todos los proveedores registrados")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Listado obtenido correctamente")
@@ -72,7 +73,7 @@ public class ProveedorControllerV2 {
         );
     }
 
-    @GetMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Obtener proveedor por ID", description = "Obtiene un proveedor según su identificador")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Proveedor encontrado",
@@ -87,7 +88,7 @@ public class ProveedorControllerV2 {
         return assembler.toModel(proveedor);
     }
 
-    @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @PutMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Actualizar proveedor", description = "Actualiza la información de un proveedor existente")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Proveedor actualizado correctamente",
@@ -106,7 +107,7 @@ public class ProveedorControllerV2 {
         return ResponseEntity.ok(assembler.toModel(actualizado));
     }
 
-    @DeleteMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @DeleteMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Eliminar proveedor", description = "Elimina un proveedor por su ID")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "204", description = "Proveedor eliminado correctamente"),

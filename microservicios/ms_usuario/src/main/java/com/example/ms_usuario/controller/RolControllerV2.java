@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.MediaTypes;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,7 +34,7 @@ public class RolControllerV2 {
     private final RolService rolService;
     private final RolModelAssembler assembler;
 
-    @GetMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Listar roles", description = "Obtiene todos los roles registrados")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Listado obtenido correctamente")
@@ -49,7 +50,7 @@ public class RolControllerV2 {
         );
     }
 
-    @GetMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Obtener rol por ID", description = "Obtiene un rol según su identificador")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Rol encontrado",
@@ -62,7 +63,7 @@ public class RolControllerV2 {
         return assembler.toModel(rol);
     }
 
-    @PostMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @PostMapping(produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Crear rol", description = "Registra un nuevo rol en el sistema")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Rol creado correctamente",
@@ -81,7 +82,7 @@ public class RolControllerV2 {
                 .body(assembler.toModel(nuevoRol));
     }
 
-    @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @PutMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Actualizar rol", description = "Actualiza un rol existente")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Rol actualizado correctamente",
@@ -98,7 +99,7 @@ public class RolControllerV2 {
         return ResponseEntity.ok(assembler.toModel(actualizado));
     }
 
-    @DeleteMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @DeleteMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Eliminar rol", description = "Elimina un rol por su ID")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "204", description = "Rol eliminado correctamente"),

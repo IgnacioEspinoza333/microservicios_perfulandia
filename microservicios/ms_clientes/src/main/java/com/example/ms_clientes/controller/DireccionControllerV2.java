@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.MediaTypes;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,7 +37,7 @@ public class DireccionControllerV2 {
     private final DireccionService direccionService;
     private final DireccionModelAssembler assembler;
 
-    @PostMapping(value = "/clientes/{clienteId}/direcciones", produces = MediaTypes.HAL_JSON_VALUE)
+    @PostMapping(value = "/clientes/{clienteId}/direcciones", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Crear dirección", description = "Registra una nueva dirección para un cliente")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Dirección creada correctamente",
@@ -58,7 +59,7 @@ public class DireccionControllerV2 {
                 .body(assembler.toModel(nuevaDireccion));
     }
 
-    @GetMapping(value = "/direcciones", produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(value = "/direcciones", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Listar direcciones", description = "Obtiene todas las direcciones registradas")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Listado obtenido correctamente")
@@ -76,7 +77,7 @@ public class DireccionControllerV2 {
         );
     }
 
-    @GetMapping(value = "/clientes/{clienteId}/direcciones", produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(value = "/clientes/{clienteId}/direcciones", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Listar direcciones por cliente", description = "Obtiene todas las direcciones asociadas a un cliente")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Listado obtenido correctamente"),
@@ -97,7 +98,7 @@ public class DireccionControllerV2 {
         );
     }
 
-    @GetMapping(value = "/direcciones/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(value = "/direcciones/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Obtener dirección por ID", description = "Obtiene una dirección según su identificador")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Dirección encontrada",
@@ -112,7 +113,7 @@ public class DireccionControllerV2 {
         return assembler.toModel(direccion);
     }
 
-    @PutMapping(value = "/direcciones/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @PutMapping(value = "/direcciones/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Actualizar dirección", description = "Actualiza una dirección existente")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Dirección actualizada correctamente",

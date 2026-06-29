@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.MediaTypes;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,7 +37,7 @@ public class ClienteControllerV2 {
     private final ClienteService clienteService;
     private final ClienteModelAssembler assembler;
 
-    @PostMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @PostMapping(produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Crear cliente", description = "Registra un nuevo cliente en el sistema")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Cliente creado correctamente",
@@ -54,7 +55,7 @@ public class ClienteControllerV2 {
                 .body(assembler.toModel(nuevoCliente));
     }
 
-    @GetMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Listar clientes", description = "Obtiene todos los clientes registrados")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Listado obtenido correctamente")
@@ -72,7 +73,7 @@ public class ClienteControllerV2 {
         );
     }
 
-    @GetMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Obtener cliente por ID", description = "Obtiene un cliente según su identificador")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Cliente encontrado",
@@ -87,7 +88,7 @@ public class ClienteControllerV2 {
         return assembler.toModel(cliente);
     }
 
-    @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @PutMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Actualizar cliente", description = "Actualiza los datos de un cliente existente")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Cliente actualizado correctamente",
