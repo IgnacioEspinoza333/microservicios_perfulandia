@@ -12,6 +12,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.MediaTypes;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,7 +37,7 @@ public class UsuarioControllerV2 {
     private final UsuarioService usuarioService;
     private final UsuarioModelAssembler assembler;
 
-    @GetMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Listar usuarios", description = "Obtiene todos los usuarios registrados")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Listado obtenido correctamente")
@@ -52,7 +53,7 @@ public class UsuarioControllerV2 {
         );
     }
 
-    @GetMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Obtener usuario por ID", description = "Obtiene un usuario según su identificador")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Usuario encontrado",
@@ -65,7 +66,7 @@ public class UsuarioControllerV2 {
         return assembler.toModel(usuario);
     }
 
-    @PostMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @PostMapping(produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Crear usuario", description = "Registra un nuevo usuario en el sistema")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Usuario creado correctamente",
@@ -84,7 +85,7 @@ public class UsuarioControllerV2 {
                 .body(assembler.toModel(nuevoUsuario));
     }
 
-    @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @PutMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Actualizar usuario", description = "Actualiza la información de un usuario existente")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Usuario actualizado correctamente",
@@ -101,7 +102,7 @@ public class UsuarioControllerV2 {
         return ResponseEntity.ok(assembler.toModel(actualizado));
     }
 
-    @DeleteMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @DeleteMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Eliminar usuario", description = "Elimina un usuario por su ID")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "204", description = "Usuario eliminado correctamente"),
@@ -112,7 +113,7 @@ public class UsuarioControllerV2 {
         return ResponseEntity.noContent().build();
     }
 
-    @PostMapping(value = "/{id}/roles", produces = MediaTypes.HAL_JSON_VALUE)
+    @PostMapping(value = "/{id}/roles", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Asignar rol a usuario", description = "Asigna un rol a un usuario específico")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Rol asignado correctamente",
@@ -136,7 +137,7 @@ public class UsuarioControllerV2 {
         return ResponseEntity.ok(model);
     }
 
-    @DeleteMapping(value = "/{id}/roles/{rolId}", produces = MediaTypes.HAL_JSON_VALUE)
+    @DeleteMapping(value = "/{id}/roles/{rolId}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Quitar rol de usuario", description = "Elimina un rol asignado a un usuario")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Rol eliminado correctamente",
@@ -159,7 +160,7 @@ public class UsuarioControllerV2 {
         return ResponseEntity.ok(model);
     }
 
-    @GetMapping(value = "/{id}/roles", produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(value = "/{id}/roles", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Listar roles de usuario", description = "Obtiene todos los roles asignados a un usuario")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Listado obtenido correctamente"),

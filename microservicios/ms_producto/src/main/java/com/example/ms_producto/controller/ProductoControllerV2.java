@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.MediaTypes;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,7 +37,7 @@ public class ProductoControllerV2 {
     private final ProductoService productoService;
     private final ProductoModelAssembler assembler;
 
-    @PostMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @PostMapping(produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Crear producto", description = "Registra un nuevo producto en el sistema")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Producto creado correctamente",
@@ -54,7 +55,7 @@ public class ProductoControllerV2 {
                 .body(assembler.toModel(nuevoProducto));
     }
 
-    @GetMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Listar productos", description = "Obtiene todos los productos registrados")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Listado obtenido correctamente")
@@ -72,7 +73,7 @@ public class ProductoControllerV2 {
         );
     }
 
-    @GetMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Obtener producto por ID", description = "Obtiene un producto según su identificador")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Producto encontrado",
@@ -87,7 +88,7 @@ public class ProductoControllerV2 {
         return assembler.toModel(producto);
     }
 
-    @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @PutMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Actualizar producto", description = "Actualiza la información de un producto existente")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Producto actualizado correctamente",
@@ -106,7 +107,7 @@ public class ProductoControllerV2 {
         return ResponseEntity.ok(assembler.toModel(actualizado));
     }
 
-    @DeleteMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @DeleteMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Eliminar producto", description = "Elimina un producto por su ID")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "204", description = "Producto eliminado correctamente"),

@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.MediaTypes;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,7 +35,7 @@ public class EmpleadoControllerV2 {
     private final EmpleadoService empleadoService;
     private final EmpleadoModelAssembler assembler;
 
-    @GetMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Listar empleados", description = "Obtiene todos los empleados registrados")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Listado obtenido correctamente")
@@ -50,7 +51,7 @@ public class EmpleadoControllerV2 {
         );
     }
 
-    @GetMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Obtener empleado por ID", description = "Obtiene un empleado según su identificador")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Empleado encontrado",
@@ -63,7 +64,7 @@ public class EmpleadoControllerV2 {
         return assembler.toModel(empleado);
     }
 
-    @PostMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @PostMapping(produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Crear empleado", description = "Registra un nuevo empleado en el sistema")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Empleado creado correctamente",
@@ -82,7 +83,7 @@ public class EmpleadoControllerV2 {
                 .body(assembler.toModel(nuevoEmpleado));
     }
 
-    @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @PutMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Actualizar empleado", description = "Actualiza la información de un empleado existente")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Empleado actualizado correctamente",
@@ -99,7 +100,7 @@ public class EmpleadoControllerV2 {
         return ResponseEntity.ok(assembler.toModel(actualizado));
     }
 
-    @DeleteMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @DeleteMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Eliminar empleado", description = "Elimina un empleado por su ID")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "204", description = "Empleado eliminado correctamente"),

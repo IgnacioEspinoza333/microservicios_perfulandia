@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.MediaTypes;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,7 +37,7 @@ public class InventarioControllerV2 {
     private final InventarioService inventarioService;
     private final InventarioModelAssembler assembler;
 
-    @PostMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @PostMapping(produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Crear inventario", description = "Registra un nuevo inventario para un producto")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Inventario creado correctamente",
@@ -54,7 +55,7 @@ public class InventarioControllerV2 {
                 .body(assembler.toModel(nuevoInventario));
     }
 
-    @GetMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Listar inventarios", description = "Obtiene todos los inventarios registrados")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Listado obtenido correctamente")
@@ -72,7 +73,7 @@ public class InventarioControllerV2 {
         );
     }
 
-    @GetMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Obtener inventario por ID", description = "Obtiene un inventario según su identificador")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Inventario encontrado",
@@ -87,7 +88,7 @@ public class InventarioControllerV2 {
         return assembler.toModel(inventario);
     }
 
-    @GetMapping(value = "/producto/{productoId}", produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(value = "/producto/{productoId}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Obtener inventario por producto", description = "Obtiene el inventario asociado a un producto específico")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Inventario encontrado",
@@ -106,7 +107,7 @@ public class InventarioControllerV2 {
         return model;
     }
 
-    @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @PutMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Actualizar inventario", description = "Actualiza un inventario existente")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Inventario actualizado correctamente",
@@ -125,7 +126,7 @@ public class InventarioControllerV2 {
         return ResponseEntity.ok(assembler.toModel(actualizado));
     }
 
-    @DeleteMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @DeleteMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Eliminar inventario", description = "Elimina un inventario por su ID")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "204", description = "Inventario eliminado correctamente"),

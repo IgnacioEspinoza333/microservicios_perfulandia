@@ -10,6 +10,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.MediaTypes;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,7 +35,7 @@ public class CategoriaControllerV2 {
     private final CategoriaService categoriaService;
     private final CategoriaModelAssembler assembler;
 
-    @PostMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @PostMapping(produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Crear categoría", description = "Registra una nueva categoría con validación")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Categoría creada correctamente",
@@ -53,7 +54,7 @@ public class CategoriaControllerV2 {
                 .body(assembler.toModel(nuevaCategoria));
     }
 
-    @GetMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Obtener categoría por ID", description = "Obtiene una categoría según su identificador")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Categoría encontrada",
@@ -66,7 +67,7 @@ public class CategoriaControllerV2 {
         return assembler.toModel(categoria);
     }
 
-    @GetMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Listar categorías", description = "Obtiene todas las categorías registradas")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Listado obtenido correctamente")
@@ -94,7 +95,7 @@ public class CategoriaControllerV2 {
         return ResponseEntity.noContent().build();
     }
 
-    @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @PutMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Actualizar categoría", description = "Actualiza una categoría existente")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Categoría actualizada correctamente",

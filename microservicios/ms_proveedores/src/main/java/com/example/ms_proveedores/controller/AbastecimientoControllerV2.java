@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.MediaTypes;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,7 +37,7 @@ public class AbastecimientoControllerV2 {
     private final AbastecimientoService abastecimientoService;
     private final AbastecimientoModelAssembler assembler;
 
-    @PostMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @PostMapping(produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Crear abastecimiento", description = "Registra un nuevo abastecimiento para un proveedor")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Abastecimiento creado correctamente",
@@ -54,7 +55,7 @@ public class AbastecimientoControllerV2 {
                 .body(assembler.toModel(nuevoAbastecimiento));
     }
 
-    @GetMapping(produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Listar abastecimientos", description = "Obtiene todos los abastecimientos registrados")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Listado obtenido correctamente")
@@ -72,7 +73,7 @@ public class AbastecimientoControllerV2 {
         );
     }
 
-    @GetMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Obtener abastecimiento por ID", description = "Obtiene un abastecimiento según su identificador")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Abastecimiento encontrado",
@@ -87,7 +88,7 @@ public class AbastecimientoControllerV2 {
         return assembler.toModel(abastecimiento);
     }
 
-    @GetMapping(value = "/proveedor/{proveedorId}", produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(value = "/proveedor/{proveedorId}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Listar abastecimientos por proveedor", description = "Obtiene los abastecimientos asociados a un proveedor")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Listado obtenido correctamente"),
@@ -108,7 +109,7 @@ public class AbastecimientoControllerV2 {
         );
     }
 
-    @GetMapping(value = "/producto/{productoId}", produces = MediaTypes.HAL_JSON_VALUE)
+    @GetMapping(value = "/producto/{productoId}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Listar abastecimientos por producto", description = "Obtiene los abastecimientos asociados a un producto")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Listado obtenido correctamente"),
@@ -128,7 +129,7 @@ public class AbastecimientoControllerV2 {
         );
     }
 
-    @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @PutMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Actualizar abastecimiento", description = "Actualiza un abastecimiento existente")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Abastecimiento actualizado correctamente",
@@ -147,7 +148,7 @@ public class AbastecimientoControllerV2 {
         return ResponseEntity.ok(assembler.toModel(actualizado));
     }
 
-    @DeleteMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    @DeleteMapping(value = "/{id}", produces = { MediaTypes.HAL_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE })
     @Operation(summary = "Eliminar abastecimiento", description = "Elimina un abastecimiento por su ID")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "204", description = "Abastecimiento eliminado correctamente"),
